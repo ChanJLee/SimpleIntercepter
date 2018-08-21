@@ -1,9 +1,11 @@
 #include <iostream>
-
-
+#include "CharStream.h"
+#include "Interpreter.h"
 
 int main()
 {
-	std::cout << "Hello, World!" << std::endl;
+	CharStream charStream("7+8-1");
+	Interpreter interpreter(&charStream);
+	std::cout << interpreter.exp() << std::endl;
 	return 0;
 }

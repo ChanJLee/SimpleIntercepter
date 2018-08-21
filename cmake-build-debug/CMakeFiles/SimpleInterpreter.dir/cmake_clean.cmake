@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SimpleInterpreter.dir/main.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o"
-  "CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o"
   "SimpleInterpreter.pdb"
   "SimpleInterpreter"
 )

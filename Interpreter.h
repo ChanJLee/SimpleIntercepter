@@ -10,10 +10,13 @@
 class Interpreter
 {
 private:
-	const Stream* mStream;
+	Stream* const mStream;
 public:
-	Interpreter(const Stream* stream): mStream(stream) {}
+	Interpreter(Stream* stream): mStream(stream) {}
 	int exp();
+private:
+	int term();
+	int factor();
 };
 
 

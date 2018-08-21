@@ -123,6 +123,33 @@ SimpleInterpreter/fast:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/build
 .PHONY : SimpleInterpreter/fast
 
+CharStream.o: CharStream.cpp.o
+
+.PHONY : CharStream.o
+
+# target to build an object file
+CharStream.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o
+.PHONY : CharStream.cpp.o
+
+CharStream.i: CharStream.cpp.i
+
+.PHONY : CharStream.i
+
+# target to preprocess a source file
+CharStream.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.i
+.PHONY : CharStream.cpp.i
+
+CharStream.s: CharStream.cpp.s
+
+.PHONY : CharStream.s
+
+# target to generate assembly for a file
+CharStream.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.s
+.PHONY : CharStream.cpp.s
+
 Interpreter.o: Interpreter.cpp.o
 
 .PHONY : Interpreter.o
@@ -149,33 +176,6 @@ Interpreter.s: Interpreter.cpp.s
 Interpreter.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.s
 .PHONY : Interpreter.cpp.s
-
-StdIOStream.o: StdIOStream.cpp.o
-
-.PHONY : StdIOStream.o
-
-# target to build an object file
-StdIOStream.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o
-.PHONY : StdIOStream.cpp.o
-
-StdIOStream.i: StdIOStream.cpp.i
-
-.PHONY : StdIOStream.i
-
-# target to preprocess a source file
-StdIOStream.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.i
-.PHONY : StdIOStream.cpp.i
-
-StdIOStream.s: StdIOStream.cpp.s
-
-.PHONY : StdIOStream.s
-
-# target to generate assembly for a file
-StdIOStream.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.s
-.PHONY : StdIOStream.cpp.s
 
 main.o: main.cpp.o
 
@@ -213,12 +213,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SimpleInterpreter"
+	@echo "... CharStream.o"
+	@echo "... CharStream.i"
+	@echo "... CharStream.s"
 	@echo "... Interpreter.o"
 	@echo "... Interpreter.i"
 	@echo "... Interpreter.s"
-	@echo "... StdIOStream.o"
-	@echo "... StdIOStream.i"
-	@echo "... StdIOStream.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

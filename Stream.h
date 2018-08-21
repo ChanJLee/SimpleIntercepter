@@ -9,7 +9,11 @@
 class Stream
 {
 public:
-	virtual char getNext() = 0;
+	virtual char next() = 0;
+
+	virtual void back() = 0;
+
+	virtual bool hasNext() = 0;
 };
 
 

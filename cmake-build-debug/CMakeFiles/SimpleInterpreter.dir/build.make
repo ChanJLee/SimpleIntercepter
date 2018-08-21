@@ -105,42 +105,42 @@ CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o.provides: CMakeFiles/SimpleIn
 CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o
 
 
-CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
-CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o: ../StdIOStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/StdIOStream.cpp
+CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o: ../CharStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/CharStream.cpp
 
-CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/StdIOStream.cpp > CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.i
+CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/CharStream.cpp > CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.i
 
-CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/StdIOStream.cpp -o CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.s
+CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/CharStream.cpp -o CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.s
 
-CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.requires:
+CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.requires:
 
-.PHONY : CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.requires
+.PHONY : CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.requires
 
-CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.provides.build
-.PHONY : CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.provides
+CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.provides
 
-CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o
+CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o
 
 
 # Object files for target SimpleInterpreter
 SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/main.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o"
+"CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o"
 
 # External object files for target SimpleInterpreter
 SimpleInterpreter_EXTERNAL_OBJECTS =
 
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/main.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o
-SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/build.make
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SimpleInterpreter"
@@ -153,7 +153,7 @@ CMakeFiles/SimpleInterpreter.dir/build: SimpleInterpreter
 
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/main.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o.requires
-CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/StdIOStream.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o.requires
 
 .PHONY : CMakeFiles/SimpleInterpreter.dir/requires
 
