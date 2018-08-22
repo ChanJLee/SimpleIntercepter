@@ -3,8 +3,8 @@
 //
 
 #include "Interpreter.h"
-#include "ParseError.h"
-#include "RuntimeError.h"
+#include "../e/ParseError.h"
+#include "../e/RuntimeError.h"
 #include <string>
 #include <cstddef>
 

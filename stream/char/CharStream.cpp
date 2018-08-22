@@ -3,7 +3,7 @@
 //
 
 #include "CharStream.h"
-#include "EOFError.h"
+#include "../../e/EOFError.h"
 #include <string>
 
 char CharStream::next()

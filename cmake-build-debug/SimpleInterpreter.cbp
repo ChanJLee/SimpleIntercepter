@@ -82,19 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/CharStream.cpp">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/CharStream.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/EOFError.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/Interpreter.cpp">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/Interpreter.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/ParseError.h">
@@ -103,13 +91,37 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/RuntimeError.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/Stream.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/Token.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/ast/AbstractSyntaxTree.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/ast/AbstractSyntaxTree.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/main.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/CMakeLists.txt">

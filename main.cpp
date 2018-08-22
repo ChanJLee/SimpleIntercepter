@@ -1,6 +1,6 @@
 #include <iostream>
-#include "CharStream.h"
-#include "Interpreter.h"
+#include "stream/char/CharStream.h"
+#include "interpreter/Interpreter.h"
 
 int main()
 {

@@ -123,59 +123,59 @@ SimpleInterpreter/fast:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/build
 .PHONY : SimpleInterpreter/fast
 
-CharStream.o: CharStream.cpp.o
+ast/AbstractSyntaxTree.o: ast/AbstractSyntaxTree.cpp.o
 
-.PHONY : CharStream.o
-
-# target to build an object file
-CharStream.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.o
-.PHONY : CharStream.cpp.o
-
-CharStream.i: CharStream.cpp.i
-
-.PHONY : CharStream.i
-
-# target to preprocess a source file
-CharStream.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.i
-.PHONY : CharStream.cpp.i
-
-CharStream.s: CharStream.cpp.s
-
-.PHONY : CharStream.s
-
-# target to generate assembly for a file
-CharStream.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/CharStream.cpp.s
-.PHONY : CharStream.cpp.s
-
-Interpreter.o: Interpreter.cpp.o
-
-.PHONY : Interpreter.o
+.PHONY : ast/AbstractSyntaxTree.o
 
 # target to build an object file
-Interpreter.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.o
-.PHONY : Interpreter.cpp.o
+ast/AbstractSyntaxTree.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/ast/AbstractSyntaxTree.cpp.o
+.PHONY : ast/AbstractSyntaxTree.cpp.o
 
-Interpreter.i: Interpreter.cpp.i
+ast/AbstractSyntaxTree.i: ast/AbstractSyntaxTree.cpp.i
 
-.PHONY : Interpreter.i
+.PHONY : ast/AbstractSyntaxTree.i
 
 # target to preprocess a source file
-Interpreter.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.i
-.PHONY : Interpreter.cpp.i
+ast/AbstractSyntaxTree.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/ast/AbstractSyntaxTree.cpp.i
+.PHONY : ast/AbstractSyntaxTree.cpp.i
 
-Interpreter.s: Interpreter.cpp.s
+ast/AbstractSyntaxTree.s: ast/AbstractSyntaxTree.cpp.s
 
-.PHONY : Interpreter.s
+.PHONY : ast/AbstractSyntaxTree.s
 
 # target to generate assembly for a file
-Interpreter.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/Interpreter.cpp.s
-.PHONY : Interpreter.cpp.s
+ast/AbstractSyntaxTree.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/ast/AbstractSyntaxTree.cpp.s
+.PHONY : ast/AbstractSyntaxTree.cpp.s
+
+interpreter/Interpreter.o: interpreter/Interpreter.cpp.o
+
+.PHONY : interpreter/Interpreter.o
+
+# target to build an object file
+interpreter/Interpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o
+.PHONY : interpreter/Interpreter.cpp.o
+
+interpreter/Interpreter.i: interpreter/Interpreter.cpp.i
+
+.PHONY : interpreter/Interpreter.i
+
+# target to preprocess a source file
+interpreter/Interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.i
+.PHONY : interpreter/Interpreter.cpp.i
+
+interpreter/Interpreter.s: interpreter/Interpreter.cpp.s
+
+.PHONY : interpreter/Interpreter.s
+
+# target to generate assembly for a file
+interpreter/Interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.s
+.PHONY : interpreter/Interpreter.cpp.s
 
 main.o: main.cpp.o
 
@@ -204,6 +204,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+parser/Parser.o: parser/Parser.cpp.o
+
+.PHONY : parser/Parser.o
+
+# target to build an object file
+parser/Parser.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
+.PHONY : parser/Parser.cpp.o
+
+parser/Parser.i: parser/Parser.cpp.i
+
+.PHONY : parser/Parser.i
+
+# target to preprocess a source file
+parser/Parser.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.i
+.PHONY : parser/Parser.cpp.i
+
+parser/Parser.s: parser/Parser.cpp.s
+
+.PHONY : parser/Parser.s
+
+# target to generate assembly for a file
+parser/Parser.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.s
+.PHONY : parser/Parser.cpp.s
+
+stream/char/CharStream.o: stream/char/CharStream.cpp.o
+
+.PHONY : stream/char/CharStream.o
+
+# target to build an object file
+stream/char/CharStream.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o
+.PHONY : stream/char/CharStream.cpp.o
+
+stream/char/CharStream.i: stream/char/CharStream.cpp.i
+
+.PHONY : stream/char/CharStream.i
+
+# target to preprocess a source file
+stream/char/CharStream.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.i
+.PHONY : stream/char/CharStream.cpp.i
+
+stream/char/CharStream.s: stream/char/CharStream.cpp.s
+
+.PHONY : stream/char/CharStream.s
+
+# target to generate assembly for a file
+stream/char/CharStream.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.s
+.PHONY : stream/char/CharStream.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,15 +267,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SimpleInterpreter"
-	@echo "... CharStream.o"
-	@echo "... CharStream.i"
-	@echo "... CharStream.s"
-	@echo "... Interpreter.o"
-	@echo "... Interpreter.i"
-	@echo "... Interpreter.s"
+	@echo "... ast/AbstractSyntaxTree.o"
+	@echo "... ast/AbstractSyntaxTree.i"
+	@echo "... ast/AbstractSyntaxTree.s"
+	@echo "... interpreter/Interpreter.o"
+	@echo "... interpreter/Interpreter.i"
+	@echo "... interpreter/Interpreter.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parser/Parser.o"
+	@echo "... parser/Parser.i"
+	@echo "... parser/Parser.s"
+	@echo "... stream/char/CharStream.o"
+	@echo "... stream/char/CharStream.i"
+	@echo "... stream/char/CharStream.s"
 .PHONY : help
 
 

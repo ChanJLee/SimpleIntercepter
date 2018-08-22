@@ -5,7 +5,7 @@
 #ifndef SIMPLEINTERPRETER_INTERCEPTER_H
 #define SIMPLEINTERPRETER_INTERCEPTER_H
 
-#include "Stream.h"
+#include "../stream/Stream.h"
 
 class Interpreter
 {

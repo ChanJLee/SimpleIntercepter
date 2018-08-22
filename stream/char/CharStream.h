@@ -6,7 +6,7 @@
 #define SIMPLEINTERPRETER_CHARSTREAM_H
 
 
-#include "Stream.h"
+#include "../Stream.h"
 #include <ctype.h>
 
 class CharStream: public Stream
