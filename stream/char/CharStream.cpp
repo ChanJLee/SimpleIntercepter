@@ -3,7 +3,7 @@
 //
 
 #include "CharStream.h"
-#include "../../e/EOFError.h"
+#include "../../exception/EOFError.h"
 #include <string>
 
 char CharStream::next()
@@ -12,7 +12,7 @@ char CharStream::next()
 		throw EOFError("End of stream");
 	}
 
-	return mStr[mCurrentPosition++];
+	return mStr[++mCurrentPosition];
 }
 
 void CharStream::back()

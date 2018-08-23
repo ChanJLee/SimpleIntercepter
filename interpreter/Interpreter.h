@@ -6,18 +6,20 @@
 #define SIMPLEINTERPRETER_INTERCEPTER_H
 
 #include "../stream/Stream.h"
+#include "../parser/Parser.h"
 
 class Interpreter
 {
 private:
-	Stream* const mStream;
+	Parser mParser;
 public:
-	Interpreter(Stream* stream): mStream(stream) {}
-	int exp();
-private:
-	int term();
-	int factor();
-};
+	Interpreter(Stream *stream)
+		: mParser(stream)
+	{}
 
+	int visit();
+private:
+	int visit(ASTNode *root);
+};
 
 #endif //SIMPLEINTERPRETER_INTERCEPTER_H

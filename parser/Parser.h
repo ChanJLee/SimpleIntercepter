@@ -6,9 +6,19 @@
 #define SIMPLEINTERPRETER_PARSER_H
 
 
+#include "ast/ASTNode.h"
+#include "../lexer/Lexer.h"
+
 class Parser
 {
-
+private:
+	Lexer mLexer;
+public:
+	Parser(Stream *stream);
+	ASTNode *exp();
+private:
+	ASTNode *term();
+	ASTNode *factor();
 };
 
 

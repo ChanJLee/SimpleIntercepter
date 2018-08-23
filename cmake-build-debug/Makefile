@@ -123,33 +123,6 @@ SimpleInterpreter/fast:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/build
 .PHONY : SimpleInterpreter/fast
 
-ast/AbstractSyntaxTree.o: ast/AbstractSyntaxTree.cpp.o
-
-.PHONY : ast/AbstractSyntaxTree.o
-
-# target to build an object file
-ast/AbstractSyntaxTree.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/ast/AbstractSyntaxTree.cpp.o
-.PHONY : ast/AbstractSyntaxTree.cpp.o
-
-ast/AbstractSyntaxTree.i: ast/AbstractSyntaxTree.cpp.i
-
-.PHONY : ast/AbstractSyntaxTree.i
-
-# target to preprocess a source file
-ast/AbstractSyntaxTree.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/ast/AbstractSyntaxTree.cpp.i
-.PHONY : ast/AbstractSyntaxTree.cpp.i
-
-ast/AbstractSyntaxTree.s: ast/AbstractSyntaxTree.cpp.s
-
-.PHONY : ast/AbstractSyntaxTree.s
-
-# target to generate assembly for a file
-ast/AbstractSyntaxTree.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/ast/AbstractSyntaxTree.cpp.s
-.PHONY : ast/AbstractSyntaxTree.cpp.s
-
 interpreter/Interpreter.o: interpreter/Interpreter.cpp.o
 
 .PHONY : interpreter/Interpreter.o
@@ -176,6 +149,33 @@ interpreter/Interpreter.s: interpreter/Interpreter.cpp.s
 interpreter/Interpreter.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.s
 .PHONY : interpreter/Interpreter.cpp.s
+
+lexer/Lexer.o: lexer/Lexer.cpp.o
+
+.PHONY : lexer/Lexer.o
+
+# target to build an object file
+lexer/Lexer.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o
+.PHONY : lexer/Lexer.cpp.o
+
+lexer/Lexer.i: lexer/Lexer.cpp.i
+
+.PHONY : lexer/Lexer.i
+
+# target to preprocess a source file
+lexer/Lexer.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.i
+.PHONY : lexer/Lexer.cpp.i
+
+lexer/Lexer.s: lexer/Lexer.cpp.s
+
+.PHONY : lexer/Lexer.s
+
+# target to generate assembly for a file
+lexer/Lexer.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.s
+.PHONY : lexer/Lexer.cpp.s
 
 main.o: main.cpp.o
 
@@ -231,6 +231,87 @@ parser/Parser.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.s
 .PHONY : parser/Parser.cpp.s
 
+parser/ast/ASTNode.o: parser/ast/ASTNode.cpp.o
+
+.PHONY : parser/ast/ASTNode.o
+
+# target to build an object file
+parser/ast/ASTNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o
+.PHONY : parser/ast/ASTNode.cpp.o
+
+parser/ast/ASTNode.i: parser/ast/ASTNode.cpp.i
+
+.PHONY : parser/ast/ASTNode.i
+
+# target to preprocess a source file
+parser/ast/ASTNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.i
+.PHONY : parser/ast/ASTNode.cpp.i
+
+parser/ast/ASTNode.s: parser/ast/ASTNode.cpp.s
+
+.PHONY : parser/ast/ASTNode.s
+
+# target to generate assembly for a file
+parser/ast/ASTNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.s
+.PHONY : parser/ast/ASTNode.cpp.s
+
+parser/ast/BinOpNode.o: parser/ast/BinOpNode.cpp.o
+
+.PHONY : parser/ast/BinOpNode.o
+
+# target to build an object file
+parser/ast/BinOpNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o
+.PHONY : parser/ast/BinOpNode.cpp.o
+
+parser/ast/BinOpNode.i: parser/ast/BinOpNode.cpp.i
+
+.PHONY : parser/ast/BinOpNode.i
+
+# target to preprocess a source file
+parser/ast/BinOpNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.i
+.PHONY : parser/ast/BinOpNode.cpp.i
+
+parser/ast/BinOpNode.s: parser/ast/BinOpNode.cpp.s
+
+.PHONY : parser/ast/BinOpNode.s
+
+# target to generate assembly for a file
+parser/ast/BinOpNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.s
+.PHONY : parser/ast/BinOpNode.cpp.s
+
+parser/ast/NumNode.o: parser/ast/NumNode.cpp.o
+
+.PHONY : parser/ast/NumNode.o
+
+# target to build an object file
+parser/ast/NumNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o
+.PHONY : parser/ast/NumNode.cpp.o
+
+parser/ast/NumNode.i: parser/ast/NumNode.cpp.i
+
+.PHONY : parser/ast/NumNode.i
+
+# target to preprocess a source file
+parser/ast/NumNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.i
+.PHONY : parser/ast/NumNode.cpp.i
+
+parser/ast/NumNode.s: parser/ast/NumNode.cpp.s
+
+.PHONY : parser/ast/NumNode.s
+
+# target to generate assembly for a file
+parser/ast/NumNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.s
+.PHONY : parser/ast/NumNode.cpp.s
+
 stream/char/CharStream.o: stream/char/CharStream.cpp.o
 
 .PHONY : stream/char/CharStream.o
@@ -267,18 +348,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SimpleInterpreter"
-	@echo "... ast/AbstractSyntaxTree.o"
-	@echo "... ast/AbstractSyntaxTree.i"
-	@echo "... ast/AbstractSyntaxTree.s"
 	@echo "... interpreter/Interpreter.o"
 	@echo "... interpreter/Interpreter.i"
 	@echo "... interpreter/Interpreter.s"
+	@echo "... lexer/Lexer.o"
+	@echo "... lexer/Lexer.i"
+	@echo "... lexer/Lexer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... parser/Parser.o"
 	@echo "... parser/Parser.i"
 	@echo "... parser/Parser.s"
+	@echo "... parser/ast/ASTNode.o"
+	@echo "... parser/ast/ASTNode.i"
+	@echo "... parser/ast/ASTNode.s"
+	@echo "... parser/ast/BinOpNode.o"
+	@echo "... parser/ast/BinOpNode.i"
+	@echo "... parser/ast/BinOpNode.s"
+	@echo "... parser/ast/NumNode.o"
+	@echo "... parser/ast/NumNode.i"
+	@echo "... parser/ast/NumNode.s"
 	@echo "... stream/char/CharStream.o"
 	@echo "... stream/char/CharStream.i"
 	@echo "... stream/char/CharStream.s"

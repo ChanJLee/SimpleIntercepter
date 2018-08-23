@@ -3,86 +3,34 @@
 //
 
 #include "Interpreter.h"
-#include "../e/ParseError.h"
-#include "../e/RuntimeError.h"
-#include <string>
-#include <cstddef>
+#include "../parser/ast/NumNode.h"
+#include "../parser/ast/BinOpNode.h"
+#include "../exception/ParseError.h"
 
-int Interpreter::exp()
+int Interpreter::visit()
 {
-	int result = term();
-	while (true) {
-		char ch = mStream->next();
-		if (ch == '+') {
-			result += term();
-		}
-		else if (ch == '-') {
-			result -= term();
-		}
-		else {
-			// other char
-			// back
-			// check if invalid
-			mStream->back();
-			break;
-		}
-	}
-
-	return result;
+	ASTNode *node = mParser.exp();
+	return visit(node);
 }
 
-int Interpreter::term()
+int Interpreter::visit(ASTNode *root)
 {
-	int result = factor();
-	while (true) {
-		char ch = mStream->next();
-		if (ch == '/') {
-			int rhs = term();
-			if (rhs == 0) {
-				throw RuntimeError("div by 0");
-			}
-			result /= term();
-		}
-		else if (ch == '*') {
-			result *= term();
-		}
-		else {
-			// other char
-			// back
-			// check if invalid
-			mStream->back();
-			break;
-		}
+	if (typeid(root).name() == "class NumNode") {
+		NumNode *node = (NumNode *) root;
+		return node->token.value;
 	}
 
-	return result;
-}
-
-int Interpreter::factor()
-{
-	char ch = mStream->next();
-	if (ch == '(') {
-		int result = exp();
-		ch = mStream->next();
-		if (ch != ')') {
-			throw ParseError("need ')'");
-		}
-		return result;
+	// bin op
+	BinOpNode *binOpNode = (BinOpNode *) root;
+	int lhs = visit(binOpNode->lhs);
+	int rhs = visit(binOpNode->rhs);
+	switch (binOpNode->token.type) {
+		case TYPE_DIV: return lhs / rhs;
+		case TYPE_MUL: return lhs * rhs;
+		case TYPE_SUB: return lhs - rhs;
+		case TYPE_PLUS: return lhs + rhs;
+		default:break;
 	}
 
-	std::string number;
-	while (ch >= '0' && ch <= '9') {
-		number += ch;
-		if (!mStream->hasNext()) {
-			break;
-		}
-		ch = mStream->next();
-	}
-
-	if (number.empty()) {
-		throw ParseError("invalid char: " + ch);
-	}
-
-	mStream->back();
-	return std::atoi(number.c_str());
+	throw ParseError("invalid exp");
 }

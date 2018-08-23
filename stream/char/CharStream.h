@@ -12,7 +12,7 @@
 class CharStream: public Stream
 {
 private:
-	size_t mCurrentPosition;
+	size_t mCurrentPosition = 0;
 	const char* mStr;
 public:
 	CharStream(const char *mStr);

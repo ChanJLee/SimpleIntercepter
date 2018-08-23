@@ -82,28 +82,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/EOFError.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/ParseError.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/RuntimeError.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/Token.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/ast/AbstractSyntaxTree.cpp">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/ast/AbstractSyntaxTree.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/main.cpp">
@@ -115,6 +109,24 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
@@ -122,6 +134,9 @@
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/CMakeLists.txt">

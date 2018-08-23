@@ -6,6 +6,6 @@ int main()
 {
 	CharStream charStream("7+8-1");
 	Interpreter interpreter(&charStream);
-	std::cout << interpreter.exp() << std::endl;
+	std::cout << interpreter.visit() << std::endl;
 	return 0;
 }
