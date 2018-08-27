@@ -3,11 +3,13 @@
 //
 
 #include "NumNode.h"
-NumNode::NumNode(const Token &token)
-	: token(token)
-{}
 
 NumNode::~NumNode()
+{
+
+}
+NumNode::NumNode(Token *const token)
+	: ASTNode(token)
 {
 
 }

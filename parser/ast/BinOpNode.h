@@ -11,10 +11,9 @@
 
 struct BinOpNode: public ASTNode
 {
-	Token token;
 	ASTNode *lhs;
 	ASTNode *rhs;
-	BinOpNode(const Token &token, ASTNode *lhs, ASTNode *rhs);
+	BinOpNode(Token *const token, ASTNode *lhs, ASTNode *rhs);
 	virtual ~BinOpNode();
 };
 

@@ -40,6 +40,7 @@ CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o: ../parser/ast/ASTNode.cpp
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o: ../parser/ast/BinOpNode.cpp

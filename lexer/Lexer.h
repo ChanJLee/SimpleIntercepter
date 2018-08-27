@@ -15,12 +15,12 @@ private:
 public:
 	Lexer(Stream *stream);
 
-	Token next();
+	Token* next();
 
 	bool hasNext();
 
 private:
-	Token nextNumber();
+	Token* nextNumber();
 };
 
 

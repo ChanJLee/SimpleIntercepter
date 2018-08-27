@@ -20,8 +20,8 @@ ASTNode *Parser::exp()
 		return lhs;
 	}
 
-	Token token = mLexer.next();
-	if (token.type != TYPE_SUB && token.type != TYPE_PLUS) {
+	Token* token = mLexer.next();
+	if (token->type != TYPE_SUB && token->type != TYPE_PLUS) {
 		if (lhs != nullptr) {
 			delete lhs;
 		}
@@ -45,8 +45,8 @@ ASTNode *Parser::term()
 		return lhs;
 	}
 
-	Token token = mLexer.next();
-	if (token.type != TYPE_DIV && token.type != TYPE_MUL) {
+	Token* token = mLexer.next();
+	if (token->type != TYPE_DIV && token->type != TYPE_MUL) {
 		if (lhs != nullptr) {
 			delete lhs;
 		}
@@ -69,10 +69,10 @@ ASTNode *Parser::factor()
 		throw EOFError("factor error");
 	}
 
-	Token token = mLexer.next();
-	if (token.type == TYPE_LEFT_BRACKET) {
+	Token* token = mLexer.next();
+	if (token->type == TYPE_LEFT_BRACKET) {
 		ASTNode *result = exp();
-		if (!mLexer.hasNext() || mLexer.next().type != TYPE_RIGHT_BRACKET) {
+		if (!mLexer.hasNext() || mLexer.next()->type != TYPE_RIGHT_BRACKET) {
 			if (result != nullptr) {
 				delete result;
 			}
@@ -81,7 +81,7 @@ ASTNode *Parser::factor()
 		return result;
 	}
 
-	if (token.type == TYPE_NUMBER) {
+	if (token->type == TYPE_NUMBER) {
 		return new NumNode(token);
 	}
 

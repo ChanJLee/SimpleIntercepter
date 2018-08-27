@@ -6,10 +6,14 @@
 #define SIMPLEINTERPRETER_ASTNODE_H
 
 
+#include "../../token/Token.h"
 class ASTNode
 {
 public:
-	virtual ~ASTNode() = 0;
+	Token* const token;
+public:
+	ASTNode(Token *const token);
+	virtual ~ASTNode();
 };
 
 

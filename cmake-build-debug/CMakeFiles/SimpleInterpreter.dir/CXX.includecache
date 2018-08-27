@@ -21,6 +21,8 @@ Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
 ../exception/ParseError.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
+typeinfo
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
 ../stream/Stream.h
@@ -75,6 +77,8 @@ ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+../../token/Token.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.cpp
 BinOpNode.h

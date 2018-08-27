@@ -41,6 +41,7 @@ CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.cpp

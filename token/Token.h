@@ -21,18 +21,30 @@ const int TYPE_DIV = 6;
 
 const int TYPE_SUB = 7;
 
-template<typename T>
 struct Token
 {
 	int type;
-	T value;
+	void* value;
+
 	Token(int type)
 		: type(type)
 	{}
 
-	Token(int type, T value)
+	Token(int type, void *value)
 		: type(type), value(value)
 	{}
+
+	virtual ~Token()
+	{
+		if (!value) {
+			return;
+		}
+
+		if (type == TYPE_NUMBER) {
+			int* p = (int *) value;
+			delete p;
+		}
+	}
 };
 
 #endif //SIMPLEINTERPRETER_TOKEN_H

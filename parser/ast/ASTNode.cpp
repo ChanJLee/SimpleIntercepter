@@ -3,3 +3,11 @@
 //
 
 #include "ASTNode.h"
+ASTNode::ASTNode(Token *const token)
+	: token(token)
+{}
+
+ASTNode::~ASTNode()
+{
+	delete token;
+}

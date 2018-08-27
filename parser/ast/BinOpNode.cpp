@@ -3,9 +3,6 @@
 //
 
 #include "BinOpNode.h"
-BinOpNode::BinOpNode(const Token &token, ASTNode *lhs, ASTNode *rhs)
-	: token(token), lhs(lhs), rhs(rhs)
-{}
 
 BinOpNode::~BinOpNode()
 {
@@ -16,4 +13,8 @@ BinOpNode::~BinOpNode()
 	if (rhs != nullptr) {
 		delete rhs;
 	}
+}
+BinOpNode::BinOpNode(Token *const token, ASTNode *lhs, ASTNode *rhs)
+	: ASTNode(token), lhs(lhs), rhs(rhs)
+{
 }

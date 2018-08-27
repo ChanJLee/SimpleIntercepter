@@ -11,8 +11,7 @@
 class NumNode: public ASTNode
 {
 public:
-	Token token;
-	NumNode(const Token<int> &token);
+	NumNode(Token* const token);
 	virtual ~NumNode();
 };
 

@@ -6,6 +6,7 @@
 #include "../parser/ast/NumNode.h"
 #include "../parser/ast/BinOpNode.h"
 #include "../exception/ParseError.h"
+#include <typeinfo>
 
 int Interpreter::visit()
 {
@@ -17,14 +18,14 @@ int Interpreter::visit(ASTNode *root)
 {
 	if (typeid(root).name() == "class NumNode") {
 		NumNode *node = (NumNode *) root;
-		return node->token.value;
+		return *((int*) node->token->value);
 	}
 
 	// bin op
 	BinOpNode *binOpNode = (BinOpNode *) root;
 	int lhs = visit(binOpNode->lhs);
 	int rhs = visit(binOpNode->rhs);
-	switch (binOpNode->token.type) {
+	switch (binOpNode->token->type) {
 		case TYPE_DIV: return lhs / rhs;
 		case TYPE_MUL: return lhs * rhs;
 		case TYPE_SUB: return lhs - rhs;

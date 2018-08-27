@@ -11,21 +11,21 @@ Lexer::Lexer(Stream *stream)
 	: mStream(stream)
 {}
 
-Token Lexer::next()
+Token *Lexer::next()
 {
 	// skip blank
 	char ch;
-	while (mStream->hasNext && (ch = mStream->next()) == ' ') {}
+	while (mStream->hasNext() && (ch = mStream->next()) == ' ') {}
 	if (!mStream->hasNext()) {
-		return Token(TYPE_EOF);
+		return new Token(TYPE_EOF);
 	}
 
 	if (ch == '(') {
-		return Token(TYPE_LEFT_BRACKET);
+		return new Token(TYPE_LEFT_BRACKET);
 	}
 
 	if (ch == ')') {
-		return Token(TYPE_RIGHT_BRACKET);
+		return new Token(TYPE_RIGHT_BRACKET);
 	}
 
 	if (ch >= '0' && ch <= '9') {
@@ -34,19 +34,19 @@ Token Lexer::next()
 	}
 
 	if (ch == '+') {
-		return Token(TYPE_PLUS);
+		return new Token(TYPE_PLUS);
 	}
 
 	if (ch == '-') {
-		return Token(TYPE_SUB);
+		return new Token(TYPE_SUB);
 	}
 
 	if (ch == '/') {
-		return Token(TYPE_DIV);
+		return new Token(TYPE_DIV);
 	}
 
 	if (ch == '*') {
-		return Token(TYPE_MUL);
+		return new Token(TYPE_MUL);
 	}
 
 	throw ParseError("unknown char");
@@ -57,7 +57,7 @@ bool Lexer::hasNext()
 	return mStream != nullptr && mStream->hasNext();
 }
 
-Token Lexer::nextNumber()
+Token *Lexer::nextNumber()
 {
 	char ch = mStream->next();
 	std::string num;
@@ -65,6 +65,8 @@ Token Lexer::nextNumber()
 		num += ch;
 		ch = mStream->next();
 	}
+
 	mStream->back();
-	return Token(TYPE_NUMBER, atoi(num.c_str()));
+	int *value = new int(atoi(num.c_str()));
+	return new Token(TYPE_NUMBER, value);
 }
