@@ -12,13 +12,13 @@
 class CharStream: public Stream
 {
 private:
-	size_t mCurrentPosition = 0;
+	int mCurrentPosition = -1;
 	const char* mStr;
 public:
 	CharStream(const char *mStr);
 public:
 	char next();
-	void back();
+	void back(int len);
 	bool hasNext();
 };
 

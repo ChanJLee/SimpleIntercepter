@@ -19,6 +19,7 @@ public:
 
 	bool hasNext();
 
+	void back(Token *token);
 private:
 	Token* nextNumber();
 };

@@ -16,51 +16,37 @@ Parser::Parser(Stream *stream)
 ASTNode *Parser::exp()
 {
 	ASTNode *lhs = term();
-	if (!mLexer.hasNext()) {
-		return lhs;
-	}
-
-	Token* token = mLexer.next();
-	if (token->type != TYPE_SUB && token->type != TYPE_PLUS) {
-		if (lhs != nullptr) {
+	while (mLexer.hasNext()) {
+		Token* token = mLexer.next();
+		if (token->type != TYPE_SUB && token->type != TYPE_PLUS) {
+			if (lhs != nullptr) {
+				delete lhs;
+			}
+			delete token;
 			delete lhs;
+			throw ParseError("invalid token in exp");
 		}
-		throw ParseError("invalid token in exp");
+
+		// memory leak
+		lhs = new BinOpNode(token, lhs, term());
 	}
 
-	if (!mLexer.hasNext()) {
-		if (lhs != nullptr) {
-			delete lhs;
-		}
-		throw ParseError("need rhs op");
-	}
-
-	return new BinOpNode(token, lhs, term());
+	return lhs;
 }
 
 ASTNode *Parser::term()
 {
 	ASTNode *lhs = factor();
-	if (!mLexer.hasNext()) {
-		return lhs;
-	}
-
-	Token* token = mLexer.next();
-	if (token->type != TYPE_DIV && token->type != TYPE_MUL) {
-		if (lhs != nullptr) {
-			delete lhs;
+	while (mLexer.hasNext()) {
+		Token* token = mLexer.next();
+		if (token->type != TYPE_DIV && token->type != TYPE_MUL) {
+			mLexer.back(token);
+			delete token;
+			break;
 		}
-		throw ParseError("invalid token in exp");
+		lhs = new BinOpNode(token, lhs, factor());
 	}
-
-	if (!mLexer.hasNext()) {
-		if (lhs != nullptr) {
-			delete lhs;
-		}
-		throw ParseError("need rhs op");
-	}
-
-	return new BinOpNode(token, lhs, factor());
+	return lhs;
 }
 
 ASTNode *Parser::factor()
@@ -76,6 +62,8 @@ ASTNode *Parser::factor()
 			if (result != nullptr) {
 				delete result;
 			}
+
+			delete token;
 			throw EOFError("need right bracket");
 		}
 		return result;

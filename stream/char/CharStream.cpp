@@ -15,16 +15,13 @@ char CharStream::next()
 	return mStr[++mCurrentPosition];
 }
 
-void CharStream::back()
+void CharStream::back(int len)
 {
-	if (mCurrentPosition == 0) {
-		return;
-	}
-	--mCurrentPosition;
+	mCurrentPosition -= len;
 }
 
 CharStream::CharStream(const char *mStr)
-	: mStr(mStr), mCurrentPosition(0)
+	: mStr(mStr), mCurrentPosition(-1)
 {}
 
 bool CharStream::hasNext()
@@ -33,5 +30,5 @@ bool CharStream::hasNext()
 		return false;
 	}
 
-	return mCurrentPosition < strlen(mStr);
+	return mCurrentPosition + 1 >= 0 && mCurrentPosition + 1 < strlen(mStr);
 }

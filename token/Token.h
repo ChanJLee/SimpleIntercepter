@@ -25,13 +25,14 @@ struct Token
 {
 	int type;
 	void* value;
+	int len;
 
-	Token(int type)
-		: type(type)
+	Token(int type, int len)
+		: type(type), len(len)
 	{}
 
-	Token(int type, void *value)
-		: type(type), value(value)
+	Token(int type, void *value, int len)
+		: type(type), value(value), len(len)
 	{}
 
 	virtual ~Token()

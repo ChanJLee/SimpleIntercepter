@@ -21,8 +21,6 @@ Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
 ../exception/ParseError.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
-typeinfo
--
 
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
 ../stream/Stream.h

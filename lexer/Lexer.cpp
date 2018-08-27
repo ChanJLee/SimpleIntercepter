@@ -14,39 +14,39 @@ Lexer::Lexer(Stream *stream)
 Token *Lexer::next()
 {
 	// skip blank
-	char ch;
+	char ch = 0;
 	while (mStream->hasNext() && (ch = mStream->next()) == ' ') {}
-	if (!mStream->hasNext()) {
-		return new Token(TYPE_EOF);
+	if (ch == 0 && !mStream->hasNext()) {
+		return new Token(TYPE_EOF, 0);
 	}
 
 	if (ch == '(') {
-		return new Token(TYPE_LEFT_BRACKET);
+		return new Token(TYPE_LEFT_BRACKET, 1);
 	}
 
 	if (ch == ')') {
-		return new Token(TYPE_RIGHT_BRACKET);
+		return new Token(TYPE_RIGHT_BRACKET, 1);
 	}
 
 	if (ch >= '0' && ch <= '9') {
-		mStream->back();
+		mStream->back(1);
 		return nextNumber();
 	}
 
 	if (ch == '+') {
-		return new Token(TYPE_PLUS);
+		return new Token(TYPE_PLUS, 1);
 	}
 
 	if (ch == '-') {
-		return new Token(TYPE_SUB);
+		return new Token(TYPE_SUB, 1);
 	}
 
 	if (ch == '/') {
-		return new Token(TYPE_DIV);
+		return new Token(TYPE_DIV, 1);
 	}
 
 	if (ch == '*') {
-		return new Token(TYPE_MUL);
+		return new Token(TYPE_MUL, 1);
 	}
 
 	throw ParseError("unknown char");
@@ -63,10 +63,22 @@ Token *Lexer::nextNumber()
 	std::string num;
 	while (ch >= '0' && ch <= '9') {
 		num += ch;
-		ch = mStream->next();
+		if (mStream->hasNext()) {
+			ch = mStream->next();
+		}
+		else {
+			break;
+		}
 	}
 
-	mStream->back();
+	if (mStream->hasNext()) {
+		mStream->back(1);
+	}
 	int *value = new int(atoi(num.c_str()));
-	return new Token(TYPE_NUMBER, value);
+	return new Token(TYPE_NUMBER, value, (int) num.size());
+}
+
+void Lexer::back(Token *token)
+{
+	mStream->back(token->len);
 }
