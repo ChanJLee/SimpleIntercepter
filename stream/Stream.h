@@ -11,7 +11,7 @@ class Stream
 public:
 	virtual char next() = 0;
 
-	virtual void back(int len) = 0;
+	virtual void back() = 0;
 
 	virtual bool hasNext() = 0;
 };

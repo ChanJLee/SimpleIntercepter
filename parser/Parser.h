@@ -13,12 +13,15 @@ class Parser
 {
 private:
 	Lexer mLexer;
+	Token *mCurrentToken = nullptr;
 public:
 	Parser(Stream *stream);
 	ASTNode *exp();
 private:
 	ASTNode *term();
 	ASTNode *factor();
+	void eat(int type);
+	void eat(int type, const char* errorMsg);
 };
 
 

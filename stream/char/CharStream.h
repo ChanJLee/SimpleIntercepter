@@ -18,7 +18,7 @@ public:
 	CharStream(const char *mStr);
 public:
 	char next();
-	void back(int len);
+	void back();
 	bool hasNext();
 };
 

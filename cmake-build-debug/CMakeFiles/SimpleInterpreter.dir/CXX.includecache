@@ -11,6 +11,8 @@ ParseError.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
+exception
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp
 Interpreter.h
@@ -59,10 +61,10 @@ Parser.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 ast/BinOpNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
-../exception/EOFError.h
-/Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h
 ast/NumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+exception
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
 ast/ASTNode.h

@@ -18,8 +18,6 @@ public:
 	Token* next();
 
 	bool hasNext();
-
-	void back(Token *token);
 private:
 	Token* nextNumber();
 };

@@ -29,7 +29,7 @@ Token *Lexer::next()
 	}
 
 	if (ch >= '0' && ch <= '9') {
-		mStream->back(1);
+		mStream->back();
 		return nextNumber();
 	}
 
@@ -72,13 +72,8 @@ Token *Lexer::nextNumber()
 	}
 
 	if (mStream->hasNext()) {
-		mStream->back(1);
+		mStream->back();
 	}
 	int *value = new int(atoi(num.c_str()));
 	return new Token(TYPE_NUMBER, value, (int) num.size());
-}
-
-void Lexer::back(Token *token)
-{
-	mStream->back(token->len);
 }

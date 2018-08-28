@@ -5,11 +5,12 @@
 #ifndef SIMPLEINTERPRETER_PARSEERROR_H
 #define SIMPLEINTERPRETER_PARSEERROR_H
 
+#include <exception>
 
-class ParseError
+class ParseError: public std::exception
 {
 private:
-	const char* mMsg;
+	const char *mMsg;
 public:
 	ParseError(const char *msg)
 		: mMsg(msg)

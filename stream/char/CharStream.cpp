@@ -15,9 +15,9 @@ char CharStream::next()
 	return mStr[++mCurrentPosition];
 }
 
-void CharStream::back(int len)
+void CharStream::back()
 {
-	mCurrentPosition -= len;
+	--mCurrentPosition;
 }
 
 CharStream::CharStream(const char *mStr)

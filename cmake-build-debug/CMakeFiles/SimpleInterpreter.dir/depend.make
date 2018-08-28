@@ -27,7 +27,6 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/char/CharStream.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../token/Token.h
 
-CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../exception/EOFError.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../exception/ParseError.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../lexer/Lexer.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/Parser.cpp

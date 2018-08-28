@@ -28,7 +28,6 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
- /Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp
