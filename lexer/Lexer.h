@@ -16,8 +16,6 @@ public:
 	Lexer(Stream *stream);
 
 	Token* next();
-
-	bool hasNext();
 private:
 	Token* nextNumber();
 };

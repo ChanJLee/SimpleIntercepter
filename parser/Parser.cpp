@@ -19,8 +19,8 @@ ASTNode *Parser::exp()
 	ASTNode *lhs = term();
 	while (mCurrentToken->type == Token::TokenType::TYPE_SUB || mCurrentToken->type == Token::TokenType::TYPE_PLUS) {
 		Token* token = mCurrentToken;
-		lhs = new BinOpNode(token, lhs, term());
 		eat(token->type);
+		lhs = new BinOpNode(token, lhs, term());
 	}
 	return lhs;
 }
@@ -30,8 +30,8 @@ ASTNode *Parser::term()
 	ASTNode *lhs = factor();
 	while (mCurrentToken->type == Token::TokenType::TYPE_DIV || mCurrentToken->type == Token::TokenType::TYPE_MUL) {
 		Token* token = mCurrentToken;
-		lhs = new BinOpNode(token, lhs, factor());
 		eat(token->type);
+		lhs = new BinOpNode(token, lhs, factor());
 	}
 	return lhs;
 }
@@ -56,6 +56,7 @@ ASTNode *Parser::factor()
 	}
 
 	if (token->type == Token::TokenType::TYPE_NUMBER) {
+		eat(Token::TokenType::TYPE_NUMBER);
 		return new NumNode(token);
 	}
 
@@ -69,12 +70,9 @@ void Parser::eat(int type)
 
 void Parser::eat(int type, const char *errorMsg)
 {
-	if (!mLexer.hasNext()) {
-		throw ParseError(errorMsg);
-	}
-
 	if (mCurrentToken->type == type) {
 		mCurrentToken = mLexer.next();
+		return;
 	}
 
 	throw ParseError(errorMsg);

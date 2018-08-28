@@ -35,8 +35,6 @@ Lexer.h
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
 ../exception/ParseError.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
-cstdlib
--
 string
 -
 

@@ -4,7 +4,6 @@
 
 #include "Lexer.h"
 #include "../exception/ParseError.h"
-#include <cstdlib>
 #include <string>
 
 Lexer::Lexer(Stream *stream)
@@ -13,6 +12,10 @@ Lexer::Lexer(Stream *stream)
 
 Token *Lexer::next()
 {
+	if (!mStream->hasNext()) {
+		return new Token(Token::TokenType::TYPE_EOF);
+	}
+
 	// skip blank
 	char ch = 0;
 	while (mStream->hasNext() && (ch = mStream->next()) == ' ') {}
@@ -50,11 +53,6 @@ Token *Lexer::next()
 	}
 
 	throw ParseError("unknown char");
-}
-
-bool Lexer::hasNext()
-{
-	return mStream != nullptr && mStream->hasNext();
 }
 
 Token *Lexer::nextNumber()
