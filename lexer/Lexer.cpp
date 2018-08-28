@@ -17,15 +17,15 @@ Token *Lexer::next()
 	char ch = 0;
 	while (mStream->hasNext() && (ch = mStream->next()) == ' ') {}
 	if (ch == 0 && !mStream->hasNext()) {
-		return new Token(TYPE_EOF, 0);
+		return new Token(Token::TokenType::TYPE_EOF, 0);
 	}
 
 	if (ch == '(') {
-		return new Token(TYPE_LEFT_BRACKET, 1);
+		return new Token(Token::TokenType::TYPE_LEFT_BRACKET);
 	}
 
 	if (ch == ')') {
-		return new Token(TYPE_RIGHT_BRACKET, 1);
+		return new Token(Token::TokenType::TYPE_RIGHT_BRACKET);
 	}
 
 	if (ch >= '0' && ch <= '9') {
@@ -34,19 +34,19 @@ Token *Lexer::next()
 	}
 
 	if (ch == '+') {
-		return new Token(TYPE_PLUS, 1);
+		return new Token(Token::TokenType::TYPE_PLUS);
 	}
 
 	if (ch == '-') {
-		return new Token(TYPE_SUB, 1);
+		return new Token(Token::TokenType::TYPE_SUB);
 	}
 
 	if (ch == '/') {
-		return new Token(TYPE_DIV, 1);
+		return new Token(Token::TokenType::TYPE_DIV);
 	}
 
 	if (ch == '*') {
-		return new Token(TYPE_MUL, 1);
+		return new Token(Token::TokenType::TYPE_MUL);
 	}
 
 	throw ParseError("unknown char");
@@ -75,5 +75,5 @@ Token *Lexer::nextNumber()
 		mStream->back();
 	}
 	int *value = new int(atoi(num.c_str()));
-	return new Token(TYPE_NUMBER, value, (int) num.size());
+	return new Token(Token::TokenType::TYPE_NUMBER, value);
 }

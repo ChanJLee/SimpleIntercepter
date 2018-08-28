@@ -5,34 +5,28 @@
 #ifndef SIMPLEINTERPRETER_TOKEN_H
 #define SIMPLEINTERPRETER_TOKEN_H
 
-const int TYPE_EOF = 0;
-
-const int TYPE_NUMBER = 1;
-
-const int TYPE_LEFT_BRACKET = 2;
-
-const int TYPE_RIGHT_BRACKET = 3;
-
-const int TYPE_MUL = 4;
-
-const int TYPE_PLUS = 5;
-
-const int TYPE_DIV = 6;
-
-const int TYPE_SUB = 7;
-
 struct Token
 {
-	int type;
-	void* value;
-	int len;
+	enum TokenType {
+		TYPE_PLUS,
+		TYPE_SUB,
+		TYPE_MUL,
+		TYPE_DIV,
+		TYPE_LEFT_BRACKET,
+		TYPE_RIGHT_BRACKET,
+		TYPE_NUMBER,
+		TYPE_EOF,
+	};
 
-	Token(int type, int len)
-		: type(type), len(len)
+	TokenType type;
+	void* value;
+
+	Token(TokenType type)
+		: type(type)
 	{}
 
-	Token(int type, void *value, int len)
-		: type(type), value(value), len(len)
+	Token(TokenType type, void *value)
+		: type(type), value(value)
 	{}
 
 	virtual ~Token()
@@ -41,7 +35,7 @@ struct Token
 			return;
 		}
 
-		if (type == TYPE_NUMBER) {
+		if (type == TokenType::TYPE_NUMBER) {
 			int* p = (int *) value;
 			delete p;
 		}

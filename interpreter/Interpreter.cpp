@@ -15,7 +15,7 @@ int Interpreter::visit()
 
 int Interpreter::visit(ASTNode *root)
 {
-	if (root->token->type == TYPE_NUMBER) {
+	if (root->token->type == Token::TokenType::TYPE_NUMBER) {
 		NumNode *node = (NumNode *) root;
 		return *((int*) node->token->value);
 	}
@@ -25,10 +25,10 @@ int Interpreter::visit(ASTNode *root)
 	int lhs = visit(binOpNode->lhs);
 	int rhs = visit(binOpNode->rhs);
 	switch (binOpNode->token->type) {
-		case TYPE_DIV: return lhs / rhs;
-		case TYPE_MUL: return lhs * rhs;
-		case TYPE_SUB: return lhs - rhs;
-		case TYPE_PLUS: return lhs + rhs;
+		case Token::TokenType::TYPE_DIV: return lhs / rhs;
+		case Token::TokenType::TYPE_MUL: return lhs * rhs;
+		case Token::TokenType::TYPE_SUB: return lhs - rhs;
+		case Token::TokenType::TYPE_PLUS: return lhs + rhs;
 		default:break;
 	}
 
