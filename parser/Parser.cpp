@@ -48,7 +48,6 @@ ASTNode *Parser::factor()
 			if (result != nullptr) {
 				delete result;
 			}
-
 			delete token;
 			throw e;
 		}

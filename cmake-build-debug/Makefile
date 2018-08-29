@@ -312,6 +312,33 @@ parser/ast/NumNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.s
 .PHONY : parser/ast/NumNode.cpp.s
 
+parser/ast/UnaryNode.o: parser/ast/UnaryNode.cpp.o
+
+.PHONY : parser/ast/UnaryNode.o
+
+# target to build an object file
+parser/ast/UnaryNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o
+.PHONY : parser/ast/UnaryNode.cpp.o
+
+parser/ast/UnaryNode.i: parser/ast/UnaryNode.cpp.i
+
+.PHONY : parser/ast/UnaryNode.i
+
+# target to preprocess a source file
+parser/ast/UnaryNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.i
+.PHONY : parser/ast/UnaryNode.cpp.i
+
+parser/ast/UnaryNode.s: parser/ast/UnaryNode.cpp.s
+
+.PHONY : parser/ast/UnaryNode.s
+
+# target to generate assembly for a file
+parser/ast/UnaryNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.s
+.PHONY : parser/ast/UnaryNode.cpp.s
+
 stream/char/CharStream.o: stream/char/CharStream.cpp.o
 
 .PHONY : stream/char/CharStream.o
@@ -369,6 +396,9 @@ help:
 	@echo "... parser/ast/NumNode.o"
 	@echo "... parser/ast/NumNode.i"
 	@echo "... parser/ast/NumNode.s"
+	@echo "... parser/ast/UnaryNode.o"
+	@echo "... parser/ast/UnaryNode.i"
+	@echo "... parser/ast/UnaryNode.s"
 	@echo "... stream/char/CharStream.o"
 	@echo "... stream/char/CharStream.i"
 	@echo "... stream/char/CharStream.s"

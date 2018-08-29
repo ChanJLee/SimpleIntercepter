@@ -23,6 +23,8 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../lexer/Lexer.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/Parser.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/BinOpNode.h
+CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/NumNode.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/char/CharStream.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../token/Token.h
@@ -50,6 +52,11 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../parser/ast/ASTNode
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../parser/ast/NumNode.cpp
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../parser/ast/NumNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../token/Token.h
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/UnaryNode.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/UnaryNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../exception/EOFError.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../exception/ParseError.h

@@ -127,6 +127,12 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>

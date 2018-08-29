@@ -3,34 +3,51 @@
 //
 
 #include "Interpreter.h"
-#include "../parser/ast/NumNode.h"
-#include "../parser/ast/BinOpNode.h"
 #include "../exception/ParseError.h"
 
 int Interpreter::visit()
 {
 	ASTNode *node = mParser.exp();
-	return visit(node);
+	int result = 0;
+
+	try {
+		result = visit(node);
+	}
+	catch (std::exception e) {
+		delete node;
+		throw e;
+	}
+
+	delete node;
+	return result;
 }
 
 int Interpreter::visit(ASTNode *root)
 {
-	if (root->token->type == Token::TokenType::TYPE_NUMBER) {
-		NumNode *node = (NumNode *) root;
-		return *((int*) node->token->value);
+	if (root->type == ASTNode::Type::NUM) {
+		return visit((NumNode *) root);
+	}
+	else if (root->type == ASTNode::Type::BIN) {
+		return visit((BinOpNode *) root);
 	}
 
-	// bin op
-	BinOpNode *binOpNode = (BinOpNode *) root;
-	int lhs = visit(binOpNode->lhs);
-	int rhs = visit(binOpNode->rhs);
-	switch (binOpNode->token->type) {
+	throw ParseError("invalid exp");
+}
+
+int Interpreter::visit(NumNode *node)
+{
+	return *((int *) node->token->value);
+}
+
+int Interpreter::visit(BinOpNode *node)
+{
+	int lhs = visit(node->lhs);
+	int rhs = visit(node->rhs);
+	switch (node->token->type) {
 		case Token::TokenType::TYPE_DIV: return lhs / rhs;
 		case Token::TokenType::TYPE_MUL: return lhs * rhs;
 		case Token::TokenType::TYPE_SUB: return lhs - rhs;
 		case Token::TokenType::TYPE_PLUS: return lhs + rhs;
-		default:break;
+		default: throw ParseError("unknown bin op");
 	}
-
-	throw ParseError("invalid exp");
 }

@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o"
   "SimpleInterpreter.pdb"
   "SimpleInterpreter"
 )

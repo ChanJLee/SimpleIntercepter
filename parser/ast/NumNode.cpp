@@ -6,10 +6,9 @@
 
 NumNode::~NumNode()
 {
-
 }
 NumNode::NumNode(Token *const token)
-	: ASTNode(token)
+	: ASTNode(token, ASTNode::Type::NUM)
 {
 
 }

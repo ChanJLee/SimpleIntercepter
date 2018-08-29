@@ -3,8 +3,9 @@
 //
 
 #include "ASTNode.h"
-ASTNode::ASTNode(Token *const token)
-	: token(token)
+
+ASTNode::ASTNode(Token *const token, ASTNode::Type type)
+	: token(token), type(type)
 {}
 
 ASTNode::~ASTNode()

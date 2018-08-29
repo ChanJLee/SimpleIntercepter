@@ -10,9 +10,16 @@
 class ASTNode
 {
 public:
-	Token* const token;
+	enum Type {
+		NUM,
+		BIN,
+		UNARY
+	};
 public:
-	ASTNode(Token *const token);
+	Token* const token;
+	Type type;
+public:
+	ASTNode(Token *const token, ASTNode::Type type);
 	virtual ~ASTNode();
 };
 

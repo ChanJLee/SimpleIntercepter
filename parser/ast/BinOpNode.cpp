@@ -14,7 +14,8 @@ BinOpNode::~BinOpNode()
 		delete rhs;
 	}
 }
+
 BinOpNode::BinOpNode(Token *const token, ASTNode *lhs, ASTNode *rhs)
-	: ASTNode(token), lhs(lhs), rhs(rhs)
+	: ASTNode(token, ASTNode::Type::BIN), lhs(lhs), rhs(rhs)
 {
 }

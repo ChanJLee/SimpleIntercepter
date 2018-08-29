@@ -7,6 +7,8 @@
 
 #include "../stream/Stream.h"
 #include "../parser/Parser.h"
+#include "../parser/ast/NumNode.h"
+#include "../parser/ast/BinOpNode.h"
 
 class Interpreter
 {
@@ -20,6 +22,10 @@ public:
 	int visit();
 private:
 	int visit(ASTNode *root);
+
+	int visit(NumNode* node);
+
+	int visit(BinOpNode* node);
 };
 
 #endif //SIMPLEINTERPRETER_INTERCEPTER_H

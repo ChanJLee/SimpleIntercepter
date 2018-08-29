@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o"
+  "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

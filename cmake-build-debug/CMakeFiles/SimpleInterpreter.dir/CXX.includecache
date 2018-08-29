@@ -17,10 +17,6 @@ exception
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp
 Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
-../parser/ast/NumNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
-../parser/ast/BinOpNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
 ../exception/ParseError.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 
@@ -29,6 +25,10 @@ Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
 ../parser/Parser.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
+../parser/ast/NumNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+../parser/ast/BinOpNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp
 Lexer.h
@@ -61,6 +61,8 @@ ast/BinOpNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
 ast/NumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+exception
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
 ast/ASTNode.h
@@ -95,6 +97,14 @@ ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 ../../token/Token.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.cpp
+UnaryNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+ASTNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
 
