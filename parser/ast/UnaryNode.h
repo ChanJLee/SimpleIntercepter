@@ -9,7 +9,7 @@
 #include "ASTNode.h"
 class UnaryNode: public ASTNode
 {
-private:
+public:
 	ASTNode* child;
 public:
 	UnaryNode(Token *const token,  ASTNode* child);

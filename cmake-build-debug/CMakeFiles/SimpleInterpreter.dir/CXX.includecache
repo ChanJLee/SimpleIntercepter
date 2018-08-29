@@ -29,6 +29,8 @@ Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
 ../parser/ast/BinOpNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
+../parser/ast/UnaryNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp
 Lexer.h
@@ -61,6 +63,8 @@ ast/BinOpNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
 ast/NumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+ast/UnaryNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
 exception
 -
 

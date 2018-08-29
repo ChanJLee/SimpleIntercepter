@@ -6,6 +6,7 @@
 #include "../exception/ParseError.h"
 #include "ast/BinOpNode.h"
 #include "ast/NumNode.h"
+#include "ast/UnaryNode.h"
 #include <exception>
 
 Parser::Parser(Stream *stream)
@@ -57,6 +58,16 @@ ASTNode *Parser::factor()
 	if (token->type == Token::TokenType::TYPE_NUMBER) {
 		eat(Token::TokenType::TYPE_NUMBER);
 		return new NumNode(token);
+	}
+
+	if (token->type == Token::TokenType::TYPE_PLUS) {
+		eat(Token::TokenType::TYPE_PLUS);
+		return new UnaryNode(token, factor());
+	}
+
+	if (token->type == Token::TokenType::TYPE_SUB) {
+		eat(Token::TokenType::TYPE_SUB);
+		return new UnaryNode(token, factor());
 	}
 
 	throw ParseError("invalid token");
