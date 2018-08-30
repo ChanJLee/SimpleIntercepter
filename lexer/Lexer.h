@@ -15,9 +15,13 @@ private:
 public:
 	Lexer(Stream *stream);
 
-	Token* next();
+	Token *next();
 private:
-	Token* nextNumber();
+	Token *nextNumber();
+
+	Token *nextID();
+
+	Token *nextColon();
 };
 
 

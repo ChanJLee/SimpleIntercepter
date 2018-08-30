@@ -5,6 +5,8 @@
 #ifndef SIMPLEINTERPRETER_TOKEN_H
 #define SIMPLEINTERPRETER_TOKEN_H
 
+#include <string>
+
 struct Token
 {
 	enum TokenType {
@@ -16,11 +18,12 @@ struct Token
 		TYPE_RIGHT_BRACKET,
 		TYPE_NUMBER,
 		TYPE_EOF,
-		TYPE_BEGIN,
-		TYPE_END,
-		TYPE_DOT,
-		TYPE_ASSIGN,
-		TYPE_SEMI,
+		TYPE_BEGIN, // BEGIN
+		TYPE_END, // END
+		TYPE_DOT, // .
+		TYPE_COLON, // :
+		TYPE_ASSIGN,// :=
+		TYPE_SEMI, // ;
 		TYPE_ID,
 	};
 
@@ -43,6 +46,11 @@ struct Token
 
 		if (type == TokenType::TYPE_NUMBER) {
 			int* p = (int *) value;
+			delete p;
+		}
+
+		if (type == TokenType::TYPE_ID) {
+			std::string* p = (std::string *) value;
 			delete p;
 		}
 	}

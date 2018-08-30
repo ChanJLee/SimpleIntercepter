@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/CharUtils.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
