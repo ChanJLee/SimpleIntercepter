@@ -61,8 +61,6 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/Unary
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/UnaryNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../token/Token.h
 
-CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../exception/EOFError.h
-CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../exception/ParseError.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/char/CharStream.cpp
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/char/CharStream.h

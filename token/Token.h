@@ -16,6 +16,12 @@ struct Token
 		TYPE_RIGHT_BRACKET,
 		TYPE_NUMBER,
 		TYPE_EOF,
+		TYPE_BEGIN,
+		TYPE_END,
+		TYPE_DOT,
+		TYPE_ASSIGN,
+		TYPE_SEMI,
+		TYPE_ID,
 	};
 
 	TokenType type;

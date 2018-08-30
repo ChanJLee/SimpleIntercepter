@@ -62,8 +62,6 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o
- /Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h
- /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h

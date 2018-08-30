@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h
-ParseError.h
-/Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
-
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 exception
 -
@@ -115,8 +111,6 @@ ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp
 CharStream.h
 /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
-../../exception/EOFError.h
-/Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h
 string
 -
 

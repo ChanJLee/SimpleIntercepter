@@ -3,13 +3,12 @@
 //
 
 #include "CharStream.h"
-#include "../../exception/EOFError.h"
 #include <string>
 
 char CharStream::next()
 {
-	if (!hasNext()) {
-		throw EOFError("End of stream");
+	if (mCurrentPosition + 1 >= mLen) {
+		return EOF;
 	}
 
 	return mStr[++mCurrentPosition];
@@ -17,18 +16,13 @@ char CharStream::next()
 
 void CharStream::back()
 {
-	--mCurrentPosition;
+	if (mCurrentPosition >= -1) {
+		--mCurrentPosition;
+	}
 }
 
 CharStream::CharStream(const char *mStr)
 	: mStr(mStr), mCurrentPosition(-1)
-{}
-
-bool CharStream::hasNext()
 {
-	if (mStr == NULL) {
-		return false;
-	}
-
-	return mCurrentPosition + 1 >= 0 && mCurrentPosition + 1 < strlen(mStr);
+	mLen = (int) (mStr == nullptr ? 0 : strlen(mStr));
 }
