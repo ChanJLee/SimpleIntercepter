@@ -4,7 +4,7 @@
 
 int main()
 {
-	CharStream charStream("7+8---+1");
+	CharStream charStream("(7 + 8) / 2");
 	Interpreter interpreter(&charStream);
 	std::cout << interpreter.visit() << std::endl;
 	return 0;

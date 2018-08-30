@@ -12,10 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15831aca-37f1-4697-ab82-5177de4f9835" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/Interpreter.cpp" afterPath="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/Interpreter.h" afterPath="$PROJECT_DIR$/interpreter/Interpreter.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser/Parser.cpp" afterPath="$PROJECT_DIR$/parser/Parser.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser/ast/UnaryNode.h" afterPath="$PROJECT_DIR$/parser/ast/UnaryNode.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" afterPath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Parser.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parser.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parser/Parser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+            <state relative-caret-position="955">
+              <caret line="82" column="38" lean-forward="true" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
               <folding>
                 <element signature="e#40#59#0" expanded="true" />
               </folding>
@@ -68,7 +66,7 @@
       <file leaf-file-name="Interpreter.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="660">
               <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
               <folding>
                 <element signature="e#40#64#0" expanded="true" />
@@ -77,12 +75,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinOpNode.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/ast/BinOpNode.h">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="90">
+              <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,7 +174,6 @@
         <option value="$PROJECT_DIR$/parser/op/BinOp.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/AbstractSyntaxTree.h" />
         <option value="$PROJECT_DIR$/parser/ast/AbstractSyntaxTree.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/BinOpNode.h" />
         <option value="$PROJECT_DIR$/parser/ast/NumNode.h" />
         <option value="$PROJECT_DIR$/stream/Stream.h" />
@@ -195,6 +194,7 @@
         <option value="$PROJECT_DIR$/interpreter/Interpreter.h" />
         <option value="$PROJECT_DIR$/parser/ast/UnaryNode.h" />
         <option value="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -593,12 +593,12 @@
       <workItem from="1535466223657" duration="2221000" />
       <workItem from="1535468767936" duration="69000" />
       <workItem from="1535468851221" duration="927000" />
-      <workItem from="1535552463621" duration="2334000" />
+      <workItem from="1535552463621" duration="3205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24222000" />
+    <option name="totallyTimeSpent" value="25093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="6" />
@@ -642,7 +642,7 @@
         <state relative-caret-position="210">
           <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding>
-            <element signature="e#112#136#0" expanded="true" />
+            <element signature="e#112#136#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -803,7 +803,7 @@
         <state relative-caret-position="165">
           <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
-            <element signature="e#112#136#0" expanded="true" />
+            <element signature="e#112#136#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -843,16 +843,6 @@
         <state relative-caret-position="135">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,16 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
-          <folding>
-            <element signature="e#40#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser/ast/UnaryNode.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -979,10 +959,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parser/Parser.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+        <state relative-caret-position="955">
+          <caret line="82" column="38" lean-forward="true" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
           <folding>
             <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+          <folding>
+            <element signature="e#40#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
