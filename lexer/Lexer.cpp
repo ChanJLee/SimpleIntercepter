@@ -17,7 +17,7 @@ Token *Lexer::next()
 	char ch = EOF;
 	while ((ch = mStream->next()) == ' ') {}
 	if (ch == EOF) {
-		return new Token(Token::TokenType::TYPE_EOF, 0);
+		return new Token(Token::TokenType::TYPE_EOF);
 	}
 
 	if (ch == '(') {
@@ -67,7 +67,7 @@ Token *Lexer::next()
 		return nextID();
 	}
 
-	throw ParseError("unknown char: " + ch);
+	throw ParseError("unknown char");
 }
 
 Token *Lexer::nextNumber()
@@ -110,7 +110,7 @@ Token *Lexer::nextID()
 
 Token *Lexer::nextColon()
 {
-	// ignore :
+	// ignore ':'
 	mStream->next();
 	char ch = mStream->next();
 	if (ch != '=') {

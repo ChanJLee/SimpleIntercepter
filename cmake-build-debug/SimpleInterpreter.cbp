@@ -82,9 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/CharUtils.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/exception/EOFError.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
@@ -146,6 +143,9 @@
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/CMakeLists.txt">

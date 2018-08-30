@@ -18,6 +18,7 @@ CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../lexer/Lexer.cpp
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../lexer/Lexer.h
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../token/Token.h
+CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../utils/CharUtils.h
 
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../interpreter/Interpreter.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../lexer/Lexer.h

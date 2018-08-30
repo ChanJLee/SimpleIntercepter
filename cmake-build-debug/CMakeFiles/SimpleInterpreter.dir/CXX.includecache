@@ -35,6 +35,8 @@ Lexer.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 string
 -
+../utils/CharUtils.h
+/Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
 ../stream/Stream.h
@@ -121,4 +123,8 @@ ctype.h
 -
 
 /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+string
+-
+
+/Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h
 

@@ -79,3 +79,8 @@ int Interpreter::visit(UnaryNode *node)
 
 	throw ParseError("unknown unary op");
 }
+
+void Interpreter::program()
+{
+	// do something
+}

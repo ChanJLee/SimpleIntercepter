@@ -20,8 +20,10 @@ public:
 		: mParser(stream)
 	{}
 
-	int visit();
+	void program();
 private:
+	int visit();
+
 	int visit(ASTNode *node);
 
 	int visit(NumNode* node);

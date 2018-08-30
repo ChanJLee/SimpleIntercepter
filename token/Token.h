@@ -28,16 +28,21 @@ struct Token
 	};
 
 	TokenType type;
-	void* value;
+	const void* value;
 
 	Token(TokenType type)
 		: type(type)
 	{}
 
-	Token(TokenType type, void *value)
+	Token(TokenType type, const int *value)
 		: type(type), value(value)
 	{}
 
+	Token(TokenType type, const std::string *value)
+		: type(type), value(value)
+	{}
+
+	// TODO refactor
 	virtual ~Token()
 	{
 		if (!value) {
@@ -45,12 +50,12 @@ struct Token
 		}
 
 		if (type == TokenType::TYPE_NUMBER) {
-			int* p = (int *) value;
+			const int* p = (const int *) value;
 			delete p;
 		}
 
 		if (type == TokenType::TYPE_ID) {
-			std::string* p = (std::string *) value;
+			const std::string* p = (const std::string *) value;
 			delete p;
 		}
 	}
