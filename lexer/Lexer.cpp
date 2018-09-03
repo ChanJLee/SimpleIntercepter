@@ -4,7 +4,6 @@
 
 #include "Lexer.h"
 #include "../exception/ParseError.h"
-#include <string>
 #include "../utils/CharUtils.h"
 
 Lexer::Lexer(Stream *stream)
@@ -13,9 +12,11 @@ Lexer::Lexer(Stream *stream)
 
 Token *Lexer::next()
 {
-	// skip blank
 	char ch = EOF;
-	while ((ch = mStream->next()) == ' ') {}
+
+	// skip blank
+	while (is_blank(ch = mStream->next())) {}
+
 	if (ch == EOF) {
 		return new Token(Token::TokenType::TYPE_EOF);
 	}
@@ -79,7 +80,10 @@ Token *Lexer::nextNumber()
 		ch = mStream->next();
 	}
 
-	mStream->back();
+	if (ch != EOF) {
+		mStream->back();
+	}
+
 	int *value = new int(atoi(num.c_str()));
 	return new Token(Token::TokenType::TYPE_NUMBER, value);
 }
@@ -92,8 +96,11 @@ Token *Lexer::nextID()
 		(*id) += ch;
 		ch = mStream->next();
 	}
-	while (is_alpha(ch) || is_num(ch));
-	mStream->back();
+	while (is_alpha(ch) || is_num(ch) || ch == '_');
+
+	if (ch != EOF) {
+		mStream->back();
+	}
 
 	if ((*id) == "BEGIN") {
 		delete id;
@@ -114,7 +121,9 @@ Token *Lexer::nextColon()
 	mStream->next();
 	char ch = mStream->next();
 	if (ch != '=') {
-		mStream->back();
+		if (ch != EOF) {
+			mStream->back();
+		}
 		return new Token(Token::TokenType::TYPE_COLON);
 	}
 

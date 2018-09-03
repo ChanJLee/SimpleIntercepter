@@ -33,8 +33,6 @@ Lexer.h
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
 ../exception/ParseError.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
-string
--
 ../utils/CharUtils.h
 /Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h
 
@@ -51,6 +49,10 @@ stream/char/CharStream.h
 /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
 interpreter/Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
+fstream
+-
+sstream
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp
 Parser.h
