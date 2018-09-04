@@ -19,7 +19,7 @@ ASTNode *Parser::exp()
 {
 	ASTNode *lhs = term();
 	while (mCurrentToken->type == Token::TokenType::TYPE_SUB || mCurrentToken->type == Token::TokenType::TYPE_PLUS) {
-		Token* token = mCurrentToken;
+		Token *token = mCurrentToken;
 		eat(token->type);
 		lhs = new BinOpNode(token, lhs, term());
 	}
@@ -30,7 +30,7 @@ ASTNode *Parser::term()
 {
 	ASTNode *lhs = factor();
 	while (mCurrentToken->type == Token::TokenType::TYPE_DIV || mCurrentToken->type == Token::TokenType::TYPE_MUL) {
-		Token* token = mCurrentToken;
+		Token *token = mCurrentToken;
 		eat(token->type);
 		lhs = new BinOpNode(token, lhs, factor());
 	}
@@ -39,13 +39,14 @@ ASTNode *Parser::term()
 
 ASTNode *Parser::factor()
 {
-	Token* token = mCurrentToken;
+	Token *token = mCurrentToken;
 	if (token->type == Token::TokenType::TYPE_LEFT_BRACKET) {
 		eat(Token::TokenType::TYPE_LEFT_BRACKET);
 		ASTNode *result = exp();
 		try {
 			eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing )");
-		} catch (std::exception e) {
+		}
+		catch (std::exception e) {
 			if (result != nullptr) {
 				delete result;
 			}
@@ -86,4 +87,16 @@ void Parser::eat(int type, const char *errorMsg)
 	}
 
 	throw ParseError(errorMsg);
+}
+
+ASTNode *Parser::program()
+{
+	ASTNode *root = compound();
+	eat(Token::TokenType::TYPE_DOT);
+	return root;
+}
+
+ASTNode *Parser::compound()
+{
+	return nullptr;
 }

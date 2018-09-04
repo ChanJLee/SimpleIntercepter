@@ -258,6 +258,33 @@ parser/ast/ASTNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.s
 .PHONY : parser/ast/ASTNode.cpp.s
 
+parser/ast/AssignStatementNode.o: parser/ast/AssignStatementNode.cpp.o
+
+.PHONY : parser/ast/AssignStatementNode.o
+
+# target to build an object file
+parser/ast/AssignStatementNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o
+.PHONY : parser/ast/AssignStatementNode.cpp.o
+
+parser/ast/AssignStatementNode.i: parser/ast/AssignStatementNode.cpp.i
+
+.PHONY : parser/ast/AssignStatementNode.i
+
+# target to preprocess a source file
+parser/ast/AssignStatementNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.i
+.PHONY : parser/ast/AssignStatementNode.cpp.i
+
+parser/ast/AssignStatementNode.s: parser/ast/AssignStatementNode.cpp.s
+
+.PHONY : parser/ast/AssignStatementNode.s
+
+# target to generate assembly for a file
+parser/ast/AssignStatementNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.s
+.PHONY : parser/ast/AssignStatementNode.cpp.s
+
 parser/ast/BinOpNode.o: parser/ast/BinOpNode.cpp.o
 
 .PHONY : parser/ast/BinOpNode.o
@@ -284,6 +311,60 @@ parser/ast/BinOpNode.s: parser/ast/BinOpNode.cpp.s
 parser/ast/BinOpNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.s
 .PHONY : parser/ast/BinOpNode.cpp.s
+
+parser/ast/CompoundNode.o: parser/ast/CompoundNode.cpp.o
+
+.PHONY : parser/ast/CompoundNode.o
+
+# target to build an object file
+parser/ast/CompoundNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o
+.PHONY : parser/ast/CompoundNode.cpp.o
+
+parser/ast/CompoundNode.i: parser/ast/CompoundNode.cpp.i
+
+.PHONY : parser/ast/CompoundNode.i
+
+# target to preprocess a source file
+parser/ast/CompoundNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.i
+.PHONY : parser/ast/CompoundNode.cpp.i
+
+parser/ast/CompoundNode.s: parser/ast/CompoundNode.cpp.s
+
+.PHONY : parser/ast/CompoundNode.s
+
+# target to generate assembly for a file
+parser/ast/CompoundNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.s
+.PHONY : parser/ast/CompoundNode.cpp.s
+
+parser/ast/NoOpNode.o: parser/ast/NoOpNode.cpp.o
+
+.PHONY : parser/ast/NoOpNode.o
+
+# target to build an object file
+parser/ast/NoOpNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o
+.PHONY : parser/ast/NoOpNode.cpp.o
+
+parser/ast/NoOpNode.i: parser/ast/NoOpNode.cpp.i
+
+.PHONY : parser/ast/NoOpNode.i
+
+# target to preprocess a source file
+parser/ast/NoOpNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.i
+.PHONY : parser/ast/NoOpNode.cpp.i
+
+parser/ast/NoOpNode.s: parser/ast/NoOpNode.cpp.s
+
+.PHONY : parser/ast/NoOpNode.s
+
+# target to generate assembly for a file
+parser/ast/NoOpNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.s
+.PHONY : parser/ast/NoOpNode.cpp.s
 
 parser/ast/NumNode.o: parser/ast/NumNode.cpp.o
 
@@ -312,6 +393,33 @@ parser/ast/NumNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.s
 .PHONY : parser/ast/NumNode.cpp.s
 
+parser/ast/StatementNode.o: parser/ast/StatementNode.cpp.o
+
+.PHONY : parser/ast/StatementNode.o
+
+# target to build an object file
+parser/ast/StatementNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o
+.PHONY : parser/ast/StatementNode.cpp.o
+
+parser/ast/StatementNode.i: parser/ast/StatementNode.cpp.i
+
+.PHONY : parser/ast/StatementNode.i
+
+# target to preprocess a source file
+parser/ast/StatementNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.i
+.PHONY : parser/ast/StatementNode.cpp.i
+
+parser/ast/StatementNode.s: parser/ast/StatementNode.cpp.s
+
+.PHONY : parser/ast/StatementNode.s
+
+# target to generate assembly for a file
+parser/ast/StatementNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.s
+.PHONY : parser/ast/StatementNode.cpp.s
+
 parser/ast/UnaryNode.o: parser/ast/UnaryNode.cpp.o
 
 .PHONY : parser/ast/UnaryNode.o
@@ -338,6 +446,33 @@ parser/ast/UnaryNode.s: parser/ast/UnaryNode.cpp.s
 parser/ast/UnaryNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.s
 .PHONY : parser/ast/UnaryNode.cpp.s
+
+parser/ast/Var.o: parser/ast/Var.cpp.o
+
+.PHONY : parser/ast/Var.o
+
+# target to build an object file
+parser/ast/Var.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.o
+.PHONY : parser/ast/Var.cpp.o
+
+parser/ast/Var.i: parser/ast/Var.cpp.i
+
+.PHONY : parser/ast/Var.i
+
+# target to preprocess a source file
+parser/ast/Var.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.i
+.PHONY : parser/ast/Var.cpp.i
+
+parser/ast/Var.s: parser/ast/Var.cpp.s
+
+.PHONY : parser/ast/Var.s
+
+# target to generate assembly for a file
+parser/ast/Var.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.s
+.PHONY : parser/ast/Var.cpp.s
 
 stream/char/CharStream.o: stream/char/CharStream.cpp.o
 
@@ -390,15 +525,30 @@ help:
 	@echo "... parser/ast/ASTNode.o"
 	@echo "... parser/ast/ASTNode.i"
 	@echo "... parser/ast/ASTNode.s"
+	@echo "... parser/ast/AssignStatementNode.o"
+	@echo "... parser/ast/AssignStatementNode.i"
+	@echo "... parser/ast/AssignStatementNode.s"
 	@echo "... parser/ast/BinOpNode.o"
 	@echo "... parser/ast/BinOpNode.i"
 	@echo "... parser/ast/BinOpNode.s"
+	@echo "... parser/ast/CompoundNode.o"
+	@echo "... parser/ast/CompoundNode.i"
+	@echo "... parser/ast/CompoundNode.s"
+	@echo "... parser/ast/NoOpNode.o"
+	@echo "... parser/ast/NoOpNode.i"
+	@echo "... parser/ast/NoOpNode.s"
 	@echo "... parser/ast/NumNode.o"
 	@echo "... parser/ast/NumNode.i"
 	@echo "... parser/ast/NumNode.s"
+	@echo "... parser/ast/StatementNode.o"
+	@echo "... parser/ast/StatementNode.i"
+	@echo "... parser/ast/StatementNode.s"
 	@echo "... parser/ast/UnaryNode.o"
 	@echo "... parser/ast/UnaryNode.i"
 	@echo "... parser/ast/UnaryNode.s"
+	@echo "... parser/ast/Var.o"
+	@echo "... parser/ast/Var.i"
+	@echo "... parser/ast/Var.s"
 	@echo "... stream/char/CharStream.o"
 	@echo "... stream/char/CharStream.i"
 	@echo "... stream/char/CharStream.s"

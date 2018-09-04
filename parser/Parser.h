@@ -16,8 +16,10 @@ private:
 	Token *mCurrentToken = nullptr;
 public:
 	Parser(Stream *stream);
-	ASTNode *exp();
+	ASTNode* program();
 private:
+	ASTNode* compound();
+	ASTNode *exp();
 	ASTNode *term();
 	ASTNode *factor();
 	void eat(int type);

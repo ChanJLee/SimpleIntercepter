@@ -10,13 +10,18 @@
 class ASTNode
 {
 public:
-	enum Type {
+	enum Type
+	{
 		NUM,
 		BIN,
-		UNARY
+		UNARY,
+		COMPOUND,
+		NO_OP,
+		ASSIGN,
+		VAR,
 	};
 public:
-	Token* const token;
+	Token *const token;
 	Type type;
 public:
 	ASTNode(Token *const token, ASTNode::Type type);

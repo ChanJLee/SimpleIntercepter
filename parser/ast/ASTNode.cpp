@@ -10,5 +10,7 @@ ASTNode::ASTNode(Token *const token, ASTNode::Type type)
 
 ASTNode::~ASTNode()
 {
-	delete token;
+	if (token != nullptr) {
+		delete token;
+	}
 }
