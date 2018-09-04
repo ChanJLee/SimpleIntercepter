@@ -9,7 +9,9 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/Parser
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/BinOpNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/NumNode.h
+CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/StatementNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/UnaryNode.h
+CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/Var.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../token/Token.h
 
@@ -27,7 +29,9 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/Parser.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/BinOpNode.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/NumNode.h
+CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/StatementNode.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/UnaryNode.h
+CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/Var.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/char/CharStream.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../token/Token.h
@@ -37,9 +41,14 @@ CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../lexer/Lexer.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/Parser.cpp
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/Parser.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/AssignStatementNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/BinOpNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/CompoundStatementNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/NoOpNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/NumNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/StatementNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/UnaryNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/Var.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../token/Token.h
 
@@ -47,20 +56,49 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o: ../parser/ast/ASTNode
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o: ../token/Token.h
 
+CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o: ../parser/ast/AssignStatementNode.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o: ../parser/ast/AssignStatementNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o: ../parser/ast/StatementNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o: ../parser/ast/Var.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o: ../token/Token.h
+
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o: ../parser/ast/BinOpNode.cpp
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o: ../parser/ast/BinOpNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o: ../token/Token.h
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o: ../parser/ast/CompoundStatementNode.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o: ../parser/ast/CompoundStatementNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o: ../parser/ast/StatementNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o: ../token/Token.h
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o: ../parser/ast/NoOpNode.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o: ../parser/ast/NoOpNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o: ../parser/ast/StatementNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../parser/ast/NumNode.cpp
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../parser/ast/NumNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../token/Token.h
 
+CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o: ../parser/ast/StatementNode.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o: ../parser/ast/StatementNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o: ../token/Token.h
+
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/UnaryNode.cpp
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../parser/ast/UnaryNode.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: ../token/Token.h
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.o: ../parser/ast/Var.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.o: ../parser/ast/Var.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/char/CharStream.cpp

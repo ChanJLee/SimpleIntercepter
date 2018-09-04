@@ -10,7 +10,9 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o
@@ -28,7 +30,9 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
@@ -38,29 +42,63 @@ CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h

@@ -7,6 +7,9 @@
 #include "ast/BinOpNode.h"
 #include "ast/NumNode.h"
 #include "ast/UnaryNode.h"
+#include "ast/CompoundStatementNode.h"
+#include "ast/NoOpNode.h"
+#include "ast/AssignStatementNode.h"
 #include <exception>
 
 Parser::Parser(Stream *stream)
@@ -71,6 +74,10 @@ ASTNode *Parser::factor()
 		return new UnaryNode(token, factor());
 	}
 
+	if (token->type == Token::TokenType::TYPE_ID) {
+		return variable();
+	}
+
 	throw ParseError("invalid token");
 }
 
@@ -96,7 +103,59 @@ ASTNode *Parser::program()
 	return root;
 }
 
-ASTNode *Parser::compound()
+StatementNode *Parser::compound()
 {
-	return nullptr;
+	eat(Token::TokenType::TYPE_BEGIN);
+	std::vector<StatementNode *> statements;
+	StatementNode *child = statement();
+	statements.push_back(child);
+	while (mCurrentToken->type == Token::TokenType::TYPE_SEMI) {
+		eat(Token::TokenType::TYPE_SEMI);
+		child = statement();
+		statements.push_back(child);
+	}
+
+	eat(Token::TokenType::TYPE_END);
+	return new CompoundStatementNode(statements);;
+}
+
+StatementNode *Parser::statement()
+{
+	if (mCurrentToken->type == Token::TokenType::TYPE_BEGIN) {
+		return compound();
+	}
+
+	if (mCurrentToken->type == Token::TokenType::TYPE_ID) {
+		return assignStatement();
+	}
+
+	return empty();
+}
+
+StatementNode *Parser::assignStatement()
+{
+	Var *lv = variable();
+	Token *op = mCurrentToken;
+	eat(Token::TYPE_ASSIGN);
+	delete op;
+	return new AssignStatementNode(lv, exp());
+}
+
+StatementNode *Parser::empty()
+{
+	return new NoOpNode();
+}
+
+Var *Parser::variable()
+{
+	Var *var = new Var(mCurrentToken);
+	eat(Token::TokenType::TYPE_ID);
+	return var;
+}
+
+ASTNode *Parser::parse()
+{
+	ASTNode *root = program();
+	eat(EOF, "eof error");
+	return root;
 }

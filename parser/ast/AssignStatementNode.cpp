@@ -4,14 +4,14 @@
 
 #include "AssignStatementNode.h"
 
-AssignStatementNode::AssignStatementNode(Token *lhs, ASTNode *expr)
-	: StatementNode(ASTNode::Type::ASSIGN), lhs(lhs), expr(expr)
+AssignStatementNode::AssignStatementNode(Var *lv, ASTNode *expr)
+	: StatementNode(ASTNode::Type::ASSIGN), lv(lv), expr(expr)
 {}
 
 AssignStatementNode::~AssignStatementNode()
 {
-	if (lhs != nullptr) {
-		delete lhs;
+	if (lv != nullptr) {
+		delete lv;
 	}
 
 	if (expr != nullptr) {

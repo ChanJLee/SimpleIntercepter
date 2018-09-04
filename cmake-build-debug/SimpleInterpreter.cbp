@@ -127,10 +127,10 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundNode.cpp">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundNode.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.cpp">

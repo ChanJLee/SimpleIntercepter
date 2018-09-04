@@ -8,6 +8,8 @@
 
 #include "ast/ASTNode.h"
 #include "../lexer/Lexer.h"
+#include "ast/StatementNode.h"
+#include "ast/Var.h"
 
 class Parser
 {
@@ -16,14 +18,19 @@ private:
 	Token *mCurrentToken = nullptr;
 public:
 	Parser(Stream *stream);
-	ASTNode* program();
+	ASTNode *parse();
 private:
-	ASTNode* compound();
+	ASTNode *program();
+	StatementNode *compound();
+	StatementNode *statement();
+	StatementNode *assignStatement();
+	StatementNode *empty();
+	Var * variable();
 	ASTNode *exp();
 	ASTNode *term();
 	ASTNode *factor();
 	void eat(int type);
-	void eat(int type, const char* errorMsg);
+	void eat(int type, const char *errorMsg);
 };
 
 

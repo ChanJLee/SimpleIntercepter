@@ -312,32 +312,32 @@ parser/ast/BinOpNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.s
 .PHONY : parser/ast/BinOpNode.cpp.s
 
-parser/ast/CompoundNode.o: parser/ast/CompoundNode.cpp.o
+parser/ast/CompoundStatementNode.o: parser/ast/CompoundStatementNode.cpp.o
 
-.PHONY : parser/ast/CompoundNode.o
+.PHONY : parser/ast/CompoundStatementNode.o
 
 # target to build an object file
-parser/ast/CompoundNode.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o
-.PHONY : parser/ast/CompoundNode.cpp.o
+parser/ast/CompoundStatementNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o
+.PHONY : parser/ast/CompoundStatementNode.cpp.o
 
-parser/ast/CompoundNode.i: parser/ast/CompoundNode.cpp.i
+parser/ast/CompoundStatementNode.i: parser/ast/CompoundStatementNode.cpp.i
 
-.PHONY : parser/ast/CompoundNode.i
+.PHONY : parser/ast/CompoundStatementNode.i
 
 # target to preprocess a source file
-parser/ast/CompoundNode.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.i
-.PHONY : parser/ast/CompoundNode.cpp.i
+parser/ast/CompoundStatementNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.i
+.PHONY : parser/ast/CompoundStatementNode.cpp.i
 
-parser/ast/CompoundNode.s: parser/ast/CompoundNode.cpp.s
+parser/ast/CompoundStatementNode.s: parser/ast/CompoundStatementNode.cpp.s
 
-.PHONY : parser/ast/CompoundNode.s
+.PHONY : parser/ast/CompoundStatementNode.s
 
 # target to generate assembly for a file
-parser/ast/CompoundNode.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.s
-.PHONY : parser/ast/CompoundNode.cpp.s
+parser/ast/CompoundStatementNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.s
+.PHONY : parser/ast/CompoundStatementNode.cpp.s
 
 parser/ast/NoOpNode.o: parser/ast/NoOpNode.cpp.o
 
@@ -531,9 +531,9 @@ help:
 	@echo "... parser/ast/BinOpNode.o"
 	@echo "... parser/ast/BinOpNode.i"
 	@echo "... parser/ast/BinOpNode.s"
-	@echo "... parser/ast/CompoundNode.o"
-	@echo "... parser/ast/CompoundNode.i"
-	@echo "... parser/ast/CompoundNode.s"
+	@echo "... parser/ast/CompoundStatementNode.o"
+	@echo "... parser/ast/CompoundStatementNode.i"
+	@echo "... parser/ast/CompoundStatementNode.s"
 	@echo "... parser/ast/NoOpNode.o"
 	@echo "... parser/ast/NoOpNode.i"
 	@echo "... parser/ast/NoOpNode.s"

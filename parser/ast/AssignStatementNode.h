@@ -7,12 +7,15 @@
 
 
 #include "StatementNode.h"
+#include "Var.h"
+
 class AssignStatementNode: public StatementNode
 {
 public:
-	Token *lhs;
+	Var *lv;
 	ASTNode *expr;
-	AssignStatementNode(Token *lhs, ASTNode *expr);
+	AssignStatementNode(Var *lv, ASTNode *expr);
+
 	virtual ~AssignStatementNode();
 };
 

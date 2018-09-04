@@ -7,7 +7,7 @@
 
 int Interpreter::visit()
 {
-	ASTNode *node = mParser.exp();
+	ASTNode *node = mParser.parse();
 	int result = 0;
 
 	try {
@@ -31,7 +31,7 @@ int Interpreter::visit(ASTNode *node)
 		return visit((BinOpNode *) node);
 	}
 	else if (node->type == ASTNode::Type::UNARY) {
-		return visit((UnaryNode*) node);
+		return visit((UnaryNode *) node);
 	}
 
 	throw ParseError("invalid exp");

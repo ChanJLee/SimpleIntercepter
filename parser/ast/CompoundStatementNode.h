@@ -10,13 +10,13 @@
 #include "ASTNode.h"
 #include "StatementNode.h"
 
-class CompoundNode: public StatementNode
+class CompoundStatementNode: public StatementNode
 {
 public:
 	const std::vector<StatementNode *> statements;
 public:
-	CompoundNode(const std::vector<StatementNode *> &statements);
-	virtual ~CompoundNode();
+	CompoundStatementNode(const std::vector<StatementNode *> &statements);
+	virtual ~CompoundStatementNode();
 };
 
 

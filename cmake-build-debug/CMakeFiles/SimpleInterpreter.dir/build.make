@@ -273,28 +273,28 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o.provides: CMakeFiles
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o
 
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
-CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o: ../parser/ast/CompoundNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundNode.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o: ../parser/ast/CompoundStatementNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundNode.cpp > CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.i
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp > CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.i
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.s
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.s
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.requires:
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.requires:
 
-.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.requires
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.requires
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.provides.build
-.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.provides
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.provides
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o
+CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o
 
 
 CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
@@ -404,7 +404,7 @@ SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o" \
@@ -422,7 +422,7 @@ SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o
-SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o
@@ -446,7 +446,7 @@ CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/lexe
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o.requires
-CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundNode.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o.requires
