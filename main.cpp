@@ -127,21 +127,24 @@ void checkStream()
 }
 
 // trim from start
-static inline std::string &ltrim(std::string &s) {
+static inline std::string &ltrim(std::string &s)
+{
 	s.erase(s.begin(), std::find_if(s.begin(), s.end(),
 									std::not1(std::ptr_fun<int, int>(std::isspace))));
 	return s;
 }
 
 // trim from end
-static inline std::string &rtrim(std::string &s) {
+static inline std::string &rtrim(std::string &s)
+{
 	s.erase(std::find_if(s.rbegin(), s.rend(),
 						 std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
 	return s;
 }
 
 // trim from both ends
-static inline std::string &trim(std::string &s) {
+static inline std::string &trim(std::string &s)
+{
 	return ltrim(rtrim(s));
 }
 
@@ -153,13 +156,12 @@ void readPas()
 	char ch;
 	while (!infile.eof()) {
 		infile >> std::noskipws >> ch;
-		printf("%x\n", ch);
 		ss.put(ch);
 	}
-	std::cout << "\n";
 	infile.close();
 
 	std::string content = ss.str();
+	std::cout << content;
 	Lexer lexer = Lexer(new CharStream(trim(content).c_str()));
 	Token *token = lexer.next();
 	while (token->type != Token::TokenType::TYPE_EOF) {
@@ -176,8 +178,11 @@ void readPas()
 				break;
 			case Token::TokenType::TYPE_RIGHT_BRACKET : std::cout << "right bracket" << std::endl;
 				break;
-			case Token::TokenType::TYPE_NUMBER : std::cout << "number: " << *((int *) token->value) << std::endl;
+			case Token::TokenType::TYPE_NUMBER : {
+				NumToken *numToken = (NumToken *) token;
+				std::cout << "number: " << numToken->value << std::endl;
 				break;
+			}
 			case Token::TokenType::TYPE_EOF : std::cout << "eof" << std::endl;
 				break;
 			case Token::TokenType::TYPE_BEGIN : std::cout << "begin" << std::endl;
@@ -192,9 +197,12 @@ void readPas()
 				break;
 			case Token::TokenType::TYPE_SEMI : std::cout << "semi" << std::endl;
 				break;
-			case Token::TokenType::TYPE_ID : std::cout << "id: " << *((const std::string *) token->value) << std::endl;
+			case Token::TokenType::TYPE_ID : {
+				IdToken *idToken = (IdToken *) token;
+				std::cout << "id: " << idToken->value << std::endl;
 				break;
-			default: std::cerr << "unknown error: " << token->value << std::endl;
+			}
+			default: std::cerr << "unknown error: " << std::endl;
 				break;
 		}
 

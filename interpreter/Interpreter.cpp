@@ -25,7 +25,8 @@ int Interpreter::visit(ASTNode *node)
 
 int Interpreter::visit(NumNode *node)
 {
-	return *((int *) node->token->value);
+	NumToken *token = (NumToken *) node->token;
+	return token->value;
 }
 
 int Interpreter::visit(BinOpNode *node)
@@ -104,12 +105,14 @@ void Interpreter::visitNoOpStatementNode(NoOpStatementNode *node)
 
 void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
-	mSymbolTable[*((const std::string *) (node->lv->token->value))] = visit(node->rv);
+	IdToken *lv = (IdToken *) node->lv->token;
+	mSymbolTable[lv->value] = visit(node->rv);
 }
 
 int Interpreter::visit(VarNode *node)
 {
-	auto it = mSymbolTable.find(*((const std::string *) (node->token->value)));
+	IdToken *lv = (IdToken *) node->token;
+	auto it = mSymbolTable.find(lv->value);
 	if (it == mSymbolTable.end()) {
 		throw ParseError("unknown symbol");
 	}

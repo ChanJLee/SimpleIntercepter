@@ -7,7 +7,8 @@
 NumNode::~NumNode()
 {
 }
-NumNode::NumNode(Token *const token)
+
+NumNode::NumNode(NumToken *token)
 	: ASTNode(token, ASTNode::Type::NUM)
 {
 

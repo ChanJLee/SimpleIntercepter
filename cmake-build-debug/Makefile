@@ -501,6 +501,60 @@ stream/char/CharStream.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.s
 .PHONY : stream/char/CharStream.cpp.s
 
+token/IdToken.o: token/IdToken.cpp.o
+
+.PHONY : token/IdToken.o
+
+# target to build an object file
+token/IdToken.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o
+.PHONY : token/IdToken.cpp.o
+
+token/IdToken.i: token/IdToken.cpp.i
+
+.PHONY : token/IdToken.i
+
+# target to preprocess a source file
+token/IdToken.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.i
+.PHONY : token/IdToken.cpp.i
+
+token/IdToken.s: token/IdToken.cpp.s
+
+.PHONY : token/IdToken.s
+
+# target to generate assembly for a file
+token/IdToken.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.s
+.PHONY : token/IdToken.cpp.s
+
+token/NumToken.o: token/NumToken.cpp.o
+
+.PHONY : token/NumToken.o
+
+# target to build an object file
+token/NumToken.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o
+.PHONY : token/NumToken.cpp.o
+
+token/NumToken.i: token/NumToken.cpp.i
+
+.PHONY : token/NumToken.i
+
+# target to preprocess a source file
+token/NumToken.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i
+.PHONY : token/NumToken.cpp.i
+
+token/NumToken.s: token/NumToken.cpp.s
+
+.PHONY : token/NumToken.s
+
+# target to generate assembly for a file
+token/NumToken.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s
+.PHONY : token/NumToken.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -552,6 +606,12 @@ help:
 	@echo "... stream/char/CharStream.o"
 	@echo "... stream/char/CharStream.i"
 	@echo "... stream/char/CharStream.s"
+	@echo "... token/IdToken.o"
+	@echo "... token/IdToken.i"
+	@echo "... token/IdToken.s"
+	@echo "... token/NumToken.o"
+	@echo "... token/NumToken.i"
+	@echo "... token/NumToken.s"
 .PHONY : help
 
 

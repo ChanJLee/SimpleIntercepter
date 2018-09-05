@@ -53,7 +53,7 @@ ASTNode *Parser::factor()
 
 	if (token->type == Token::TokenType::TYPE_NUMBER) {
 		eat(Token::TokenType::TYPE_NUMBER);
-		return new NumNode(token);
+		return new NumNode((NumToken *const) token);
 	}
 
 	if (token->type == Token::TokenType::TYPE_PLUS) {
@@ -139,7 +139,7 @@ StatementNode *Parser::empty()
 
 VarNode *Parser::variable()
 {
-	VarNode *var = new VarNode(mCurrentToken);
+	VarNode *var = new VarNode((IdToken *const) mCurrentToken);
 	eat(Token::TokenType::TYPE_ID);
 	return var;
 }

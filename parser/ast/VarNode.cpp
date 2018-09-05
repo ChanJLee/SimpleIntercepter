@@ -4,6 +4,6 @@
 
 #include "VarNode.h"
 
-VarNode::VarNode(Token *const token)
+VarNode::VarNode(IdToken *token)
 	: ASTNode(token, ASTNode::Type::VAR)
 {}

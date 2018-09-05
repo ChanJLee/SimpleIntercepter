@@ -18,6 +18,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o"
+  "/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"
+  "/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

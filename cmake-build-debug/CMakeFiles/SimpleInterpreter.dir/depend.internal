@@ -17,12 +17,16 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
  /Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o
@@ -41,6 +45,8 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
@@ -57,6 +63,8 @@ CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp
@@ -68,6 +76,7 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
@@ -90,6 +99,7 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
@@ -105,8 +115,17 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h

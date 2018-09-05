@@ -393,6 +393,54 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o.provides: CMakeFiles/S
 CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o
 
 
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o: ../token/NumToken.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp
+
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp > CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i
+
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp -o CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s
+
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires:
+
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires
+
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides
+
+CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o
+
+
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o: ../token/IdToken.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp
+
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp > CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.i
+
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp -o CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.s
+
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.requires:
+
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.requires
+
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.provides
+
+CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o
+
+
 # Object files for target SimpleInterpreter
 SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/main.cpp.o" \
@@ -408,7 +456,9 @@ SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o"
+"CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"
 
 # External object files for target SimpleInterpreter
 SimpleInterpreter_EXTERNAL_OBJECTS =
@@ -427,9 +477,11 @@ SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/build.make
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable SimpleInterpreter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable SimpleInterpreter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SimpleInterpreter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -451,6 +503,8 @@ CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/pars
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.requires
 
 .PHONY : CMakeFiles/SimpleInterpreter.dir/requires
 

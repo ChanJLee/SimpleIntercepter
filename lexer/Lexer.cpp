@@ -5,6 +5,9 @@
 #include "Lexer.h"
 #include "../exception/ParseError.h"
 #include "../utils/CharUtils.h"
+#include <string>
+#include "../token/IdToken.h"
+#include "../token/NumToken.h"
 
 Lexer::Lexer(Stream *stream)
 	: mStream(stream)
@@ -84,16 +87,15 @@ Token *Lexer::nextNumber()
 		mStream->back();
 	}
 
-	int *value = new int(atoi(num.c_str()));
-	return new Token(Token::TokenType::TYPE_NUMBER, value);
+	return new NumToken(atoi(num.c_str()));
 }
 
 Token *Lexer::nextID()
 {
 	char ch = mStream->next();
-	std::string *id = new std::string();
+	std::string id;
 	do {
-		(*id) += ch;
+		(id) += ch;
 		ch = mStream->next();
 	}
 	while (is_alpha(ch) || is_num(ch) || ch == '_');
@@ -102,17 +104,15 @@ Token *Lexer::nextID()
 		mStream->back();
 	}
 
-	if ((*id) == "BEGIN") {
-		delete id;
+	if (id == "BEGIN") {
 		return new Token(Token::TokenType::TYPE_BEGIN);
 	}
 
-	if ((*id) == "END") {
-		delete id;
+	if (id == "END") {
 		return new Token(Token::TokenType::TYPE_END);
 	}
 
-	return new Token(Token::TokenType::TYPE_ID, id);
+	return new IdToken(id);
 }
 
 Token *Lexer::nextColon()

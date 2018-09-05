@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"
   "SimpleInterpreter.pdb"
   "SimpleInterpreter"
 )

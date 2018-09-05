@@ -43,6 +43,12 @@ Lexer.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 ../utils/CharUtils.h
 /Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h
+string
+-
+../token/IdToken.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+../token/NumToken.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
 ../stream/Stream.h
@@ -151,6 +157,8 @@ ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 ../../token/Token.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+../../token/NumToken.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.cpp
 StatementNode.h
@@ -175,6 +183,8 @@ VarNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+../../token/IdToken.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
 
@@ -190,9 +200,25 @@ string
 ctype.h
 -
 
+/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp
+IdToken.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+Token.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 string
 -
+
+/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp
+NumToken.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
+Token.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h
 

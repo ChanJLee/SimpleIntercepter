@@ -5,11 +5,10 @@
 #ifndef SIMPLEINTERPRETER_TOKEN_H
 #define SIMPLEINTERPRETER_TOKEN_H
 
-#include <string>
-
 struct Token
 {
-	enum TokenType {
+	enum TokenType
+	{
 		TYPE_PLUS,
 		TYPE_SUB,
 		TYPE_MUL,
@@ -28,37 +27,11 @@ struct Token
 	};
 
 	TokenType type;
-	const void* value;
-
 	Token(TokenType type)
 		: type(type)
 	{}
-
-	Token(TokenType type, const int *value)
-		: type(type), value(value)
-	{}
-
-	Token(TokenType type, const std::string *value)
-		: type(type), value(value)
-	{}
-
-	// TODO refactor
 	virtual ~Token()
-	{
-		if (!value) {
-			return;
-		}
-
-		if (type == TokenType::TYPE_NUMBER) {
-			const int* p = (const int *) value;
-			delete p;
-		}
-
-		if (type == TokenType::TYPE_ID) {
-			const std::string* p = (const std::string *) value;
-			delete p;
-		}
-	}
+	{}
 };
 
 #endif //SIMPLEINTERPRETER_TOKEN_H
