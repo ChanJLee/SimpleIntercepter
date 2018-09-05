@@ -9,6 +9,8 @@
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 exception
 -
+string
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp
 Interpreter.h

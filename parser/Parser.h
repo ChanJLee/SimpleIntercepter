@@ -30,7 +30,7 @@ private:
 	ASTNode *term();
 	ASTNode *factor();
 	void eat(int type);
-	void eat(int type, const char *errorMsg);
+	void eat(int type, const std::string& msg);
 };
 
 

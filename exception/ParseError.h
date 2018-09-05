@@ -6,20 +6,16 @@
 #define SIMPLEINTERPRETER_PARSEERROR_H
 
 #include <exception>
+#include <string>
 
 class ParseError: public std::exception
 {
-private:
-	const char *mMsg;
 public:
-	ParseError(const char *msg)
-		: mMsg(msg)
+	const std::string msg;
+public:
+	ParseError(const std::string &msg)
+		: msg(msg)
 	{}
-
-	const char *getMsg() const
-	{
-		return mMsg;
-	}
 };
 
 

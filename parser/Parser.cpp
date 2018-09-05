@@ -70,22 +70,33 @@ ASTNode *Parser::factor()
 		return variable();
 	}
 
-	throw ParseError("invalid token");
+	std::string msg = "invalid token, type is";
+	msg += token->type;
+	throw ParseError(msg);
 }
 
 void Parser::eat(int type)
 {
-	eat(type, "invalid state");
+	try {
+		eat(type, "");
+	}
+	catch (const ParseError error) {
+		std::string msg = "invalid state, need is: ";
+		msg += type;
+		msg += ", and current is ";
+		msg += mCurrentToken->type;
+		throw ParseError(msg);
+	}
 }
 
-void Parser::eat(int type, const char *errorMsg)
+void Parser::eat(int type, const std::string &msg)
 {
 	if (mCurrentToken->type == type) {
 		mCurrentToken = mLexer.next();
 		return;
 	}
 
-	throw ParseError(errorMsg);
+	throw ParseError(msg);
 }
 
 ASTNode *Parser::program()

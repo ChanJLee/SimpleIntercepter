@@ -20,7 +20,9 @@ int Interpreter::visit(ASTNode *node)
 		return visit((VarNode *) node);
 	}
 
-	throw ParseError("invalid exp");
+	std::string msg = "unknown ast node, type is: ";
+	msg += node->token->type;
+	throw ParseError(msg);
 }
 
 int Interpreter::visit(NumNode *node)
@@ -31,7 +33,6 @@ int Interpreter::visit(NumNode *node)
 
 int Interpreter::visit(BinOpNode *node)
 {
-	// TODO error msg
 	if (node->lhs == nullptr) {
 		throw ParseError("missing left operand");
 	}
@@ -47,7 +48,9 @@ int Interpreter::visit(BinOpNode *node)
 		case Token::TokenType::TYPE_MUL: return lhs * rhs;
 		case Token::TokenType::TYPE_SUB: return lhs - rhs;
 		case Token::TokenType::TYPE_PLUS: return lhs + rhs;
-		default: throw ParseError("unknown bin op");
+		default: std::string msg = "unknown bin op, type is: ";
+			msg += node->token->type;
+			throw ParseError("unknown bin op");
 	}
 }
 
@@ -65,8 +68,9 @@ int Interpreter::visit(UnaryNode *node)
 		return visit(node->child);
 	}
 
-	// TODO error msg
-	throw ParseError("unknown unary op");
+	std::string msg = "unknown unary op, type is: ";
+	msg += node->token->type;
+	throw ParseError(msg);
 }
 
 #include <iostream>
@@ -74,10 +78,6 @@ void Interpreter::interpret()
 {
 	ASTNode *root = mParser.parse();
 	visitCompoundStatementNode((CompoundStatementNode *) root);
-
-	for (const auto& kv : mSymbolTable) {
-		std::cout << kv.first << " has value " << kv.second << std::endl;
-	}
 }
 
 void Interpreter::visitCompoundStatementNode(CompoundStatementNode *root)
@@ -99,7 +99,9 @@ void Interpreter::visitCompoundStatementNode(CompoundStatementNode *root)
 			return;
 		}
 
-		throw ParseError("invalid ast node");
+		std::string msg = "unknown ast node, type is: ";
+		msg += child->type;
+		throw ParseError(msg);
 	});
 }
 
@@ -119,7 +121,9 @@ int Interpreter::visit(VarNode *node)
 	IdToken *lv = (IdToken *) node->token;
 	auto it = mSymbolTable.find(lv->value);
 	if (it == mSymbolTable.end()) {
-		throw ParseError("unknown symbol");
+		std::string msg = "unknown symbol: ";
+		msg += lv->value;
+		throw ParseError(msg);
 	}
 
 	return it->second;
