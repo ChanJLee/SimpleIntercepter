@@ -4,8 +4,8 @@
 
 #include "AssignStatementNode.h"
 
-AssignStatementNode::AssignStatementNode(Var *lv, ASTNode *expr)
-	: StatementNode(ASTNode::Type::ASSIGN), lv(lv), expr(expr)
+AssignStatementNode::AssignStatementNode(VarNode *lv, Token *op, ASTNode *rv)
+	: StatementNode(ASTNode::Type::ASSIGN), lv(lv), rv(rv), op(op)
 {}
 
 AssignStatementNode::~AssignStatementNode()
@@ -14,7 +14,11 @@ AssignStatementNode::~AssignStatementNode()
 		delete lv;
 	}
 
-	if (expr != nullptr) {
-		delete expr;
+	if (rv != nullptr) {
+		delete rv;
+	}
+
+	if (op != nullptr) {
+		delete op;
 	}
 }

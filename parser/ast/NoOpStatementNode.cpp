@@ -2,9 +2,8 @@
 // Created by chan on 2018/9/4.
 //
 
-#include "NoOpNode.h"
-#include "StatementNode.h"
+#include "NoOpStatementNode.h"
 
-NoOpNode::NoOpNode()
+NoOpStatementNode::NoOpStatementNode()
 	: StatementNode(ASTNode::Type::NO_OP)
 {}

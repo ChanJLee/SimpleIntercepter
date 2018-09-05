@@ -9,7 +9,7 @@
 #include "ast/ASTNode.h"
 #include "../lexer/Lexer.h"
 #include "ast/StatementNode.h"
-#include "ast/Var.h"
+#include "ast/VarNode.h"
 
 class Parser
 {
@@ -25,7 +25,7 @@ private:
 	StatementNode *statement();
 	StatementNode *assignStatement();
 	StatementNode *empty();
-	Var * variable();
+	VarNode * variable();
 	ASTNode *exp();
 	ASTNode *term();
 	ASTNode *factor();

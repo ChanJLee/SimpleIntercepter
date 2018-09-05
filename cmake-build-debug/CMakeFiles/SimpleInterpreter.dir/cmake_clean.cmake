@@ -10,9 +10,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o"
-  "CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o"
-  "CMakeFiles/SimpleInterpreter.dir/parser/ast/Var.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o"
   "SimpleInterpreter.pdb"
   "SimpleInterpreter"
 )

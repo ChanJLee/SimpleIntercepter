@@ -7,10 +7,10 @@
 
 
 #include "ASTNode.h"
-class Var: public ASTNode
+class VarNode: public ASTNode
 {
 public:
-	Var(Token *const token);
+	VarNode(Token *const token);
 
 };
 

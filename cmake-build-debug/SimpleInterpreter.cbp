@@ -133,10 +133,10 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.cpp">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp">
@@ -157,10 +157,10 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.cpp">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h">

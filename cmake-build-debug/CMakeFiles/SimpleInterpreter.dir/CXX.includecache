@@ -27,6 +27,14 @@ Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
 ../parser/ast/UnaryNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+../parser/ast/CompoundStatementNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
+../parser/ast/NoOpStatementNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
+../parser/ast/AssignStatementNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
+map
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp
 Lexer.h
@@ -67,12 +75,10 @@ ast/UnaryNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
 ast/CompoundStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
-ast/NoOpNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.h
+ast/NoOpStatementNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
 ast/AssignStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
-exception
--
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
 ast/ASTNode.h
@@ -81,8 +87,8 @@ ast/ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
 ast/StatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
-ast/Var.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
+ast/VarNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp
 ASTNode.h
@@ -99,8 +105,8 @@ AssignStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
 StatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
-Var.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
+VarNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.cpp
 BinOpNode.h
@@ -126,13 +132,11 @@ ASTNode.h
 StatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
 
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.cpp
-NoOpNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.h
-StatementNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.cpp
+NoOpStatementNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
 
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 StatementNode.h
@@ -164,11 +168,11 @@ UnaryNode.h
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.cpp
-Var.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.cpp
+VarNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
 
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/Var.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 

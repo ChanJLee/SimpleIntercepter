@@ -10,27 +10,38 @@
 #include "../parser/ast/NumNode.h"
 #include "../parser/ast/BinOpNode.h"
 #include "../parser/ast/UnaryNode.h"
+#include "../parser/ast/CompoundStatementNode.h"
+#include "../parser/ast/NoOpStatementNode.h"
+#include "../parser/ast/AssignStatementNode.h"
+#include <map>
 
 class Interpreter
 {
 private:
 	Parser mParser;
+	std::map<std::string, int> mSymbolTable;
 public:
 	Interpreter(Stream *stream)
 		: mParser(stream)
 	{}
 
-	void program();
+	void interpret();
 private:
-	int visit();
+	void visitCompoundStatementNode(CompoundStatementNode *root);
+
+	void visitAssignStatementNode(AssignStatementNode *node);
+
+	void visitNoOpStatementNode(NoOpStatementNode *node);
 
 	int visit(ASTNode *node);
 
-	int visit(NumNode* node);
+	int visit(NumNode *node);
 
-	int visit(BinOpNode* node);
+	int visit(BinOpNode *node);
 
-	int visit(UnaryNode* node);
+	int visit(UnaryNode *node);
+
+	int visit(VarNode* node);
 };
 
 #endif //SIMPLEINTERPRETER_INTERCEPTER_H

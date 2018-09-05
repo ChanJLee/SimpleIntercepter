@@ -9,10 +9,10 @@
 #include "ASTNode.h"
 #include "StatementNode.h"
 
-class NoOpNode: public StatementNode
+class NoOpStatementNode: public StatementNode
 {
 public:
-	NoOpNode();
+	NoOpStatementNode();
 };
 
 

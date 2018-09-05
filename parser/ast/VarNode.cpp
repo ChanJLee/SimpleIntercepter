@@ -2,8 +2,8 @@
 // Created by chan on 2018/9/4.
 //
 
-#include "Var.h"
+#include "VarNode.h"
 
-Var::Var(Token *const token)
+VarNode::VarNode(Token *const token)
 	: ASTNode(token, ASTNode::Type::VAR)
 {}

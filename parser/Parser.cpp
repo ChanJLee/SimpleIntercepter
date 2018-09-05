@@ -8,9 +8,8 @@
 #include "ast/NumNode.h"
 #include "ast/UnaryNode.h"
 #include "ast/CompoundStatementNode.h"
-#include "ast/NoOpNode.h"
+#include "ast/NoOpStatementNode.h"
 #include "ast/AssignStatementNode.h"
-#include <exception>
 
 Parser::Parser(Stream *stream)
 	: mLexer(stream)
@@ -21,7 +20,8 @@ Parser::Parser(Stream *stream)
 ASTNode *Parser::exp()
 {
 	ASTNode *lhs = term();
-	while (mCurrentToken->type == Token::TokenType::TYPE_SUB || mCurrentToken->type == Token::TokenType::TYPE_PLUS) {
+	while (mCurrentToken->type == Token::TokenType::TYPE_SUB ||
+		mCurrentToken->type == Token::TokenType::TYPE_PLUS) {
 		Token *token = mCurrentToken;
 		eat(token->type);
 		lhs = new BinOpNode(token, lhs, term());
@@ -32,7 +32,8 @@ ASTNode *Parser::exp()
 ASTNode *Parser::term()
 {
 	ASTNode *lhs = factor();
-	while (mCurrentToken->type == Token::TokenType::TYPE_DIV || mCurrentToken->type == Token::TokenType::TYPE_MUL) {
+	while (mCurrentToken->type == Token::TokenType::TYPE_DIV ||
+		mCurrentToken->type == Token::TokenType::TYPE_MUL) {
 		Token *token = mCurrentToken;
 		eat(token->type);
 		lhs = new BinOpNode(token, lhs, factor());
@@ -46,16 +47,7 @@ ASTNode *Parser::factor()
 	if (token->type == Token::TokenType::TYPE_LEFT_BRACKET) {
 		eat(Token::TokenType::TYPE_LEFT_BRACKET);
 		ASTNode *result = exp();
-		try {
-			eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing )");
-		}
-		catch (std::exception e) {
-			if (result != nullptr) {
-				delete result;
-			}
-			delete token;
-			throw e;
-		}
+		eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing )");
 		return result;
 	}
 
@@ -99,7 +91,7 @@ void Parser::eat(int type, const char *errorMsg)
 ASTNode *Parser::program()
 {
 	ASTNode *root = compound();
-	eat(Token::TokenType::TYPE_DOT);
+	eat(Token::TokenType::TYPE_DOT, "missing .");
 	return root;
 }
 
@@ -134,21 +126,20 @@ StatementNode *Parser::statement()
 
 StatementNode *Parser::assignStatement()
 {
-	Var *lv = variable();
+	VarNode *lv = variable();
 	Token *op = mCurrentToken;
-	eat(Token::TYPE_ASSIGN);
-	delete op;
-	return new AssignStatementNode(lv, exp());
+	eat(op->type);
+	return new AssignStatementNode(lv, op, exp());
 }
 
 StatementNode *Parser::empty()
 {
-	return new NoOpNode();
+	return new NoOpStatementNode();
 }
 
-Var *Parser::variable()
+VarNode *Parser::variable()
 {
-	Var *var = new Var(mCurrentToken);
+	VarNode *var = new VarNode(mCurrentToken);
 	eat(Token::TokenType::TYPE_ID);
 	return var;
 }
