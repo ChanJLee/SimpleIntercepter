@@ -69,10 +69,15 @@ int Interpreter::visit(UnaryNode *node)
 	throw ParseError("unknown unary op");
 }
 
+#include <iostream>
 void Interpreter::interpret()
 {
 	ASTNode *root = mParser.parse();
 	visitCompoundStatementNode((CompoundStatementNode *) root);
+
+	for (const auto& kv : mSymbolTable) {
+		std::cout << kv.first << " has value " << kv.second << std::endl;
+	}
 }
 
 void Interpreter::visitCompoundStatementNode(CompoundStatementNode *root)

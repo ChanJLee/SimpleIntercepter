@@ -147,6 +147,6 @@ VarNode *Parser::variable()
 ASTNode *Parser::parse()
 {
 	ASTNode *root = program();
-	eat(EOF, "eof error");
+	eat(Token::TokenType::TYPE_EOF, "eof error");
 	return root;
 }
