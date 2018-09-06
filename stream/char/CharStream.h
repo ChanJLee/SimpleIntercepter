@@ -7,7 +7,6 @@
 
 
 #include "../Stream.h"
-#include <ctype.h>
 
 class CharStream: public Stream
 {

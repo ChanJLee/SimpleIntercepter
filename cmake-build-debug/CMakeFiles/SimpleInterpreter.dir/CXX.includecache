@@ -219,8 +219,6 @@ string
 /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
 ../Stream.h
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
-ctype.h
--
 
 /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp
 IdToken.h
