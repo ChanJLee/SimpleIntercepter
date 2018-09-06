@@ -12,9 +12,19 @@
 class IdToken: public Token
 {
 public:
-	const std::string value;
+	enum IdTokenType
+	{
+		REAL,
+		INT,
+		NONE
+	};
 public:
-	IdToken(const std::string& value);
+	const std::string value;
+	const IdToken::IdTokenType type;
+public:
+	IdToken(const std::string &value);
+
+	IdToken(const std::string &value, IdToken::IdTokenType type);
 };
 
 

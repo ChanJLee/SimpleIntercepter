@@ -3,6 +3,12 @@
 //
 
 #include "IdToken.h"
-IdToken::IdToken(const std::string& value)
-	: Token(TokenType::TYPE_ID), value(value)
+IdToken::IdToken(const std::string &value)
+	: IdToken(value, IdToken::IdTokenType::NONE)
 {}
+
+IdToken::IdToken(const std::string &value, IdToken::IdTokenType type)
+	: Token(TokenType::TYPE_ID), value(value), type(type)
+{
+
+}

@@ -44,7 +44,7 @@ int Interpreter::visit(BinOpNode *node)
 	int lhs = visit(node->lhs);
 	int rhs = visit(node->rhs);
 	switch (node->token->type) {
-		case Token::TokenType::TYPE_DIV: return lhs / rhs;
+		case Token::TokenType::TYPE_FLOAT_DIV: return lhs / rhs;
 		case Token::TokenType::TYPE_MUL: return lhs * rhs;
 		case Token::TokenType::TYPE_SUB: return lhs - rhs;
 		case Token::TokenType::TYPE_PLUS: return lhs + rhs;

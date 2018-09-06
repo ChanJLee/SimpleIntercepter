@@ -47,14 +47,16 @@ Lexer.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 ../utils/CharUtils.h
 /Users/chan/ClionProjects/SimpleInterpreter/utils/CharUtils.h
-string
--
 ../token/IdToken.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
 ../token/NumToken.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h
+string
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
+string
+-
 ../stream/Stream.h
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
 ../token/Token.h

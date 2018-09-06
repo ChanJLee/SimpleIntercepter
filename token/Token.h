@@ -12,7 +12,8 @@ struct Token
 		TYPE_PLUS,
 		TYPE_SUB,
 		TYPE_MUL,
-		TYPE_DIV,
+		TYPE_FLOAT_DIV,
+		TYPE_INT_DIV,
 		TYPE_LEFT_BRACKET,
 		TYPE_RIGHT_BRACKET,
 		TYPE_NUMBER,
@@ -24,6 +25,10 @@ struct Token
 		TYPE_ASSIGN,// :=
 		TYPE_SEMI, // ;
 		TYPE_ID,
+		TYPE_COMMA, // ,
+		TYPE_PROGRAM,
+		TYPE_REAL,
+		TYPE_INTEGER,
 	};
 
 	TokenType type;

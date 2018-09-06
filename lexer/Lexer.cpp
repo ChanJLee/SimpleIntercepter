@@ -5,9 +5,21 @@
 #include "Lexer.h"
 #include "../exception/ParseError.h"
 #include "../utils/CharUtils.h"
-#include <string>
 #include "../token/IdToken.h"
 #include "../token/NumToken.h"
+#include <string>
+
+const std::string Lexer::KEYWORD_BEGIN = "BEGIN";
+
+const std::string Lexer::KEYWORD_END = "END";
+
+const std::string Lexer::KEYWORD_PROGRAM = "PROGRAM";
+
+const std::string Lexer::KEYWORD_DIV = "DIV";
+
+const std::string Lexer::KEYWORD_INTEGER = "INTEGER";
+
+const std::string Lexer::KEYWORD_REAL = "REAL";
 
 Lexer::Lexer(Stream *stream)
 	: mStream(stream)
@@ -41,7 +53,7 @@ Token *Lexer::next()
 	}
 
 	if (ch == '/') {
-		return new Token(Token::TokenType::TYPE_DIV);
+		return new Token(Token::TokenType::TYPE_FLOAT_DIV);
 	}
 
 	if (ch == '*') {
@@ -54,6 +66,10 @@ Token *Lexer::next()
 
 	if (ch == ';') {
 		return new Token(Token::TokenType::TYPE_SEMI);
+	}
+
+	if (ch == ',') {
+		return new Token(Token::TokenType::TYPE_COMMA);
 	}
 
 	if (ch == ':') {
@@ -104,12 +120,28 @@ Token *Lexer::nextID()
 		mStream->back();
 	}
 
-	if (id == "BEGIN") {
+	if (id == KEYWORD_BEGIN) {
 		return new Token(Token::TokenType::TYPE_BEGIN);
 	}
 
-	if (id == "END") {
+	if (id == KEYWORD_END) {
 		return new Token(Token::TokenType::TYPE_END);
+	}
+
+	if (id == KEYWORD_PROGRAM) {
+		return new Token(Token::TokenType::TYPE_PROGRAM);
+	}
+
+	if (id == KEYWORD_DIV) {
+		return new Token(Token::TokenType::TYPE_INT_DIV);
+	}
+
+	if (id == KEYWORD_REAL) {
+		return new Token(Token::TokenType::TYPE_REAL);
+	}
+
+	if (id == KEYWORD_INTEGER) {
+		return new Token(Token::TokenType::TYPE_INTEGER);
 	}
 
 	return new IdToken(id);
