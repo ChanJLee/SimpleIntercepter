@@ -6,7 +6,8 @@
 #include "../exception/ParseError.h"
 #include "../utils/CharUtils.h"
 #include "../token/IdToken.h"
-#include "../token/NumToken.h"
+#include "../token/IntNumToken.h"
+#include "../token/RealNumToken.h"
 #include <string>
 
 const std::string Lexer::KEYWORD_BEGIN = "BEGIN";
@@ -94,7 +95,14 @@ Token *Lexer::nextNumber()
 {
 	char ch = mStream->next();
 	std::string num;
-	while (is_num(ch)) {
+	bool has_dot = false;
+	while (is_num(ch) || ch == '.') {
+		if (ch == '.') {
+			if (has_dot) {
+				throw ParseError("invalid float");
+			}
+			has_dot = true;
+		}
 		num += ch;
 		ch = mStream->next();
 	}
@@ -103,7 +111,11 @@ Token *Lexer::nextNumber()
 		mStream->back();
 	}
 
-	return new NumToken(atoi(num.c_str()));
+	if (has_dot) {
+		return new RealNumToken(atof(num.c_str()));
+	}
+
+	return new IntNumToken(atoi(num.c_str()));
 }
 
 Token *Lexer::nextId()

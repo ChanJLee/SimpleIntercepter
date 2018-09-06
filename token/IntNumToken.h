@@ -7,12 +7,12 @@
 
 
 #include "Token.h"
-class NumToken: public Token
+class IntNumToken: public Token
 {
 public:
 	int value;
 public:
-	NumToken(int value);
+	IntNumToken(int value);
 };
 
 

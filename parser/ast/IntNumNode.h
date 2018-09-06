@@ -8,13 +8,13 @@
 
 #include "ASTNode.h"
 #include "../../token/Token.h"
-#include "../../token/NumToken.h"
+#include "../../token/IntNumToken.h"
 
-class NumNode: public ASTNode
+class IntNumNode: public ASTNode
 {
 public:
-	NumNode(NumToken *token);
-	virtual ~NumNode();
+	IntNumNode(IntNumToken *token);
+	virtual ~IntNumNode();
 };
 
 

@@ -225,28 +225,28 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o.provides: CMakeFiles/S
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o
 
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
-CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o: ../parser/ast/NumNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp
+CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o: ../parser/ast/IntNumNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp > CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.i
+CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp > CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.i
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.s
+CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.s
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.requires:
+CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.requires:
 
-.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.requires
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.requires
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.provides.build
-.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.provides
+CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.provides
 
-CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o
+CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o
 
 
 CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
@@ -393,28 +393,28 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o.provides: CMakeFiles/S
 CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o
 
 
-CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
-CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o: ../token/NumToken.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp
+CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o: ../token/IntNumToken.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.cpp
 
-CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp > CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i
+CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.cpp > CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.i
 
-CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp -o CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s
+CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.cpp -o CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.s
 
-CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires:
+CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.requires:
 
-.PHONY : CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.requires
 
-CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides.build
-.PHONY : CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides
+CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.provides
 
-CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o
+CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o
 
 
 CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
@@ -441,6 +441,54 @@ CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.provides: CMakeFiles/Simple
 CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o
 
 
+CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o: ../token/RealNumToken.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.cpp
+
+CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.cpp > CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.i
+
+CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.cpp -o CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.s
+
+CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.requires:
+
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.requires
+
+CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.provides
+
+CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o
+
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o: ../parser/ast/RealNumNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.cpp
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.cpp > CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.i
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.s
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.requires:
+
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.requires
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.provides
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o
+
+
 # Object files for target SimpleInterpreter
 SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/main.cpp.o" \
@@ -450,15 +498,17 @@ SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"
+"CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o"
 
 # External object files for target SimpleInterpreter
 SimpleInterpreter_EXTERNAL_OBJECTS =
@@ -470,18 +520,20 @@ SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o
-SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o
-SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/build.make
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable SimpleInterpreter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable SimpleInterpreter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SimpleInterpreter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -496,15 +548,17 @@ CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/pars
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o.requires
-CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o.requires
-CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o.requires
 
 .PHONY : CMakeFiles/SimpleInterpreter.dir/requires
 

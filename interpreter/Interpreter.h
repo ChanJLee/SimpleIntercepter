@@ -7,12 +7,13 @@
 
 #include "../stream/Stream.h"
 #include "../parser/Parser.h"
-#include "../parser/ast/NumNode.h"
+#include "../parser/ast/IntNumNode.h"
 #include "../parser/ast/BinOpNode.h"
 #include "../parser/ast/UnaryNode.h"
 #include "../parser/ast/CompoundStatementNode.h"
 #include "../parser/ast/NoOpStatementNode.h"
 #include "../parser/ast/AssignStatementNode.h"
+#include "../parser/ast/RealNumNode.h"
 #include <map>
 
 class Interpreter
@@ -37,15 +38,17 @@ private:
 
 	void visitNoOpStatementNode(NoOpStatementNode *node);
 
-	int visit(ASTNode *node);
+	int visitNode(ASTNode *node);
 
-	int visit(NumNode *node);
+	int visitIntNumNode(IntNumNode *node);
 
-	int visit(BinOpNode *node);
+	double visitRealNumNode(RealNumNode *node);
 
-	int visit(UnaryNode *node);
+	int visitBinOpNode(BinOpNode *node);
 
-	int visit(VarNode* node);
+	int visitUnaryNode(UnaryNode *node);
+
+	int visitVarNode(VarNode *node);
 };
 
 #endif //SIMPLEINTERPRETER_INTERCEPTER_H

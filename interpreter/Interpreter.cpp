@@ -5,19 +5,19 @@
 #include "Interpreter.h"
 #include "../exception/ParseError.h"
 
-int Interpreter::visit(ASTNode *node)
+int Interpreter::visitNode(ASTNode *node)
 {
-	if (node->type == ASTNode::Type::NUM) {
-		return visit((NumNode *) node);
+	if (node->type == ASTNode::Type::INT_NUM) {
+		return visitIntNumNode((IntNumNode *) node);
 	}
 	else if (node->type == ASTNode::Type::BIN) {
-		return visit((BinOpNode *) node);
+		return visitBinOpNode((BinOpNode *) node);
 	}
 	else if (node->type == ASTNode::Type::UNARY) {
-		return visit((UnaryNode *) node);
+		return visitUnaryNode((UnaryNode *) node);
 	}
 	else if (node->type == ASTNode::Type::VAR) {
-		return visit((VarNode *) node);
+		return visitVarNode((VarNode *) node);
 	}
 
 	std::string msg = "unknown ast node, type is: ";
@@ -25,13 +25,13 @@ int Interpreter::visit(ASTNode *node)
 	throw ParseError(msg);
 }
 
-int Interpreter::visit(NumNode *node)
+int Interpreter::visitIntNumNode(IntNumNode *node)
 {
-	NumToken *token = (NumToken *) node->token;
+	IntNumToken *token = (IntNumToken *) node->token;
 	return token->value;
 }
 
-int Interpreter::visit(BinOpNode *node)
+int Interpreter::visitBinOpNode(BinOpNode *node)
 {
 	if (node->lhs == nullptr) {
 		throw ParseError("missing left operand");
@@ -41,8 +41,8 @@ int Interpreter::visit(BinOpNode *node)
 		throw ParseError("missing right operand");
 	}
 
-	int lhs = visit(node->lhs);
-	int rhs = visit(node->rhs);
+	int lhs = visitNode(node->lhs);
+	int rhs = visitNode(node->rhs);
 	switch (node->token->type) {
 		case Token::TokenType::TYPE_FLOAT_DIV: return lhs / rhs;
 		case Token::TokenType::TYPE_MUL: return lhs * rhs;
@@ -54,18 +54,18 @@ int Interpreter::visit(BinOpNode *node)
 	}
 }
 
-int Interpreter::visit(UnaryNode *node)
+int Interpreter::visitUnaryNode(UnaryNode *node)
 {
 	if (node->child == nullptr) {
 		throw ParseError("missing unary operand");
 	}
 
 	if (node->token->type == Token::TokenType::TYPE_SUB) {
-		return -visit(node->child);
+		return -visitNode(node->child);
 	}
 
 	if (node->token->type == Token::TokenType::TYPE_PLUS) {
-		return visit(node->child);
+		return visitNode(node->child);
 	}
 
 	std::string msg = "unknown unary op, type is: ";
@@ -73,12 +73,21 @@ int Interpreter::visit(UnaryNode *node)
 	throw ParseError(msg);
 }
 
-#include <iostream>
 void Interpreter::interpret()
 {
 	ASTNode *root = mParser.parse();
 	visitCompoundStatementNode((CompoundStatementNode *) root);
 }
+
+#ifdef DEBUG
+#include <iostream>
+void Interpreter::dumpSymbolTable()
+{
+	for (std::map<std::string, int>::iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
+		std::cout << "key: " << it->first << " value: " << it->second << std::endl;
+	}
+}
+#endif
 
 void Interpreter::visitCompoundStatementNode(CompoundStatementNode *root)
 {
@@ -113,10 +122,10 @@ void Interpreter::visitNoOpStatementNode(NoOpStatementNode *node)
 void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
 	IdToken *lv = (IdToken *) node->lv->token;
-	mSymbolTable[lv->value] = visit(node->rv);
+	mSymbolTable[lv->value] = visitNode(node->rv);
 }
 
-int Interpreter::visit(VarNode *node)
+int Interpreter::visitVarNode(VarNode *node)
 {
 	IdToken *lv = (IdToken *) node->token;
 	auto it = mSymbolTable.find(lv->value);
@@ -129,12 +138,8 @@ int Interpreter::visit(VarNode *node)
 	return it->second;
 }
 
-#ifdef DEBUG
-#include <iostream>
-void Interpreter::dumpSymbolTable()
+double Interpreter::visitRealNumNode(RealNumNode *node)
 {
-	for (std::map<std::string, int>::iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
-		std::cout << "key: " << it->first << " value: " << it->second << std::endl;
-	}
+	RealNumToken *token = (RealNumToken *) node->token;
+	return token->value;
 }
-#endif

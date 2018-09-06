@@ -44,7 +44,7 @@ void checkUnit()
 
 	lexer = Lexer(new CharStream("123"));
 	token = lexer.next();
-	if (token->type != Token::TokenType::TYPE_NUM) {
+	if (token->type != Token::TokenType::TYPE_INT_NUM) {
 		std::cerr << "NUMBER failed" << std::endl;
 	}
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
@@ -81,27 +81,27 @@ void checkUnit()
 
 void checkStream()
 {
-	Lexer lexer = Lexer(new CharStream("BEGIN 1+2/3;x:=y END."));
+	Lexer lexer = Lexer(new CharStream("BEGIN 1+2/3.0;x:=y END."));
 	Token *token = lexer.next();
 	if (token->type != Token::TokenType::TYPE_BEGIN) {
 		std::cerr << "TYPE_BEGIN failed" << std::endl;
 	}
 
-	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUM) {
-		std::cerr << "TYPE_NUM end" << std::endl;
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_INT_NUM) {
+		std::cerr << "TYPE_INT_NUM end" << std::endl;
 	}
 
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_PLUS) {
 		std::cerr << "TYPE_PLUS end" << std::endl;
 	}
-	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUM) {
-		std::cerr << "TYPE_NUM end" << std::endl;
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_INT_NUM) {
+		std::cerr << "TYPE_INT_NUM end" << std::endl;
 	}
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_FLOAT_DIV) {
 		std::cerr << "TYPE_FLOAT_DIV end" << std::endl;
 	}
-	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUM) {
-		std::cerr << "TYPE_NUM end" << std::endl;
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_REAL_NUM) {
+		std::cerr << "TYPE_REAL_NUM end" << std::endl;
 	}
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_SEMI) {
 		std::cerr << "TYPE_SEMI end" << std::endl;
@@ -178,8 +178,8 @@ void readPas()
 //				break;
 //			case Token::TokenType::TYPE_RIGHT_BRACKET : std::cout << "right bracket" << std::endl;
 //				break;
-//			case Token::TokenType::TYPE_NUM : {
-//				NumToken *numToken = (NumToken *) token;
+//			case Token::TokenType::TYPE_INT_NUM : {
+//				IntNumToken *numToken = (IntNumToken *) token;
 //				std::cout << "number: " << numToken->value << std::endl;
 //				break;
 //			}
@@ -219,8 +219,8 @@ void readPas()
 
 int main()
 {
-//	checkUnit();
+	checkUnit();
 //	checkStream();
-	readPas();
+//	readPas();
 	return 0;
 }

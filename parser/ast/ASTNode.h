@@ -12,7 +12,8 @@ class ASTNode
 public:
 	enum Type
 	{
-		NUM,
+		REAL_NUM,
+		INT_NUM,
 		BIN,
 		UNARY,
 		COMPOUND,

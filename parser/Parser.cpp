@@ -5,11 +5,12 @@
 #include "Parser.h"
 #include "../exception/ParseError.h"
 #include "ast/BinOpNode.h"
-#include "ast/NumNode.h"
+#include "ast/IntNumNode.h"
 #include "ast/UnaryNode.h"
 #include "ast/CompoundStatementNode.h"
 #include "ast/NoOpStatementNode.h"
 #include "ast/AssignStatementNode.h"
+#include "ast/RealNumNode.h"
 
 Parser::Parser(Stream *stream)
 	: mLexer(stream)
@@ -51,9 +52,9 @@ ASTNode *Parser::factor()
 		return result;
 	}
 
-	if (token->type == Token::TokenType::TYPE_NUM) {
-		eat(Token::TokenType::TYPE_NUM);
-		return new NumNode((NumToken *const) token);
+	if (token->type == Token::TokenType::TYPE_INT_NUM) {
+		eat(Token::TokenType::TYPE_INT_NUM);
+		return new IntNumNode((IntNumToken *) token);
 	}
 
 	if (token->type == Token::TokenType::TYPE_PLUS) {
@@ -68,6 +69,11 @@ ASTNode *Parser::factor()
 
 	if (token->type == Token::TokenType::TYPE_ID) {
 		return variable();
+	}
+
+	if (token->type == Token::TokenType::TYPE_REAL_NUM) {
+		eat(Token::TokenType::TYPE_REAL_NUM);
+		return new RealNumNode((RealNumToken *) token);
 	}
 
 	std::string msg = "invalid token, type is";

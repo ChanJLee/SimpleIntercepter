@@ -132,16 +132,22 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.cpp">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NumNode.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.cpp">
@@ -177,10 +183,16 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.cpp">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/NumToken.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h">

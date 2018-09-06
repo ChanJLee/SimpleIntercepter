@@ -339,6 +339,33 @@ parser/ast/CompoundStatementNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.s
 .PHONY : parser/ast/CompoundStatementNode.cpp.s
 
+parser/ast/IntNumNode.o: parser/ast/IntNumNode.cpp.o
+
+.PHONY : parser/ast/IntNumNode.o
+
+# target to build an object file
+parser/ast/IntNumNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o
+.PHONY : parser/ast/IntNumNode.cpp.o
+
+parser/ast/IntNumNode.i: parser/ast/IntNumNode.cpp.i
+
+.PHONY : parser/ast/IntNumNode.i
+
+# target to preprocess a source file
+parser/ast/IntNumNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.i
+.PHONY : parser/ast/IntNumNode.cpp.i
+
+parser/ast/IntNumNode.s: parser/ast/IntNumNode.cpp.s
+
+.PHONY : parser/ast/IntNumNode.s
+
+# target to generate assembly for a file
+parser/ast/IntNumNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.s
+.PHONY : parser/ast/IntNumNode.cpp.s
+
 parser/ast/NoOpStatementNode.o: parser/ast/NoOpStatementNode.cpp.o
 
 .PHONY : parser/ast/NoOpStatementNode.o
@@ -366,32 +393,32 @@ parser/ast/NoOpStatementNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.s
 .PHONY : parser/ast/NoOpStatementNode.cpp.s
 
-parser/ast/NumNode.o: parser/ast/NumNode.cpp.o
+parser/ast/RealNumNode.o: parser/ast/RealNumNode.cpp.o
 
-.PHONY : parser/ast/NumNode.o
+.PHONY : parser/ast/RealNumNode.o
 
 # target to build an object file
-parser/ast/NumNode.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.o
-.PHONY : parser/ast/NumNode.cpp.o
+parser/ast/RealNumNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o
+.PHONY : parser/ast/RealNumNode.cpp.o
 
-parser/ast/NumNode.i: parser/ast/NumNode.cpp.i
+parser/ast/RealNumNode.i: parser/ast/RealNumNode.cpp.i
 
-.PHONY : parser/ast/NumNode.i
+.PHONY : parser/ast/RealNumNode.i
 
 # target to preprocess a source file
-parser/ast/NumNode.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.i
-.PHONY : parser/ast/NumNode.cpp.i
+parser/ast/RealNumNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.i
+.PHONY : parser/ast/RealNumNode.cpp.i
 
-parser/ast/NumNode.s: parser/ast/NumNode.cpp.s
+parser/ast/RealNumNode.s: parser/ast/RealNumNode.cpp.s
 
-.PHONY : parser/ast/NumNode.s
+.PHONY : parser/ast/RealNumNode.s
 
 # target to generate assembly for a file
-parser/ast/NumNode.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NumNode.cpp.s
-.PHONY : parser/ast/NumNode.cpp.s
+parser/ast/RealNumNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.s
+.PHONY : parser/ast/RealNumNode.cpp.s
 
 parser/ast/StatementNode.o: parser/ast/StatementNode.cpp.o
 
@@ -528,32 +555,59 @@ token/IdToken.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.s
 .PHONY : token/IdToken.cpp.s
 
-token/NumToken.o: token/NumToken.cpp.o
+token/IntNumToken.o: token/IntNumToken.cpp.o
 
-.PHONY : token/NumToken.o
+.PHONY : token/IntNumToken.o
 
 # target to build an object file
-token/NumToken.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.o
-.PHONY : token/NumToken.cpp.o
+token/IntNumToken.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o
+.PHONY : token/IntNumToken.cpp.o
 
-token/NumToken.i: token/NumToken.cpp.i
+token/IntNumToken.i: token/IntNumToken.cpp.i
 
-.PHONY : token/NumToken.i
+.PHONY : token/IntNumToken.i
 
 # target to preprocess a source file
-token/NumToken.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.i
-.PHONY : token/NumToken.cpp.i
+token/IntNumToken.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.i
+.PHONY : token/IntNumToken.cpp.i
 
-token/NumToken.s: token/NumToken.cpp.s
+token/IntNumToken.s: token/IntNumToken.cpp.s
 
-.PHONY : token/NumToken.s
+.PHONY : token/IntNumToken.s
 
 # target to generate assembly for a file
-token/NumToken.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/NumToken.cpp.s
-.PHONY : token/NumToken.cpp.s
+token/IntNumToken.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.s
+.PHONY : token/IntNumToken.cpp.s
+
+token/RealNumToken.o: token/RealNumToken.cpp.o
+
+.PHONY : token/RealNumToken.o
+
+# target to build an object file
+token/RealNumToken.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o
+.PHONY : token/RealNumToken.cpp.o
+
+token/RealNumToken.i: token/RealNumToken.cpp.i
+
+.PHONY : token/RealNumToken.i
+
+# target to preprocess a source file
+token/RealNumToken.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.i
+.PHONY : token/RealNumToken.cpp.i
+
+token/RealNumToken.s: token/RealNumToken.cpp.s
+
+.PHONY : token/RealNumToken.s
+
+# target to generate assembly for a file
+token/RealNumToken.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.s
+.PHONY : token/RealNumToken.cpp.s
 
 # Help Target
 help:
@@ -588,12 +642,15 @@ help:
 	@echo "... parser/ast/CompoundStatementNode.o"
 	@echo "... parser/ast/CompoundStatementNode.i"
 	@echo "... parser/ast/CompoundStatementNode.s"
+	@echo "... parser/ast/IntNumNode.o"
+	@echo "... parser/ast/IntNumNode.i"
+	@echo "... parser/ast/IntNumNode.s"
 	@echo "... parser/ast/NoOpStatementNode.o"
 	@echo "... parser/ast/NoOpStatementNode.i"
 	@echo "... parser/ast/NoOpStatementNode.s"
-	@echo "... parser/ast/NumNode.o"
-	@echo "... parser/ast/NumNode.i"
-	@echo "... parser/ast/NumNode.s"
+	@echo "... parser/ast/RealNumNode.o"
+	@echo "... parser/ast/RealNumNode.i"
+	@echo "... parser/ast/RealNumNode.s"
 	@echo "... parser/ast/StatementNode.o"
 	@echo "... parser/ast/StatementNode.i"
 	@echo "... parser/ast/StatementNode.s"
@@ -609,9 +666,12 @@ help:
 	@echo "... token/IdToken.o"
 	@echo "... token/IdToken.i"
 	@echo "... token/IdToken.s"
-	@echo "... token/NumToken.o"
-	@echo "... token/NumToken.i"
-	@echo "... token/NumToken.s"
+	@echo "... token/IntNumToken.o"
+	@echo "... token/IntNumToken.i"
+	@echo "... token/IntNumToken.s"
+	@echo "... token/RealNumToken.o"
+	@echo "... token/RealNumToken.i"
+	@echo "... token/RealNumToken.s"
 .PHONY : help
 
 
