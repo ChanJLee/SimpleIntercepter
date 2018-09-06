@@ -212,14 +212,13 @@ void readPas()
 
 	Interpreter interpreter(new CharStream(trim(content).c_str()));
 	interpreter.interpret();
+#ifdef DEBUG
+	interpreter.dumpSymbolTable();
+#endif
 }
 
 int main()
 {
-#ifdef DEBUG
-	std::cout << "hello" << std::endl;
-#endif
-
 //	checkUnit();
 //	checkStream();
 	readPas();

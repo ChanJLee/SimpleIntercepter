@@ -19,6 +19,8 @@ Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 iostream
 -
+iostream
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
 ../stream/Stream.h

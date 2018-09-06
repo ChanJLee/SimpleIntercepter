@@ -26,6 +26,10 @@ public:
 	{}
 
 	void interpret();
+
+#ifdef DEBUG
+	void dumpSymbolTable();
+#endif
 private:
 	void visitCompoundStatementNode(CompoundStatementNode *root);
 

@@ -129,3 +129,12 @@ int Interpreter::visit(VarNode *node)
 	return it->second;
 }
 
+#ifdef DEBUG
+#include <iostream>
+void Interpreter::dumpSymbolTable()
+{
+	for (std::map<std::string, int>::iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
+		std::cout << "key: " << it->first << " value: " << it->second << std::endl;
+	}
+}
+#endif
