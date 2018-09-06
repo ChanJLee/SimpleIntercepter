@@ -27,7 +27,7 @@ public:
 private:
 	Token *nextNumber();
 
-	Token *nextID();
+	Token *nextId();
 
 	Token *nextColon();
 };

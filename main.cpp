@@ -44,7 +44,7 @@ void checkUnit()
 
 	lexer = Lexer(new CharStream("123"));
 	token = lexer.next();
-	if (token->type != Token::TokenType::TYPE_NUMBER) {
+	if (token->type != Token::TokenType::TYPE_NUM) {
 		std::cerr << "NUMBER failed" << std::endl;
 	}
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
@@ -87,21 +87,21 @@ void checkStream()
 		std::cerr << "TYPE_BEGIN failed" << std::endl;
 	}
 
-	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUMBER) {
-		std::cerr << "TYPE_NUMBER end" << std::endl;
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUM) {
+		std::cerr << "TYPE_NUM end" << std::endl;
 	}
 
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_PLUS) {
 		std::cerr << "TYPE_PLUS end" << std::endl;
 	}
-	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUMBER) {
-		std::cerr << "TYPE_NUMBER end" << std::endl;
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUM) {
+		std::cerr << "TYPE_NUM end" << std::endl;
 	}
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_FLOAT_DIV) {
 		std::cerr << "TYPE_FLOAT_DIV end" << std::endl;
 	}
-	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUMBER) {
-		std::cerr << "TYPE_NUMBER end" << std::endl;
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_NUM) {
+		std::cerr << "TYPE_NUM end" << std::endl;
 	}
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_SEMI) {
 		std::cerr << "TYPE_SEMI end" << std::endl;
@@ -178,7 +178,7 @@ void readPas()
 //				break;
 //			case Token::TokenType::TYPE_RIGHT_BRACKET : std::cout << "right bracket" << std::endl;
 //				break;
-//			case Token::TokenType::TYPE_NUMBER : {
+//			case Token::TokenType::TYPE_NUM : {
 //				NumToken *numToken = (NumToken *) token;
 //				std::cout << "number: " << numToken->value << std::endl;
 //				break;

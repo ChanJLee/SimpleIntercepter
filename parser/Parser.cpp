@@ -51,8 +51,8 @@ ASTNode *Parser::factor()
 		return result;
 	}
 
-	if (token->type == Token::TokenType::TYPE_NUMBER) {
-		eat(Token::TokenType::TYPE_NUMBER);
+	if (token->type == Token::TokenType::TYPE_NUM) {
+		eat(Token::TokenType::TYPE_NUM);
 		return new NumNode((NumToken *const) token);
 	}
 

@@ -84,7 +84,7 @@ Token *Lexer::next()
 
 	if (is_alpha(ch)) {
 		mStream->back();
-		return nextID();
+		return nextId();
 	}
 
 	throw ParseError("unknown char");
@@ -106,7 +106,7 @@ Token *Lexer::nextNumber()
 	return new NumToken(atoi(num.c_str()));
 }
 
-Token *Lexer::nextID()
+Token *Lexer::nextId()
 {
 	char ch = mStream->next();
 	std::string id;
