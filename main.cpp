@@ -140,6 +140,7 @@ void readPas()
 
 	std::string content = ss.str();
 	std::cout << content;
+
 //	Lexer lexer = Lexer(new CharStream(trim(content).c_str()));
 //	Token *token = lexer.next();
 //	while (token->type != Token::TokenType::TYPE_EOF) {
