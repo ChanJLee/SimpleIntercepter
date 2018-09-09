@@ -22,16 +22,23 @@ const std::string Lexer::KEYWORD_INTEGER = "INTEGER";
 
 const std::string Lexer::KEYWORD_REAL = "REAL";
 
+const std::string Lexer::KEYWORD_VAR = "VAR";
+
 Lexer::Lexer(Stream *stream)
 	: mStream(stream)
 {}
 
 Token *Lexer::next()
 {
-	char ch = EOF;
+	char ch = skipBlankChar();
 
-	// skip blank
-	while (is_blank(ch = mStream->next())) {}
+	// skip comment
+	while (ch == '{') {
+		ch = skipComment();
+		if (is_blank(ch)) {
+			ch = skipBlankChar();
+		}
+	}
 
 	if (ch == EOF) {
 		return new Token(Token::TokenType::TYPE_EOF);
@@ -156,6 +163,10 @@ Token *Lexer::nextId()
 		return new Token(Token::TokenType::TYPE_INTEGER);
 	}
 
+	if (id == KEYWORD_VAR) {
+		return new Token(Token::TokenType::TYPE_VAR);
+	}
+
 	return new IdToken(id);
 }
 
@@ -172,4 +183,25 @@ Token *Lexer::nextColon()
 	}
 
 	return new Token(Token::TokenType::TYPE_ASSIGN);
+}
+
+char Lexer::skipBlankChar()
+{
+	char ch = EOF;
+	// skip blank
+	while (is_blank(ch = mStream->next())) {}
+	return ch;
+}
+
+char Lexer::skipComment()
+{
+	char ch = mStream->next();
+	while (ch != '}' && ch != EOF) {
+		ch = mStream->next();
+	}
+
+	if (ch == '}') {
+		ch = mStream->next();
+	}
+	return ch;
 }

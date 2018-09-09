@@ -77,6 +77,51 @@ void checkUnit()
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
 		std::cerr << "TYPE_ASSIGN end" << std::endl;
 	}
+
+	lexer = Lexer(new CharStream("VAR"));
+	token = lexer.next();
+	if (token->type != Token::TokenType::TYPE_VAR) {
+		std::cerr << "TYPE_VAR failed" << std::endl;
+	}
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
+		std::cerr << "TYPE_VAR end" << std::endl;
+	}
+
+	lexer = Lexer(new CharStream("PROGRAM"));
+	token = lexer.next();
+	if (token->type != Token::TokenType::TYPE_PROGRAM) {
+		std::cerr << "TYPE_PROGRAM failed" << std::endl;
+	}
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
+		std::cerr << "TYPE_PROGRAM end" << std::endl;
+	}
+
+	lexer = Lexer(new CharStream("DIV"));
+	token = lexer.next();
+	if (token->type != Token::TokenType::TYPE_INT_DIV) {
+		std::cerr << "DIV failed" << std::endl;
+	}
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
+		std::cerr << "DIV end" << std::endl;
+	}
+
+	lexer = Lexer(new CharStream("INTEGER"));
+	token = lexer.next();
+	if (token->type != Token::TokenType::TYPE_INTEGER) {
+		std::cerr << "INTEGER; failed" << std::endl;
+	}
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
+		std::cerr << "INTEGER; end" << std::endl;
+	}
+
+	lexer = Lexer(new CharStream("REAL"));
+	token = lexer.next();
+	if (token->type != Token::TokenType::TYPE_REAL) {
+		std::cerr << "real failed" << std::endl;
+	}
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
+		std::cerr << "real end" << std::endl;
+	}
 }
 
 void checkStream()
@@ -196,10 +241,90 @@ void readPas()
 #endif
 }
 
+void printToken()
+{
+	std::ifstream infile;
+	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test.pas");
+	std::stringstream ss;
+	char ch;
+	while (!infile.eof()) {
+		infile >> std::noskipws >> ch;
+		ss.put(ch);
+	}
+	infile.close();
+
+	std::string content = ss.str();
+	std::cout << content << std::endl;
+
+	Lexer lexer = Lexer(new CharStream(content.c_str()));
+	Token *token = lexer.next();
+	while (token->type != Token::TokenType::TYPE_EOF) {
+		switch (token->type) {
+			case Token::TokenType::TYPE_PLUS : std::cout << "plus" << std::endl;
+				break;
+			case Token::TokenType::TYPE_SUB : std::cout << "sub" << std::endl;
+				break;
+			case Token::TokenType::TYPE_MUL : std::cout << "mul" << std::endl;
+				break;
+			case Token::TokenType::TYPE_FLOAT_DIV : std::cout << "float div" << std::endl;
+				break;
+			case Token::TokenType::TYPE_INT_DIV : std::cout << "int div" << std::endl;
+				break;
+			case Token::TokenType::TYPE_LEFT_BRACKET : std::cout << "left bracket" << std::endl;
+				break;
+			case Token::TokenType::TYPE_RIGHT_BRACKET : std::cout << "right bracket" << std::endl;
+				break;
+			case Token::TokenType::TYPE_INT_NUM : {
+				IntNumToken *numToken = (IntNumToken *) token;
+				std::cout << "int number: " << numToken->value << std::endl;
+				break;
+			}
+			case Token::TokenType::TYPE_REAL_NUM : {
+				RealNumToken *numToken = (RealNumToken *) token;
+				std::cout << "real number: " << numToken->value << std::endl;
+				break;
+			}
+			case Token::TokenType::TYPE_EOF : std::cout << "eof" << std::endl;
+				break;
+			case Token::TokenType::TYPE_BEGIN : std::cout << "begin" << std::endl;
+				break;
+			case Token::TokenType::TYPE_END : std::cout << "end" << std::endl;
+				break;
+			case Token::TokenType::TYPE_DOT : std::cout << "dot" << std::endl;
+				break;
+			case Token::TokenType::TYPE_COLON : std::cout << "colon" << std::endl;
+				break;
+			case Token::TokenType::TYPE_ASSIGN : std::cout << "assign" << std::endl;
+				break;
+			case Token::TokenType::TYPE_SEMI : std::cout << "semi" << std::endl;
+				break;
+			case Token::TokenType::TYPE_ID : {
+				IdToken *idToken = (IdToken *) token;
+				std::cout << "id: " << idToken->value << std::endl;
+				break;
+			}
+			case Token::TokenType::TYPE_COMMA : std::cout << "comma" << std::endl;
+				break;
+			case Token::TokenType::TYPE_PROGRAM : std::cout << "PROGRAM" << std::endl;
+				break;
+			case Token::TokenType::TYPE_REAL : std::cout << "REAL" << std::endl;
+				break;
+			case Token::TokenType::TYPE_INTEGER : std::cout << "INTEGER" << std::endl;
+				break;
+			case Token::TokenType::TYPE_VAR : std::cout << "VAR" << std::endl;
+				break;
+			default: std::cerr << "unknown error: " << std::endl;
+				break;
+		}
+		token = lexer.next();
+	}
+}
+
 int main()
 {
 //	checkUnit();
-	checkStream();
+//	checkStream();
 //	readPas();
+	printToken();
 	return 0;
 }

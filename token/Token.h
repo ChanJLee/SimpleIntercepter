@@ -30,6 +30,7 @@ struct Token
 		TYPE_PROGRAM,
 		TYPE_REAL,
 		TYPE_INTEGER,
+		TYPE_VAR, // VAR
 	};
 
 	TokenType type;

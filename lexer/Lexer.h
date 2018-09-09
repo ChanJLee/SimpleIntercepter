@@ -18,6 +18,8 @@ private:
 	static const std::string KEYWORD_DIV;
 	static const std::string KEYWORD_INTEGER;
 	static const std::string KEYWORD_REAL;
+	static const std::string KEYWORD_VAR;
+
 private:
 	Stream *mStream;
 public:
@@ -30,6 +32,10 @@ private:
 	Token *nextId();
 
 	Token *nextColon();
+
+	char skipBlankChar();
+
+	char skipComment();
 };
 
 
