@@ -11,6 +11,8 @@
 #include "ast/NoOpStatementNode.h"
 #include "ast/AssignStatementNode.h"
 #include "ast/RealNumNode.h"
+#include "ast/ProgramNode.h"
+#include "ast/BlockNode.h"
 
 Parser::Parser(Stream *stream)
 	: mLexer(stream)
@@ -107,9 +109,12 @@ void Parser::eat(int type, const std::string &msg)
 
 ASTNode *Parser::program()
 {
-	ASTNode *root = compound();
-	eat(Token::TokenType::TYPE_DOT, "missing .");
-	return root;
+	eat(Token::TokenType::TYPE_PROGRAM, "miss PROGRAM header");
+	Token *id = mCurrentToken;
+	eat(Token::TokenType::TYPE_ID, "missing PROGRAM id");
+	eat(Token::TokenType::TYPE_SEMI, "missing ';' after PROGRAM id");
+
+	return new ProgramNode(id, block());
 }
 
 StatementNode *Parser::compound()
@@ -166,4 +171,65 @@ ASTNode *Parser::parse()
 	ASTNode *root = program();
 	eat(Token::TokenType::TYPE_EOF, "eof error");
 	return root;
+}
+
+ASTNode *Parser::block()
+{
+	return new BlockNode(declarations(), compound());
+}
+
+DeclarationsNode *Parser::declarations()
+{
+	if (mCurrentToken->type != Token::TokenType::TYPE_VAR) {
+		return new DeclarationsNode();
+	}
+
+	// VAR
+	// a : REAL;
+	// b : REAL;
+	// BEGIN
+	// ...
+	// END
+	eat(Token::TokenType::TYPE_VAR);
+	std::vector<DeclarationsNode::Declaration *> declarations;
+	while (mCurrentToken->type != Token::TYPE_BEGIN &&
+		mCurrentToken->type != Token::TYPE_EOF) {
+
+		Token *id = mCurrentToken;
+		eat(Token::TokenType::TYPE_ID);
+
+		std::vector<Token *> ids;
+		ids.push_back(id);
+
+		// a, b, c, d : REAL
+		while (mCurrentToken->type == Token::TokenType::TYPE_COMMA) {
+			eat(Token::TokenType::TYPE_COMMA);
+			id = mCurrentToken;
+			ids.push_back(id);
+			eat(Token::TokenType::TYPE_ID, "missing id after ','");
+		}
+
+		eat(Token::TokenType::TYPE_COLON, "missing ':' after declaration");
+		if (mCurrentToken->type != Token::TokenType::TYPE_REAL &&
+			mCurrentToken->type != Token::TokenType::TYPE_INTEGER) {
+			throw ParseError("missing type after declaration");
+		}
+
+		Token *idTypeToken = mCurrentToken;
+		Token::TokenType varType = idTypeToken->type;
+		eat(mCurrentToken->type);
+		delete idTypeToken;
+		std::for_each(ids.cbegin(), ids.cend(), [&](Token *token)
+		{
+			declarations.push_back(new DeclarationsNode::Declaration(token, varType));
+		});
+
+		// eat ;
+		if (mCurrentToken->type != Token::TokenType::TYPE_SEMI) {
+			break;
+		}
+		eat(Token::TokenType::TYPE_SEMI);
+	}
+
+	return new DeclarationsNode(declarations);
 }

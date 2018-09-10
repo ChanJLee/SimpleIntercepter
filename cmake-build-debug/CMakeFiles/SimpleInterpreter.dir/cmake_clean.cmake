@@ -17,6 +17,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o"
   "SimpleInterpreter.pdb"
   "SimpleInterpreter"
 )

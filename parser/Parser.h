@@ -10,6 +10,8 @@
 #include "../lexer/Lexer.h"
 #include "ast/StatementNode.h"
 #include "ast/VarNode.h"
+#include "ast/DeclarationNode.h"
+#include "ast/DeclarationsNode.h"
 
 class Parser
 {
@@ -21,6 +23,8 @@ public:
 	ASTNode *parse();
 private:
 	ASTNode *program();
+	ASTNode *block();
+	DeclarationsNode* declarations();
 	StatementNode *compound();
 	StatementNode *statement();
 	StatementNode *assignStatement();

@@ -20,6 +20,9 @@ public:
 		NO_OP,
 		ASSIGN,
 		VAR,
+		PROGRAM,
+		BLOCK,
+		DECLARATION,
 	};
 public:
 	Token *const token;

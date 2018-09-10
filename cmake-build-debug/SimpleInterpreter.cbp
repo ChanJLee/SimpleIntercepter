@@ -126,10 +126,28 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp">
@@ -142,6 +160,12 @@
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.cpp">
