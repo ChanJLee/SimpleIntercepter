@@ -14,13 +14,14 @@
 #include "../parser/ast/NoOpStatementNode.h"
 #include "../parser/ast/AssignStatementNode.h"
 #include "../parser/ast/RealNumNode.h"
+#include "../parser/ast/ProgramNode.h"
 #include <map>
 
 class Interpreter
 {
 private:
 	Parser mParser;
-	std::map<std::string, int> mSymbolTable;
+	std::map<std::string, double> mSymbolTable;
 public:
 	Interpreter(Stream *stream)
 		: mParser(stream)
@@ -32,23 +33,29 @@ public:
 	void dumpSymbolTable();
 #endif
 private:
-	void visitCompoundStatementNode(CompoundStatementNode *root);
+	void visitProgramNode(ProgramNode* node);
+
+	void visitDeclarationsNode(DeclarationsNode* node);
+
+	void visitBlockNode(BlockNode* node);
+
+	void visitCompoundStatementNode(CompoundStatementNode *node);
 
 	void visitAssignStatementNode(AssignStatementNode *node);
 
 	void visitNoOpStatementNode(NoOpStatementNode *node);
 
-	int visitNode(ASTNode *node);
+	double visitNode(ASTNode *node);
 
-	int visitIntNumNode(IntNumNode *node);
+	double visitIntNumNode(IntNumNode *node);
 
 	double visitRealNumNode(RealNumNode *node);
 
-	int visitBinOpNode(BinOpNode *node);
+	double visitBinOpNode(BinOpNode *node);
 
-	int visitUnaryNode(UnaryNode *node);
+	double visitUnaryNode(UnaryNode *node);
 
-	int visitVarNode(VarNode *node);
+	double visitVarNode(VarNode *node);
 };
 
 #endif //SIMPLEINTERPRETER_INTERCEPTER_H

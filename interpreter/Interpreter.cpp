@@ -4,8 +4,12 @@
 
 #include "Interpreter.h"
 #include "../exception/ParseError.h"
+#ifdef DEBUG
+#include <iostream>
+#endif
 
-int Interpreter::visitNode(ASTNode *node)
+
+double Interpreter::visitNode(ASTNode *node)
 {
 	if (node->type == ASTNode::Type::INT_NUM) {
 		return visitIntNumNode((IntNumNode *) node);
@@ -19,19 +23,22 @@ int Interpreter::visitNode(ASTNode *node)
 	else if (node->type == ASTNode::Type::VAR) {
 		return visitVarNode((VarNode *) node);
 	}
+	else if (node->type == ASTNode::Type::REAL_NUM) {
+		return visitRealNumNode((RealNumNode *) node);
+	}
 
 	std::string msg = "unknown ast node, type is: ";
 	msg += node->token->type;
 	throw ParseError(msg);
 }
 
-int Interpreter::visitIntNumNode(IntNumNode *node)
+double Interpreter::visitIntNumNode(IntNumNode *node)
 {
 	IntNumToken *token = (IntNumToken *) node->token;
 	return token->value;
 }
 
-int Interpreter::visitBinOpNode(BinOpNode *node)
+double Interpreter::visitBinOpNode(BinOpNode *node)
 {
 	if (node->lhs == nullptr) {
 		throw ParseError("missing left operand");
@@ -41,20 +48,21 @@ int Interpreter::visitBinOpNode(BinOpNode *node)
 		throw ParseError("missing right operand");
 	}
 
-	int lhs = visitNode(node->lhs);
-	int rhs = visitNode(node->rhs);
+	double lhs = visitNode(node->lhs);
+	double rhs = visitNode(node->rhs);
 	switch (node->token->type) {
 		case Token::TokenType::TYPE_FLOAT_DIV: return lhs / rhs;
 		case Token::TokenType::TYPE_MUL: return lhs * rhs;
 		case Token::TokenType::TYPE_SUB: return lhs - rhs;
 		case Token::TokenType::TYPE_PLUS: return lhs + rhs;
+		case Token::TokenType::TYPE_INT_DIV: return (int) lhs / (int) rhs;
 		default: std::string msg = "unknown bin op, type is: ";
 			msg += node->token->type;
 			throw ParseError("unknown bin op");
 	}
 }
 
-int Interpreter::visitUnaryNode(UnaryNode *node)
+double Interpreter::visitUnaryNode(UnaryNode *node)
 {
 	if (node->child == nullptr) {
 		throw ParseError("missing unary operand");
@@ -75,23 +83,13 @@ int Interpreter::visitUnaryNode(UnaryNode *node)
 
 void Interpreter::interpret()
 {
-	ASTNode *root = mParser.parse();
-	visitCompoundStatementNode((CompoundStatementNode *) root);
+	ProgramNode *root = mParser.parse();
+	visitProgramNode(root);
 }
 
-#ifdef DEBUG
-#include <iostream>
-void Interpreter::dumpSymbolTable()
+void Interpreter::visitCompoundStatementNode(CompoundStatementNode *node)
 {
-	for (std::map<std::string, int>::iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
-		std::cout << "key: " << it->first << " value: " << it->second << std::endl;
-	}
-}
-#endif
-
-void Interpreter::visitCompoundStatementNode(CompoundStatementNode *root)
-{
-	std::for_each(root->statements.cbegin(), root->statements.cend(), [this](StatementNode *child)
+	std::for_each(node->statements.cbegin(), node->statements.cend(), [this](StatementNode *child)
 	{
 		if (child->type == ASTNode::Type::COMPOUND) {
 			visitCompoundStatementNode((CompoundStatementNode *) child);
@@ -125,7 +123,7 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 	mSymbolTable[lv->value] = visitNode(node->rv);
 }
 
-int Interpreter::visitVarNode(VarNode *node)
+double Interpreter::visitVarNode(VarNode *node)
 {
 	IdToken *lv = (IdToken *) node->token;
 	auto it = mSymbolTable.find(lv->value);
@@ -143,3 +141,41 @@ double Interpreter::visitRealNumNode(RealNumNode *node)
 	RealNumToken *token = (RealNumToken *) node->token;
 	return token->value;
 }
+
+void Interpreter::visitProgramNode(ProgramNode *node)
+{
+#ifdef DEBUG
+	IdToken *idToken = (IdToken *) node->token;
+	std::cout << "current program: " << idToken->value << std::endl;
+#endif
+	visitBlockNode(node->block);
+}
+
+void Interpreter::visitBlockNode(BlockNode *node)
+{
+	visitDeclarationsNode(node->declarations);
+	visitCompoundStatementNode((CompoundStatementNode *) node->compoundStatementNode);
+}
+
+void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
+{
+	std::for_each(node->declarations.cbegin(),
+				  node->declarations.cend(),
+				  [this](DeclarationsNode::Declaration *declaration)
+				  {
+					  if (declaration != nullptr) {
+						  IdToken *id = (IdToken *) declaration->id;
+						  // TODO add type info
+						  mSymbolTable[id->value] = 0;
+					  }
+				  });
+}
+
+#ifdef DEBUG
+void Interpreter::dumpSymbolTable()
+{
+	for (std::map<std::string, double>::iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
+		std::cout << "key: " << it->first << " value: " << it->second << std::endl;
+	}
+}
+#endif

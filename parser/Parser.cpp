@@ -11,8 +11,6 @@
 #include "ast/NoOpStatementNode.h"
 #include "ast/AssignStatementNode.h"
 #include "ast/RealNumNode.h"
-#include "ast/ProgramNode.h"
-#include "ast/BlockNode.h"
 
 Parser::Parser(Stream *stream)
 	: mLexer(stream)
@@ -36,6 +34,7 @@ ASTNode *Parser::term()
 {
 	ASTNode *lhs = factor();
 	while (mCurrentToken->type == Token::TokenType::TYPE_FLOAT_DIV ||
+		mCurrentToken->type == Token::TokenType::TYPE_INT_DIV ||
 		mCurrentToken->type == Token::TokenType::TYPE_MUL) {
 		Token *token = mCurrentToken;
 		eat(token->type);
@@ -107,14 +106,15 @@ void Parser::eat(int type, const std::string &msg)
 	throw ParseError(msg);
 }
 
-ASTNode *Parser::program()
+ProgramNode *Parser::program()
 {
 	eat(Token::TokenType::TYPE_PROGRAM, "miss PROGRAM header");
 	Token *id = mCurrentToken;
 	eat(Token::TokenType::TYPE_ID, "missing PROGRAM id");
 	eat(Token::TokenType::TYPE_SEMI, "missing ';' after PROGRAM id");
-
-	return new ProgramNode(id, block());
+	ProgramNode *node = new ProgramNode(id, block());
+	eat(Token::TokenType::TYPE_DOT, "missing .");
+	return node;
 }
 
 StatementNode *Parser::compound()
@@ -166,14 +166,14 @@ VarNode *Parser::variable()
 	return var;
 }
 
-ASTNode *Parser::parse()
+ProgramNode *Parser::parse()
 {
-	ASTNode *root = program();
+	ProgramNode *root = program();
 	eat(Token::TokenType::TYPE_EOF, "eof error");
 	return root;
 }
 
-ASTNode *Parser::block()
+BlockNode *Parser::block()
 {
 	return new BlockNode(declarations(), compound());
 }

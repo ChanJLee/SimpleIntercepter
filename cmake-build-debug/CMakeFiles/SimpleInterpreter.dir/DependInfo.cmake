@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o"
-  "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o"

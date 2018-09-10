@@ -7,12 +7,13 @@
 
 
 #include "ASTNode.h"
+#include "BlockNode.h"
 class ProgramNode: public ASTNode
 {
 public:
-	ASTNode* block;
+	BlockNode* block;
 public:
-	ProgramNode(Token *id, ASTNode* block);
+	ProgramNode(Token *id, BlockNode* block);
 	virtual ~ProgramNode();
 };
 

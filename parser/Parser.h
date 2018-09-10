@@ -10,8 +10,9 @@
 #include "../lexer/Lexer.h"
 #include "ast/StatementNode.h"
 #include "ast/VarNode.h"
-#include "ast/DeclarationNode.h"
 #include "ast/DeclarationsNode.h"
+#include "ast/BlockNode.h"
+#include "ast/ProgramNode.h"
 
 class Parser
 {
@@ -20,10 +21,10 @@ private:
 	Token *mCurrentToken = nullptr;
 public:
 	Parser(Stream *stream);
-	ASTNode *parse();
+	ProgramNode *parse();
 private:
-	ASTNode *program();
-	ASTNode *block();
+	ProgramNode *program();
+	BlockNode *block();
 	DeclarationsNode* declarations();
 	StatementNode *compound();
 	StatementNode *statement();

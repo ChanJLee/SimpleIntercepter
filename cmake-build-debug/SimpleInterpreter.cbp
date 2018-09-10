@@ -138,12 +138,6 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.cpp">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>

@@ -39,6 +39,8 @@ iostream
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
 ../parser/ast/RealNumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.h
+../parser/ast/ProgramNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
 map
 -
 
@@ -73,6 +75,8 @@ stream/char/CharStream.h
 /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
 interpreter/Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
+exception/ParseError.h
+/Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 fstream
 -
 sstream
@@ -111,10 +115,12 @@ ast/StatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
 ast/VarNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
-ast/DeclarationNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.h
-vector
--
+ast/DeclarationsNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h
+ast/BlockNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
+ast/ProgramNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp
 ASTNode.h
@@ -147,18 +153,16 @@ ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.cpp
 BlockNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
-algorithm
--
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
 vector
 -
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
-DeclarationNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.h
 CompoundStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
+DeclarationsNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.cpp
 CompoundStatementNode.h
@@ -174,11 +178,13 @@ ASTNode.h
 StatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
 
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.cpp
-DeclarationNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.cpp
+DeclarationsNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h
 
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h
+vector
+-
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 
@@ -211,6 +217,8 @@ ProgramNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+BlockNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.cpp
 RealNumNode.h

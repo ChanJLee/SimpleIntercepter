@@ -366,33 +366,6 @@ parser/ast/CompoundStatementNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.s
 .PHONY : parser/ast/CompoundStatementNode.cpp.s
 
-parser/ast/DeclarationNode.o: parser/ast/DeclarationNode.cpp.o
-
-.PHONY : parser/ast/DeclarationNode.o
-
-# target to build an object file
-parser/ast/DeclarationNode.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationNode.cpp.o
-.PHONY : parser/ast/DeclarationNode.cpp.o
-
-parser/ast/DeclarationNode.i: parser/ast/DeclarationNode.cpp.i
-
-.PHONY : parser/ast/DeclarationNode.i
-
-# target to preprocess a source file
-parser/ast/DeclarationNode.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationNode.cpp.i
-.PHONY : parser/ast/DeclarationNode.cpp.i
-
-parser/ast/DeclarationNode.s: parser/ast/DeclarationNode.cpp.s
-
-.PHONY : parser/ast/DeclarationNode.s
-
-# target to generate assembly for a file
-parser/ast/DeclarationNode.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationNode.cpp.s
-.PHONY : parser/ast/DeclarationNode.cpp.s
-
 parser/ast/DeclarationsNode.o: parser/ast/DeclarationsNode.cpp.o
 
 .PHONY : parser/ast/DeclarationsNode.o
@@ -753,9 +726,6 @@ help:
 	@echo "... parser/ast/CompoundStatementNode.o"
 	@echo "... parser/ast/CompoundStatementNode.i"
 	@echo "... parser/ast/CompoundStatementNode.s"
-	@echo "... parser/ast/DeclarationNode.o"
-	@echo "... parser/ast/DeclarationNode.i"
-	@echo "... parser/ast/DeclarationNode.s"
 	@echo "... parser/ast/DeclarationsNode.o"
 	@echo "... parser/ast/DeclarationsNode.i"
 	@echo "... parser/ast/DeclarationsNode.s"

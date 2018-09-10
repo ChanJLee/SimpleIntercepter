@@ -1,6 +1,7 @@
 #include <iostream>
 #include "stream/char/CharStream.h"
 #include "interpreter/Interpreter.h"
+#include "exception/ParseError.h"
 #include <fstream>
 #include <sstream>
 
@@ -234,11 +235,16 @@ void readPas()
 //		token = lexer.next();
 //	}
 
-	Interpreter interpreter(new CharStream(content.c_str()));
-	interpreter.interpret();
+	try {
+		Interpreter interpreter(new CharStream(content.c_str()));
+		interpreter.interpret();
 #ifdef DEBUG
-	interpreter.dumpSymbolTable();
+		interpreter.dumpSymbolTable();
 #endif
+	}
+	catch (ParseError error) {
+		std::cerr << error.msg << std::endl;
+	}
 }
 
 void printToken()
@@ -324,7 +330,7 @@ int main()
 {
 //	checkUnit();
 //	checkStream();
-//	readPas();
-	printToken();
+	readPas();
+//	printToken();
 	return 0;
 }

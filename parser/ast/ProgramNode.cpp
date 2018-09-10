@@ -4,7 +4,7 @@
 
 #include "ProgramNode.h"
 
-ProgramNode::ProgramNode(Token *const token, ASTNode *block)
+ProgramNode::ProgramNode(Token *const token, BlockNode *block)
 	: ASTNode(token, ASTNode::Type::PROGRAM), block(block)
 {}
 
