@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o"
+  "/Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o"
+  "/Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/main.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o"

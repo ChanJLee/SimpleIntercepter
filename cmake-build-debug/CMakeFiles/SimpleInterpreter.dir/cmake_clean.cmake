@@ -20,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o"
   "SimpleInterpreter.pdb"
   "SimpleInterpreter"
 )

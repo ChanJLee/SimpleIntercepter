@@ -25,6 +25,13 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../token/IntNumT
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../token/RealNumToken.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../token/Token.h
 
+CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o: ../interpreter/st/SymbolTable.cpp
+CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o: ../interpreter/st/SymbolTable.h
+CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o: ../token/Token.h
+
+CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o: ../interpreter/symbol/Symbol.cpp
+CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o: ../interpreter/symbol/Symbol.h
+
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../exception/ParseError.h
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../lexer/Lexer.cpp
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../lexer/Lexer.h

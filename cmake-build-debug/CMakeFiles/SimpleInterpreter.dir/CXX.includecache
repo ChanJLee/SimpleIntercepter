@@ -44,6 +44,24 @@ iostream
 map
 -
 
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.cpp
+SymbolTable.h
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.h
+string
+-
+map
+-
+../../token/Token.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.cpp
+Symbol.h
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.h
+
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp
 Lexer.h
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
@@ -93,18 +111,12 @@ ast/IntNumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.h
 ast/UnaryNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
-ast/CompoundStatementNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
 ast/NoOpStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
 ast/AssignStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
 ast/RealNumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.h
-ast/ProgramNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
-ast/BlockNode.h
-/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
 ast/ASTNode.h

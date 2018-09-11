@@ -7,7 +7,6 @@
 #include "ast/BinOpNode.h"
 #include "ast/IntNumNode.h"
 #include "ast/UnaryNode.h"
-#include "ast/CompoundStatementNode.h"
 #include "ast/NoOpStatementNode.h"
 #include "ast/AssignStatementNode.h"
 #include "ast/RealNumNode.h"

@@ -25,17 +25,17 @@ public:
 private:
 	ProgramNode *program();
 	BlockNode *block();
-	DeclarationsNode* declarations();
+	DeclarationsNode *declarations();
 	StatementNode *compound();
 	StatementNode *statement();
 	StatementNode *assignStatement();
 	StatementNode *empty();
-	VarNode * variable();
+	VarNode *variable();
 	ASTNode *exp();
 	ASTNode *term();
 	ASTNode *factor();
 	void eat(int type);
-	void eat(int type, const std::string& msg);
+	void eat(int type, const std::string &msg);
 };
 
 

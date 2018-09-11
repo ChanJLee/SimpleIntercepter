@@ -8,7 +8,6 @@
 #include <iostream>
 #endif
 
-
 double Interpreter::visitNode(ASTNode *node)
 {
 	if (node->type == ASTNode::Type::INT_NUM) {

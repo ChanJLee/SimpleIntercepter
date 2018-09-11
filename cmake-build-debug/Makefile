@@ -150,6 +150,60 @@ interpreter/Interpreter.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.s
 .PHONY : interpreter/Interpreter.cpp.s
 
+interpreter/st/SymbolTable.o: interpreter/st/SymbolTable.cpp.o
+
+.PHONY : interpreter/st/SymbolTable.o
+
+# target to build an object file
+interpreter/st/SymbolTable.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o
+.PHONY : interpreter/st/SymbolTable.cpp.o
+
+interpreter/st/SymbolTable.i: interpreter/st/SymbolTable.cpp.i
+
+.PHONY : interpreter/st/SymbolTable.i
+
+# target to preprocess a source file
+interpreter/st/SymbolTable.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.i
+.PHONY : interpreter/st/SymbolTable.cpp.i
+
+interpreter/st/SymbolTable.s: interpreter/st/SymbolTable.cpp.s
+
+.PHONY : interpreter/st/SymbolTable.s
+
+# target to generate assembly for a file
+interpreter/st/SymbolTable.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.s
+.PHONY : interpreter/st/SymbolTable.cpp.s
+
+interpreter/symbol/Symbol.o: interpreter/symbol/Symbol.cpp.o
+
+.PHONY : interpreter/symbol/Symbol.o
+
+# target to build an object file
+interpreter/symbol/Symbol.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o
+.PHONY : interpreter/symbol/Symbol.cpp.o
+
+interpreter/symbol/Symbol.i: interpreter/symbol/Symbol.cpp.i
+
+.PHONY : interpreter/symbol/Symbol.i
+
+# target to preprocess a source file
+interpreter/symbol/Symbol.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.i
+.PHONY : interpreter/symbol/Symbol.cpp.i
+
+interpreter/symbol/Symbol.s: interpreter/symbol/Symbol.cpp.s
+
+.PHONY : interpreter/symbol/Symbol.s
+
+# target to generate assembly for a file
+interpreter/symbol/Symbol.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.s
+.PHONY : interpreter/symbol/Symbol.cpp.s
+
 lexer/Lexer.o: lexer/Lexer.cpp.o
 
 .PHONY : lexer/Lexer.o
@@ -702,6 +756,12 @@ help:
 	@echo "... interpreter/Interpreter.o"
 	@echo "... interpreter/Interpreter.i"
 	@echo "... interpreter/Interpreter.s"
+	@echo "... interpreter/st/SymbolTable.o"
+	@echo "... interpreter/st/SymbolTable.i"
+	@echo "... interpreter/st/SymbolTable.s"
+	@echo "... interpreter/symbol/Symbol.o"
+	@echo "... interpreter/symbol/Symbol.i"
+	@echo "... interpreter/symbol/Symbol.s"
 	@echo "... lexer/Lexer.o"
 	@echo "... lexer/Lexer.i"
 	@echo "... lexer/Lexer.s"

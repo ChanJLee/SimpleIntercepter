@@ -45,6 +45,7 @@ private:
 
 	void visitNoOpStatementNode(NoOpStatementNode *node);
 
+	// TODO add NodeValue
 	double visitNode(ASTNode *node);
 
 	double visitIntNumNode(IntNumNode *node);
