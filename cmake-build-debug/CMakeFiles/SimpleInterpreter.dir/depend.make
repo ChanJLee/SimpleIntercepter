@@ -169,11 +169,14 @@ CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/char/Ch
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../exception/ParseError.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/AssignStatementNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/BinOpNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/BlockNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/CompoundStatementNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/DeclarationsNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/NoOpStatementNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/ProgramNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/StatementNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/UnaryNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/VarNode.h
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../syntax/SyntaxChecker.cpp
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../syntax/SyntaxChecker.h

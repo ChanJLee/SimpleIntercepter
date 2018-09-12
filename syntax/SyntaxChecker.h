@@ -8,6 +8,9 @@
 #include "../parser/ast/ProgramNode.h"
 #include "ast/Symbol.h"
 #include "../parser/ast/AssignStatementNode.h"
+#include "../parser/ast/BinOpNode.h"
+#include "../parser/ast/UnaryNode.h"
+#include "../parser/ast/NoOpStatementNode.h"
 #include <map>
 #include <string>
 
@@ -27,10 +30,15 @@ private:
 	void checkDeclarations(DeclarationsNode *node);
 	void checkCompoundStatement(CompoundStatementNode *node);
 	void checkAssignStatement(AssignStatementNode *node);
+	void checkNoOp(NoOpStatementNode *node);
+
+	Symbol checkVar(VarNode *node);
+	Symbol checkExp(ASTNode *node);
+	Symbol checkBinOp(BinOpNode *node);
+	Symbol visitUnaryNode(UnaryNode *node);
+
 	void putSymbol(const String &key, Token::TokenType value);
 	Symbol getSymbol(const String &key);
-	Symbol checkVar(VarNode *node);
-	void checkExp(ASTNode *node, Symbol prefer);
 };
 
 

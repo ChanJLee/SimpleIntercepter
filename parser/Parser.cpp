@@ -32,7 +32,7 @@ ASTNode *Parser::exp()
 ASTNode *Parser::term()
 {
 	ASTNode *lhs = factor();
-	while (mCurrentToken->type == Token::TokenType::TYPE_FLOAT_DIV ||
+	while (mCurrentToken->type == Token::TokenType::TYPE_REAL_DIV ||
 		mCurrentToken->type == Token::TokenType::TYPE_INT_DIV ||
 		mCurrentToken->type == Token::TokenType::TYPE_MUL) {
 		Token *token = mCurrentToken;

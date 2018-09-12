@@ -170,11 +170,14 @@ CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.h

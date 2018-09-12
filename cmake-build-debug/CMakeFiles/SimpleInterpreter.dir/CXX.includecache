@@ -263,6 +263,8 @@ string
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp
+term.h
+-
 SyntaxChecker.h
 /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.h
 ../token/IdToken.h
@@ -271,6 +273,10 @@ SyntaxChecker.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
 ../parser/ast/AssignStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
+../parser/ast/BinOpNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
+../parser/ast/UnaryNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.h
 ../parser/ast/ProgramNode.h
@@ -279,6 +285,12 @@ ast/Symbol.h
 /Users/chan/ClionProjects/SimpleInterpreter/syntax/ast/Symbol.h
 ../parser/ast/AssignStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
+../parser/ast/BinOpNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BinOpNode.h
+../parser/ast/UnaryNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.h
+../parser/ast/NoOpStatementNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
 map
 -
 string

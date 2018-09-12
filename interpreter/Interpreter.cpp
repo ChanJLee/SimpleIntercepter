@@ -50,7 +50,7 @@ double Interpreter::visitBinOpNode(BinOpNode *node)
 	double lhs = visitNode(node->lhs);
 	double rhs = visitNode(node->rhs);
 	switch (node->token->type) {
-		case Token::TokenType::TYPE_FLOAT_DIV: return lhs / rhs;
+		case Token::TokenType::TYPE_REAL_DIV: return lhs / rhs;
 		case Token::TokenType::TYPE_MUL: return lhs * rhs;
 		case Token::TokenType::TYPE_SUB: return lhs - rhs;
 		case Token::TokenType::TYPE_PLUS: return lhs + rhs;

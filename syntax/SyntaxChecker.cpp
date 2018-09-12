@@ -2,10 +2,13 @@
 // Created by chan on 2018/9/11.
 //
 
+#include <term.h>
 #include "SyntaxChecker.h"
 #include "../token/IdToken.h"
 #include "../exception/ParseError.h"
 #include "../parser/ast/AssignStatementNode.h"
+#include "../parser/ast/BinOpNode.h"
+#include "../parser/ast/UnaryNode.h"
 
 SyntaxChecker::SyntaxChecker(ProgramNode *tree)
 	: mTree(tree)
@@ -53,7 +56,7 @@ void SyntaxChecker::checkCompoundStatement(CompoundStatementNode *node)
 		}
 
 		if (statement->type == ASTNode::Type::NO_OP) {
-			/* DO NOTHING */
+			checkNoOp((NoOpStatementNode *) statement);
 			return;
 		}
 
@@ -97,8 +100,13 @@ Symbol SyntaxChecker::getSymbol(const SyntaxChecker::String &key)
 void SyntaxChecker::checkAssignStatement(AssignStatementNode *node)
 {
 	VarNode *lv = node->lv;
-	Symbol symbol = checkVar(lv);
-	checkExp(node->rv, symbol);
+	Symbol lhs = checkVar(lv);
+	Symbol rhs = checkExp(node->rv);
+	if (lhs == Symbol::INT && rhs == Symbol::REAL) {
+		IdToken *id = (IdToken *) node->token;
+		String msg = "can not assign REAL to " + id->value + ", it's type is INT";
+		throw ParseError(msg);
+	}
 }
 
 Symbol SyntaxChecker::checkVar(VarNode *node)
@@ -112,6 +120,57 @@ Symbol SyntaxChecker::checkVar(VarNode *node)
 	return type;
 }
 
-void SyntaxChecker::checkExp(ASTNode *node, Symbol prefer)
+Symbol SyntaxChecker::checkExp(ASTNode *node)
 {
+	if (node->type == ASTNode::Type::INT_NUM) {
+		return Symbol::INT;
+	}
+	else if (node->type == ASTNode::Type::BIN) {
+		return checkBinOp((BinOpNode *) node);
+	}
+	else if (node->type == ASTNode::Type::UNARY) {
+		return visitUnaryNode((UnaryNode *) node);
+	}
+	else if (node->type == ASTNode::Type::VAR) {
+		return checkVar((VarNode *) node);
+	}
+	else if (node->type == ASTNode::Type::REAL_NUM) {
+		return Symbol::REAL;
+	}
+
+	std::string msg = "unknown ast node, type is: ";
+	msg += node->token->type;
+	throw ParseError(msg);
+}
+
+Symbol SyntaxChecker::checkBinOp(BinOpNode *node)
+{
+	Symbol lhs = checkExp(node->lhs);
+	Symbol rhs = checkExp(node->rhs);
+	Symbol result = (lhs == Symbol::REAL || rhs == Symbol::REAL) ? Symbol::REAL : Symbol::INT;
+
+	if (Token::TokenType::TYPE_INT_DIV == node->token->type &&
+		result == Symbol::REAL) {
+		throw ParseError("DIV only can be used for INT");
+	}
+
+	if (node->token->type != Token::TokenType::TYPE_INT_DIV &&
+		node->token->type != Token::TokenType::TYPE_REAL_DIV &&
+		node->token->type != Token::TokenType::TYPE_PLUS &&
+		node->token->type != Token::TokenType::TYPE_MUL &&
+		node->token->type != Token::TokenType::TYPE_SUB) {
+		throw ParseError("unknown binary op");
+	}
+
+	return result;
+}
+
+Symbol SyntaxChecker::visitUnaryNode(UnaryNode *node)
+{
+	return checkExp(node->child);
+}
+
+void SyntaxChecker::checkNoOp(NoOpStatementNode *node)
+{
+	/* do nothing */
 }

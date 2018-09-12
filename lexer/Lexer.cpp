@@ -61,7 +61,7 @@ Token *Lexer::next()
 	}
 
 	if (ch == '/') {
-		return new Token(Token::TokenType::TYPE_FLOAT_DIV);
+		return new Token(Token::TokenType::TYPE_REAL_DIV);
 	}
 
 	if (ch == '*') {

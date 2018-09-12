@@ -143,8 +143,8 @@ void checkStream()
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_INT_NUM) {
 		std::cerr << "TYPE_INT_NUM end" << std::endl;
 	}
-	if ((token = lexer.next())->type != Token::TokenType::TYPE_FLOAT_DIV) {
-		std::cerr << "TYPE_FLOAT_DIV end" << std::endl;
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_REAL_DIV) {
+		std::cerr << "TYPE_REAL_DIV end" << std::endl;
 	}
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_REAL_NUM) {
 		std::cerr << "TYPE_REAL_NUM end" << std::endl;
@@ -197,7 +197,7 @@ void readPas()
 //				break;
 //			case Token::TokenType::TYPE_MUL : std::cout << "mul" << std::endl;
 //				break;
-//			case Token::TokenType::TYPE_FLOAT_DIV : std::cout << "div" << std::endl;
+//			case Token::TokenType::TYPE_REAL_DIV : std::cout << "div" << std::endl;
 //				break;
 //			case Token::TokenType::TYPE_LEFT_BRACKET : std::cout << "left bracket" << std::endl;
 //				break;
@@ -272,7 +272,7 @@ void printToken()
 				break;
 			case Token::TokenType::TYPE_MUL : std::cout << "mul" << std::endl;
 				break;
-			case Token::TokenType::TYPE_FLOAT_DIV : std::cout << "float div" << std::endl;
+			case Token::TokenType::TYPE_REAL_DIV : std::cout << "float div" << std::endl;
 				break;
 			case Token::TokenType::TYPE_INT_DIV : std::cout << "int div" << std::endl;
 				break;
