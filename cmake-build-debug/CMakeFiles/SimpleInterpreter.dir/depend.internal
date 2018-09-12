@@ -25,13 +25,6 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
-CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o
- /Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.cpp
- /Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.h
- /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
-CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o
- /Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.cpp
- /Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.h
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp
@@ -173,6 +166,21 @@ CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o
+ /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/CompoundStatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.h
+ /Users/chan/ClionProjects/SimpleInterpreter/syntax/ast/Symbol.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+ /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h

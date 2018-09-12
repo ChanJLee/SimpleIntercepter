@@ -93,18 +93,6 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.cpp">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.cpp">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.h">
-			<Option target="SimpleInterpreter"/>
-		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
@@ -205,6 +193,15 @@
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/syntax/ast/Symbol.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp">

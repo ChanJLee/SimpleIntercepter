@@ -5,8 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o"
-  "/Users/chan/ClionProjects/SimpleInterpreter/interpreter/st/SymbolTable.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o"
-  "/Users/chan/ClionProjects/SimpleInterpreter/interpreter/symbol/Symbol.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/main.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o"
@@ -24,6 +22,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o"
+  "/Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o"

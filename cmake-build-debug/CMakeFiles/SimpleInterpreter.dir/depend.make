@@ -25,13 +25,6 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../token/IntNumT
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../token/RealNumToken.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../token/Token.h
 
-CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o: ../interpreter/st/SymbolTable.cpp
-CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o: ../interpreter/st/SymbolTable.h
-CMakeFiles/SimpleInterpreter.dir/interpreter/st/SymbolTable.cpp.o: ../token/Token.h
-
-CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o: ../interpreter/symbol/Symbol.cpp
-CMakeFiles/SimpleInterpreter.dir/interpreter/symbol/Symbol.cpp.o: ../interpreter/symbol/Symbol.h
-
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../exception/ParseError.h
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../lexer/Lexer.cpp
 CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o: ../lexer/Lexer.h
@@ -172,6 +165,21 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o: ../token/Token.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/char/CharStream.cpp
 CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o: ../stream/char/CharStream.h
+
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../exception/ParseError.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/ASTNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/AssignStatementNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/BlockNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/CompoundStatementNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/DeclarationsNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/ProgramNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/StatementNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../parser/ast/VarNode.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../syntax/SyntaxChecker.cpp
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../syntax/SyntaxChecker.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../syntax/ast/Symbol.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../token/IdToken.h
+CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o: ../token/IdToken.cpp
 CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o: ../token/IdToken.h

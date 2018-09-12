@@ -125,7 +125,7 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 double Interpreter::visitVarNode(VarNode *node)
 {
 	IdToken *lv = (IdToken *) node->token;
-	auto it = mSymbolTable.find(lv->value);
+	Iterator it = mSymbolTable.find(lv->value);
 	if (it == mSymbolTable.end()) {
 		std::string msg = "unknown symbol: ";
 		msg += lv->value;
@@ -173,7 +173,7 @@ void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
 #ifdef DEBUG
 void Interpreter::dumpSymbolTable()
 {
-	for (std::map<std::string, double>::iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
+	for (Iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
 		std::cout << "key: " << it->first << " value: " << it->second << std::endl;
 	}
 }

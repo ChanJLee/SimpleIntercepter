@@ -1,0 +1,15 @@
+//
+// Created by chan on 2018/9/11.
+//
+
+#ifndef SIMPLEINTERPRETER_SYMBOL_H
+#define SIMPLEINTERPRETER_SYMBOL_H
+
+enum Symbol
+{
+	INT,
+	REAL,
+	UNDEFINED,
+};
+
+#endif //SIMPLEINTERPRETER_SYMBOL_H

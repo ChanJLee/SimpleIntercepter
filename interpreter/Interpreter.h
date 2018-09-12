@@ -19,9 +19,12 @@
 
 class Interpreter
 {
+	typedef std::string String;
+	typedef std::map<String, double> KVTable;
+	typedef KVTable::iterator Iterator;
 private:
 	Parser mParser;
-	std::map<std::string, double> mSymbolTable;
+	KVTable mSymbolTable;
 public:
 	Interpreter(Stream *stream)
 		: mParser(stream)
@@ -33,11 +36,11 @@ public:
 	void dumpSymbolTable();
 #endif
 private:
-	void visitProgramNode(ProgramNode* node);
+	void visitProgramNode(ProgramNode *node);
 
-	void visitDeclarationsNode(DeclarationsNode* node);
+	void visitDeclarationsNode(DeclarationsNode *node);
 
-	void visitBlockNode(BlockNode* node);
+	void visitBlockNode(BlockNode *node);
 
 	void visitCompoundStatementNode(CompoundStatementNode *node);
 
