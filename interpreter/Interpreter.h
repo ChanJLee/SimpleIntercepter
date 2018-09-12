@@ -23,11 +23,11 @@ class Interpreter
 	typedef std::map<String, double> KVTable;
 	typedef KVTable::iterator Iterator;
 private:
-	Parser mParser;
+	ProgramNode * mRoot;
 	KVTable mSymbolTable;
 public:
-	Interpreter(Stream *stream)
-		: mParser(stream)
+	Interpreter(ProgramNode *root)
+		: mRoot(root)
 	{}
 
 	void interpret();

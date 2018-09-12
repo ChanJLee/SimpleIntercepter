@@ -82,8 +82,7 @@ double Interpreter::visitUnaryNode(UnaryNode *node)
 
 void Interpreter::interpret()
 {
-	ProgramNode *root = mParser.parse();
-	visitProgramNode(root);
+	visitProgramNode(mRoot);
 }
 
 void Interpreter::visitCompoundStatementNode(CompoundStatementNode *node)

@@ -20,7 +20,7 @@ private:
 	Lexer mLexer;
 	Token *mCurrentToken = nullptr;
 public:
-	Parser(Stream *stream);
+	Parser(const Lexer &lexer);
 	ProgramNode *parse();
 private:
 	ProgramNode *program();

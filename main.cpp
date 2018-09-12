@@ -2,6 +2,7 @@
 #include "stream/char/CharStream.h"
 #include "interpreter/Interpreter.h"
 #include "exception/ParseError.h"
+#include "syntax/SyntaxChecker.h"
 #include <fstream>
 #include <sstream>
 
@@ -236,7 +237,11 @@ void readPas()
 //	}
 
 	try {
-		Interpreter interpreter(new CharStream(content.c_str()));
+		Stream *stream = new CharStream(content.c_str());
+		Lexer lexer(stream);
+		Parser parser(lexer);
+		ProgramNode *root = parser.parse();
+		Interpreter interpreter(root);
 		interpreter.interpret();
 #ifdef DEBUG
 		interpreter.dumpSymbolTable();
@@ -326,11 +331,62 @@ void printToken()
 	}
 }
 
+void testAssign()
+{
+	std::ifstream infile;
+	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test_assign.pas");
+	std::stringstream ss;
+	char ch;
+	while (!infile.eof()) {
+		infile >> std::noskipws >> ch;
+		ss.put(ch);
+	}
+	infile.close();
+
+	std::string content = ss.str();
+	std::cout << content << std::endl;
+
+	Lexer lexer = Lexer(new CharStream(content.c_str()));
+	Parser parser(lexer);
+	SyntaxChecker checker(parser.parse());
+	try {
+		checker.check();
+	} catch (const ParseError &e) {
+		std::cerr << e.msg << std::endl;
+	}
+}
+
+void testDefine() {
+	std::ifstream infile;
+	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test_define.pas");
+	std::stringstream ss;
+	char ch;
+	while (!infile.eof()) {
+		infile >> std::noskipws >> ch;
+		ss.put(ch);
+	}
+	infile.close();
+
+	std::string content = ss.str();
+	std::cout << content << std::endl;
+
+	Lexer lexer = Lexer(new CharStream(content.c_str()));
+	Parser parser(lexer);
+	SyntaxChecker checker(parser.parse());
+	try {
+		checker.check();
+	} catch (const ParseError &e) {
+		std::cerr << e.msg << std::endl;
+	}
+}
+
 int main()
 {
 //	checkUnit();
 //	checkStream();
-	readPas();
+//	readPas();
 //	printToken();
+//	testAssign();
+	testDefine();
 	return 0;
 }

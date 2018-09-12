@@ -11,8 +11,8 @@
 #include "ast/AssignStatementNode.h"
 #include "ast/RealNumNode.h"
 
-Parser::Parser(Stream *stream)
-	: mLexer(stream)
+Parser::Parser(const Lexer &lexer)
+	: mLexer(lexer)
 {
 	mCurrentToken = mLexer.next();
 }

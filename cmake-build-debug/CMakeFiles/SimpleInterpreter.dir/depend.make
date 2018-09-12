@@ -55,6 +55,8 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/UnaryNode.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/VarNode.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/Stream.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../stream/char/CharStream.h
+CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../syntax/SyntaxChecker.h
+CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../syntax/ast/Symbol.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../token/IdToken.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../token/IntNumToken.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../token/RealNumToken.h

@@ -56,6 +56,8 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
  /Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.h
+ /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.h
+ /Users/chan/ClionProjects/SimpleInterpreter/syntax/ast/Symbol.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.h
  /Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.h

@@ -76,9 +76,11 @@ void SyntaxChecker::putSymbol(const SyntaxChecker::String &key, Token::TokenType
 
 	if (value == Token::TokenType::TYPE_REAL) {
 		mGlobalSymbolTable[key] = Symbol::REAL;
+		return;
 	}
 	else if (value == Token::TokenType::TYPE_INTEGER) {
 		mGlobalSymbolTable[key] = Symbol::INT;
+		return;
 	}
 
 	String msg = "unknown type: ";
@@ -103,7 +105,7 @@ void SyntaxChecker::checkAssignStatement(AssignStatementNode *node)
 	Symbol lhs = checkVar(lv);
 	Symbol rhs = checkExp(node->rv);
 	if (lhs == Symbol::INT && rhs == Symbol::REAL) {
-		IdToken *id = (IdToken *) node->token;
+		IdToken *id = (IdToken *) node->lv->token;
 		String msg = "can not assign REAL to " + id->value + ", it's type is INT";
 		throw ParseError(msg);
 	}
@@ -151,7 +153,7 @@ Symbol SyntaxChecker::checkBinOp(BinOpNode *node)
 
 	if (Token::TokenType::TYPE_INT_DIV == node->token->type &&
 		result == Symbol::REAL) {
-		throw ParseError("DIV only can be used for INT");
+		throw ParseError("DIV can be used for INT only");
 	}
 
 	if (node->token->type != Token::TokenType::TYPE_INT_DIV &&

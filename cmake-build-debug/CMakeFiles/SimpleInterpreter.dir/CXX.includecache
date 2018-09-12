@@ -77,6 +77,8 @@ interpreter/Interpreter.h
 /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
 exception/ParseError.h
 /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
+syntax/SyntaxChecker.h
+/Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.h
 fstream
 -
 sstream
