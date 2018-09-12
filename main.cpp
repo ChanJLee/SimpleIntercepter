@@ -241,6 +241,8 @@ void readPas()
 		Lexer lexer(stream);
 		Parser parser(lexer);
 		ProgramNode *root = parser.parse();
+		SyntaxChecker syntaxChecker(root);
+		syntaxChecker.check();
 		Interpreter interpreter(root);
 		interpreter.interpret();
 #ifdef DEBUG
@@ -384,9 +386,9 @@ int main()
 {
 //	checkUnit();
 //	checkStream();
-//	readPas();
+	readPas();
 //	printToken();
 //	testAssign();
-	testDefine();
+//	testDefine();
 	return 0;
 }
