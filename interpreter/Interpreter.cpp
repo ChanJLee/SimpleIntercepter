@@ -8,7 +8,7 @@
 #include <iostream>
 #endif
 
-Result Interpreter::visitNode(ASTNode *node)
+const Result &Interpreter::visitNode(ASTNode *node)
 {
 	if (node->type == ASTNode::Type::INT_NUM) {
 		return visitIntNumNode((IntNumNode *) node);
@@ -31,7 +31,7 @@ Result Interpreter::visitNode(ASTNode *node)
 	throw ParseError(msg);
 }
 
-Result Interpreter::visitIntNumNode(IntNumNode *node)
+const Result &Interpreter::visitIntNumNode(IntNumNode *node)
 {
 	IntNumToken *token = (IntNumToken *) node->token;
 	return Result {
@@ -40,7 +40,7 @@ Result Interpreter::visitIntNumNode(IntNumNode *node)
 	};
 }
 
-Result Interpreter::visitBinOpNode(BinOpNode *node)
+const Result &Interpreter::visitBinOpNode(BinOpNode *node)
 {
 	if (node->lhs == nullptr) {
 		throw ParseError("missing left operand");
@@ -79,12 +79,12 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 		default: {
 			std::string msg = "unknown bin op, type is: ";
 			msg += node->token->type;
-			throw ParseError("unknown bin op")
+			throw ParseError("unknown bin op");
 		};
 	}
 }
 
-Result Interpreter::visitUnaryNode(UnaryNode *node)
+const Result &Interpreter::visitUnaryNode(UnaryNode *node)
 {
 	if (node->child == nullptr) {
 		throw ParseError("missing unary operand");
@@ -145,7 +145,7 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 	mSymbolTable[lv->value] = visitNode(node->rv);
 }
 
-Result Interpreter::visitVarNode(VarNode *node)
+const Result &Interpreter::visitVarNode(VarNode *node)
 {
 	IdToken *lv = (IdToken *) node->token;
 	Iterator it = mSymbolTable.find(lv->value);
@@ -158,7 +158,7 @@ Result Interpreter::visitVarNode(VarNode *node)
 	return it->second;
 }
 
-Result Interpreter::visitRealNumNode(RealNumNode *node)
+const Result &Interpreter::visitRealNumNode(RealNumNode *node)
 {
 	RealNumToken *token = (RealNumToken *) node->token;
 	return Result {
