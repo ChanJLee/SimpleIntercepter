@@ -386,9 +386,9 @@ int main()
 {
 //	checkUnit();
 //	checkStream();
-	readPas();
+//	readPas();
 //	printToken();
-//	testAssign();
+	testAssign();
 //	testDefine();
 	return 0;
 }

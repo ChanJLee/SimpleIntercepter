@@ -6,9 +6,9 @@ VAR
 
 BEGIN {Part10}
    BEGIN
-      number := 2.0;
+      number := 2;
       a := number;
-      b := 10 * a + 10 * number DIV 4;
+      b := 10 * a + 10.0 * number DIV 4;
       c := a - - b
    END;
    foo := 10;
