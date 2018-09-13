@@ -51,9 +51,7 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 	}
 
 	const Result &lr = visitNode(node->lhs);
-	auto lhs = RESULT_TO_BUILD_IN_VALUE(lr);
 	const Result &rr = visitNode(node->rhs);
-	auto rhs = RESULT_TO_BUILD_IN_VALUE(rr);
 
 	Token::TokenType type = Token::TokenType::TYPE_INTEGER;
 	if (lr.type == Token::TokenType::TYPE_REAL || rr.type == Token::TokenType::TYPE_REAL) {
@@ -61,14 +59,28 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 	}
 
 	switch (node->token->type) {
-		case Token::TokenType::TYPE_REAL_DIV: return BUILD_IN_VALUE_TO_RESULT(type, lhs / rhs);
-		case Token::TokenType::TYPE_MUL: return BUILD_IN_VALUE_TO_RESULT(type, lhs * rhs);
-		case Token::TokenType::TYPE_SUB: return BUILD_IN_VALUE_TO_RESULT(type, lhs - rhs);
-		case Token::TokenType::TYPE_PLUS: return BUILD_IN_VALUE_TO_RESULT(type, lhs + rhs);
-		case Token::TokenType::TYPE_INT_DIV: return BUILD_IN_VALUE_TO_RESULT(type, (int) lhs / (int) rhs);
-		default: std::string msg = "unknown bin op, type is: ";
+		case Token::TokenType::TYPE_REAL_DIV:
+		case Token::TokenType::TYPE_INT_DIV:
+			return BUILD_IN_VALUE_TO_RESULT(type,
+											RESULT_TO_BUILD_IN_VALUE(lr)
+												/ RESULT_TO_BUILD_IN_VALUE(rr));
+		case Token::TokenType::TYPE_MUL:
+			return BUILD_IN_VALUE_TO_RESULT(type,
+											RESULT_TO_BUILD_IN_VALUE(lr)
+												* RESULT_TO_BUILD_IN_VALUE(rr));
+		case Token::TokenType::TYPE_SUB:
+			return BUILD_IN_VALUE_TO_RESULT(type,
+											RESULT_TO_BUILD_IN_VALUE(lr)
+												- RESULT_TO_BUILD_IN_VALUE(rr));
+		case Token::TokenType::TYPE_PLUS:
+			return BUILD_IN_VALUE_TO_RESULT(type,
+											RESULT_TO_BUILD_IN_VALUE(lr)
+												+ RESULT_TO_BUILD_IN_VALUE(rr));
+		default: {
+			std::string msg = "unknown bin op, type is: ";
 			msg += node->token->type;
-			throw ParseError("unknown bin op");
+			throw ParseError("unknown bin op")
+		};
 	}
 }
 
