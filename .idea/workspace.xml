@@ -12,9 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15831aca-37f1-4697-ab82-5177de4f9835" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" afterPath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/Interpreter.cpp" afterPath="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/Interpreter.h" afterPath="$PROJECT_DIR$/interpreter/Interpreter.h" />
@@ -35,25 +34,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Interpreter.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Interpreter.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+            <state relative-caret-position="75">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
-                <marker date="1536850141000" expanded="true" signature="1475:2332" ph="..." />
+                <marker date="1536850393000" expanded="true" signature="1454:2196" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interpreter.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Interpreter.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+            <state relative-caret-position="260">
+              <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
               <folding>
-                <marker date="1536850101000" expanded="true" signature="832:855" ph="..." />
+                <marker date="1536850349000" expanded="true" signature="833:856" ph="..." />
               </folding>
             </state>
           </provider>
@@ -619,12 +618,12 @@
       <workItem from="1535468851221" duration="927000" />
       <workItem from="1535552463621" duration="8078000" />
       <workItem from="1535982833375" duration="36499000" />
-      <workItem from="1536673917040" duration="13942000" />
+      <workItem from="1536673917040" duration="14170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80407000" />
+    <option name="totallyTimeSpent" value="80635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="6" />
@@ -632,11 +631,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24453841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32692307" sideWeight="0.49753347" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32692307" sideWeight="0.49753347" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42994505" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35714287" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1013,22 +1012,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
+    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+        <state relative-caret-position="260">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
           <folding>
-            <marker date="1536850141000" expanded="true" signature="1475:2332" ph="..." />
+            <marker date="1536850349000" expanded="true" signature="833:856" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.h">
+    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+        <state relative-caret-position="75">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <marker date="1536850101000" expanded="true" signature="832:855" ph="..." />
+            <marker date="1536850393000" expanded="true" signature="1454:2196" ph="..." />
           </folding>
         </state>
       </provider>

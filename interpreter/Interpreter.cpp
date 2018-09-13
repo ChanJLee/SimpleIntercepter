@@ -8,7 +8,7 @@
 #include <iostream>
 #endif
 
-const Result &Interpreter::visitNode(ASTNode *node)
+Result Interpreter::visitNode(ASTNode *node)
 {
 	if (node->type == ASTNode::Type::INT_NUM) {
 		return visitIntNumNode((IntNumNode *) node);
@@ -31,7 +31,7 @@ const Result &Interpreter::visitNode(ASTNode *node)
 	throw ParseError(msg);
 }
 
-const Result &Interpreter::visitIntNumNode(IntNumNode *node)
+Result Interpreter::visitIntNumNode(IntNumNode *node)
 {
 	IntNumToken *token = (IntNumToken *) node->token;
 	return Result {
@@ -40,7 +40,7 @@ const Result &Interpreter::visitIntNumNode(IntNumNode *node)
 	};
 }
 
-const Result &Interpreter::visitBinOpNode(BinOpNode *node)
+Result Interpreter::visitBinOpNode(BinOpNode *node)
 {
 	if (node->lhs == nullptr) {
 		throw ParseError("missing left operand");
@@ -60,31 +60,17 @@ const Result &Interpreter::visitBinOpNode(BinOpNode *node)
 
 	switch (node->token->type) {
 		case Token::TokenType::TYPE_REAL_DIV:
-		case Token::TokenType::TYPE_INT_DIV:
-			return BUILD_IN_VALUE_TO_RESULT(type,
-											RESULT_TO_BUILD_IN_VALUE(lr)
-												/ RESULT_TO_BUILD_IN_VALUE(rr));
-		case Token::TokenType::TYPE_MUL:
-			return BUILD_IN_VALUE_TO_RESULT(type,
-											RESULT_TO_BUILD_IN_VALUE(lr)
-												* RESULT_TO_BUILD_IN_VALUE(rr));
-		case Token::TokenType::TYPE_SUB:
-			return BUILD_IN_VALUE_TO_RESULT(type,
-											RESULT_TO_BUILD_IN_VALUE(lr)
-												- RESULT_TO_BUILD_IN_VALUE(rr));
-		case Token::TokenType::TYPE_PLUS:
-			return BUILD_IN_VALUE_TO_RESULT(type,
-											RESULT_TO_BUILD_IN_VALUE(lr)
-												+ RESULT_TO_BUILD_IN_VALUE(rr));
-		default: {
-			std::string msg = "unknown bin op, type is: ";
+		case Token::TokenType::TYPE_INT_DIV:return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) / RESULT_TO_BUILD_IN_VALUE(rr));
+		case Token::TokenType::TYPE_MUL: return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) * RESULT_TO_BUILD_IN_VALUE(rr));
+		case Token::TokenType::TYPE_SUB: return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) - RESULT_TO_BUILD_IN_VALUE(rr));
+		case Token::TokenType::TYPE_PLUS: return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) + RESULT_TO_BUILD_IN_VALUE(rr));
+		default: std::string msg = "unknown bin op, type is: ";
 			msg += node->token->type;
 			throw ParseError("unknown bin op");
-		};
 	}
 }
 
-const Result &Interpreter::visitUnaryNode(UnaryNode *node)
+Result Interpreter::visitUnaryNode(UnaryNode *node)
 {
 	if (node->child == nullptr) {
 		throw ParseError("missing unary operand");
@@ -145,7 +131,7 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 	mSymbolTable[lv->value] = visitNode(node->rv);
 }
 
-const Result &Interpreter::visitVarNode(VarNode *node)
+Result Interpreter::visitVarNode(VarNode *node)
 {
 	IdToken *lv = (IdToken *) node->token;
 	Iterator it = mSymbolTable.find(lv->value);
@@ -158,7 +144,7 @@ const Result &Interpreter::visitVarNode(VarNode *node)
 	return it->second;
 }
 
-const Result &Interpreter::visitRealNumNode(RealNumNode *node)
+Result Interpreter::visitRealNumNode(RealNumNode *node)
 {
 	RealNumToken *token = (RealNumToken *) node->token;
 	return Result {

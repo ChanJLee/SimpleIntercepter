@@ -24,7 +24,7 @@ class Interpreter
 	typedef std::map<String, Result> KVTable;
 	typedef KVTable::iterator Iterator;
 private:
-	ProgramNode *mRoot;
+	ProgramNode * mRoot;
 	KVTable mSymbolTable;
 public:
 	Interpreter(ProgramNode *root)
@@ -49,17 +49,17 @@ private:
 
 	void visitNoOpStatementNode(NoOpStatementNode *node);
 
-	const Result &visitNode(ASTNode *node);
+	Result visitNode(ASTNode *node);
 
-	const Result &visitIntNumNode(IntNumNode *node);
+	Result visitIntNumNode(IntNumNode *node);
 
-	const Result &visitRealNumNode(RealNumNode *node);
+	Result visitRealNumNode(RealNumNode *node);
 
-	const Result &visitBinOpNode(BinOpNode *node);
+	Result visitBinOpNode(BinOpNode *node);
 
-	const Result &visitUnaryNode(UnaryNode *node);
+	Result visitUnaryNode(UnaryNode *node);
 
-	const Result &visitVarNode(VarNode *node);
+	Result visitVarNode(VarNode *node);
 };
 
 #endif //SIMPLEINTERPRETER_INTERCEPTER_H
