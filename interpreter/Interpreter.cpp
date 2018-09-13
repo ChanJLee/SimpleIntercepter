@@ -8,7 +8,7 @@
 #include <iostream>
 #endif
 
-double Interpreter::visitNode(ASTNode *node)
+Result Interpreter::visitNode(ASTNode *node)
 {
 	if (node->type == ASTNode::Type::INT_NUM) {
 		return visitIntNumNode((IntNumNode *) node);
@@ -31,13 +31,16 @@ double Interpreter::visitNode(ASTNode *node)
 	throw ParseError(msg);
 }
 
-double Interpreter::visitIntNumNode(IntNumNode *node)
+Result Interpreter::visitIntNumNode(IntNumNode *node)
 {
 	IntNumToken *token = (IntNumToken *) node->token;
-	return token->value;
+	return Result {
+		.type = Token::TokenType::TYPE_INTEGER,
+		.value.i = token->value
+	};
 }
 
-double Interpreter::visitBinOpNode(BinOpNode *node)
+Result Interpreter::visitBinOpNode(BinOpNode *node)
 {
 	if (node->lhs == nullptr) {
 		throw ParseError("missing left operand");
@@ -47,28 +50,37 @@ double Interpreter::visitBinOpNode(BinOpNode *node)
 		throw ParseError("missing right operand");
 	}
 
-	double lhs = visitNode(node->lhs);
-	double rhs = visitNode(node->rhs);
+	const Result &lr = visitNode(node->lhs);
+	auto lhs = RESULT_TO_BUILD_IN_VALUE(lr);
+	const Result &rr = visitNode(node->rhs);
+	auto rhs = RESULT_TO_BUILD_IN_VALUE(rr);
+
+	Token::TokenType type = Token::TokenType::TYPE_INTEGER;
+	if (lr.type == Token::TokenType::TYPE_REAL || rr.type == Token::TokenType::TYPE_REAL) {
+		type = Token::TokenType::TYPE_REAL;
+	}
+
 	switch (node->token->type) {
-		case Token::TokenType::TYPE_REAL_DIV: return lhs / rhs;
-		case Token::TokenType::TYPE_MUL: return lhs * rhs;
-		case Token::TokenType::TYPE_SUB: return lhs - rhs;
-		case Token::TokenType::TYPE_PLUS: return lhs + rhs;
-		case Token::TokenType::TYPE_INT_DIV: return (int) lhs / (int) rhs;
+		case Token::TokenType::TYPE_REAL_DIV: return BUILD_IN_VALUE_TO_RESULT(type, lhs / rhs);
+		case Token::TokenType::TYPE_MUL: return BUILD_IN_VALUE_TO_RESULT(type, lhs * rhs);
+		case Token::TokenType::TYPE_SUB: return BUILD_IN_VALUE_TO_RESULT(type, lhs - rhs);
+		case Token::TokenType::TYPE_PLUS: return BUILD_IN_VALUE_TO_RESULT(type, lhs + rhs);
+		case Token::TokenType::TYPE_INT_DIV: return BUILD_IN_VALUE_TO_RESULT(type, (int) lhs / (int) rhs);
 		default: std::string msg = "unknown bin op, type is: ";
 			msg += node->token->type;
 			throw ParseError("unknown bin op");
 	}
 }
 
-double Interpreter::visitUnaryNode(UnaryNode *node)
+Result Interpreter::visitUnaryNode(UnaryNode *node)
 {
 	if (node->child == nullptr) {
 		throw ParseError("missing unary operand");
 	}
 
 	if (node->token->type == Token::TokenType::TYPE_SUB) {
-		return -visitNode(node->child);
+		const Result &result = visitNode(node->child);
+		return BUILD_IN_VALUE_TO_RESULT(result.type, -RESULT_TO_BUILD_IN_VALUE_(result));
 	}
 
 	if (node->token->type == Token::TokenType::TYPE_PLUS) {
@@ -121,7 +133,7 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 	mSymbolTable[lv->value] = visitNode(node->rv);
 }
 
-double Interpreter::visitVarNode(VarNode *node)
+Result Interpreter::visitVarNode(VarNode *node)
 {
 	IdToken *lv = (IdToken *) node->token;
 	Iterator it = mSymbolTable.find(lv->value);
@@ -134,10 +146,13 @@ double Interpreter::visitVarNode(VarNode *node)
 	return it->second;
 }
 
-double Interpreter::visitRealNumNode(RealNumNode *node)
+Result Interpreter::visitRealNumNode(RealNumNode *node)
 {
 	RealNumToken *token = (RealNumToken *) node->token;
-	return token->value;
+	return Result {
+		.type = Token::TokenType::TYPE_REAL,
+		.value.r = token->value
+	};
 }
 
 void Interpreter::visitProgramNode(ProgramNode *node)
@@ -163,8 +178,7 @@ void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
 				  {
 					  if (declaration != nullptr) {
 						  IdToken *id = (IdToken *) declaration->id;
-						  // TODO add type info
-						  mSymbolTable[id->value] = 0;
+						  mSymbolTable[id->value] = BUILD_IN_VALUE_TO_RESULT(declaration->type, 0);
 					  }
 				  });
 }
@@ -173,7 +187,7 @@ void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
 void Interpreter::dumpSymbolTable()
 {
 	for (Iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
-		std::cout << "key: " << it->first << " value: " << it->second << std::endl;
+		std::cout << "key: " << it->first << " value: " << RESULT_TO_BUILD_IN_VALUE(it->second) << std::endl;
 	}
 }
 #endif

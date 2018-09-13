@@ -5,6 +5,7 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
+ /Users/chan/ClionProjects/SimpleInterpreter/interpreter/result/Result.h
  /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
@@ -38,6 +39,7 @@ CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h
+ /Users/chan/ClionProjects/SimpleInterpreter/interpreter/result/Result.h
  /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
  /Users/chan/ClionProjects/SimpleInterpreter/main.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h

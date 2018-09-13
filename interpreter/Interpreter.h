@@ -15,12 +15,13 @@
 #include "../parser/ast/AssignStatementNode.h"
 #include "../parser/ast/RealNumNode.h"
 #include "../parser/ast/ProgramNode.h"
+#include "result/Result.h"
 #include <map>
 
 class Interpreter
 {
 	typedef std::string String;
-	typedef std::map<String, double> KVTable;
+	typedef std::map<String, Result> KVTable;
 	typedef KVTable::iterator Iterator;
 private:
 	ProgramNode * mRoot;
@@ -48,18 +49,17 @@ private:
 
 	void visitNoOpStatementNode(NoOpStatementNode *node);
 
-	// TODO add NodeValue
-	double visitNode(ASTNode *node);
+	Result visitNode(ASTNode *node);
 
-	double visitIntNumNode(IntNumNode *node);
+	Result visitIntNumNode(IntNumNode *node);
 
-	double visitRealNumNode(RealNumNode *node);
+	Result visitRealNumNode(RealNumNode *node);
 
-	double visitBinOpNode(BinOpNode *node);
+	Result visitBinOpNode(BinOpNode *node);
 
-	double visitUnaryNode(UnaryNode *node);
+	Result visitUnaryNode(UnaryNode *node);
 
-	double visitVarNode(VarNode *node);
+	Result visitVarNode(VarNode *node);
 };
 
 #endif //SIMPLEINTERPRETER_INTERCEPTER_H

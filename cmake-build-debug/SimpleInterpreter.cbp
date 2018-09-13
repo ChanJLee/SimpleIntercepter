@@ -93,6 +93,9 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/Interpreter.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/interpreter/result/Result.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>

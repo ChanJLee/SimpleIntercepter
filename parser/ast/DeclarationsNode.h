@@ -15,7 +15,7 @@ public:
 	struct Declaration
 	{
 		Token *id;
-		Token::TokenType  type;
+		Token::TokenType type;
 		Declaration(Token *id, Token::TokenType type);
 		virtual ~Declaration();
 	};

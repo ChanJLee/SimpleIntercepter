@@ -41,8 +41,14 @@ iostream
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.h
 ../parser/ast/ProgramNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
+result/Result.h
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/result/Result.h
 map
 -
+
+/Users/chan/ClionProjects/SimpleInterpreter/interpreter/result/Result.h
+../../token/Token.h
+/Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.cpp
 Lexer.h
