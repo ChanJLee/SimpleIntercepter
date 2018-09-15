@@ -40,6 +40,20 @@ Result Interpreter::visitIntNumNode(IntNumNode *node)
 	};
 }
 
+#ifndef RETURN_BIN_OP_
+#define RETURN_BIN_OP_(type, lr, rr, op) \
+    if (lr.type == Token::TokenType::TYPE_REAL && rr.type == Token::TokenType::TYPE_REAL) { \
+        return BUILD_IN_VALUE_TO_RESULT(type, lr.value.r op rr.value.r); \
+    } else if (lr.type == Token::TokenType::TYPE_INTEGER && rr.type == Token::TokenType::TYPE_INTEGER) { \
+        return BUILD_IN_VALUE_TO_RESULT(type, lr.value.i op rr.value.i); \
+    } else if (lr.type == Token::TokenType::TYPE_INTEGER && rr.type == Token::TokenType::TYPE_REAL) { \
+        return BUILD_IN_VALUE_TO_RESULT(type, lr.value.i op rr.value.r); \
+    } else { \
+        return BUILD_IN_VALUE_TO_RESULT(type, lr.value.r op rr.value.i); \
+    }
+#define RETURN_BIN_OP RETURN_BIN_OP_
+#endif
+
 Result Interpreter::visitBinOpNode(BinOpNode *node)
 {
 	if (node->lhs == nullptr) {
@@ -60,13 +74,15 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 
 	switch (node->token->type) {
 		case Token::TokenType::TYPE_REAL_DIV:
-		case Token::TokenType::TYPE_INT_DIV:return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) / RESULT_TO_BUILD_IN_VALUE(rr));
-		case Token::TokenType::TYPE_MUL: return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) * RESULT_TO_BUILD_IN_VALUE(rr));
-		case Token::TokenType::TYPE_SUB: return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) - RESULT_TO_BUILD_IN_VALUE(rr));
-		case Token::TokenType::TYPE_PLUS: return BUILD_IN_VALUE_TO_RESULT(type, RESULT_TO_BUILD_IN_VALUE(lr) + RESULT_TO_BUILD_IN_VALUE(rr));
-		default: std::string msg = "unknown bin op, type is: ";
+		case Token::TokenType::TYPE_INT_DIV: RETURN_BIN_OP(type, lr, rr, /)
+		case Token::TokenType::TYPE_MUL: RETURN_BIN_OP(type, lr, rr, *)
+		case Token::TokenType::TYPE_SUB: RETURN_BIN_OP(type, lr, rr, -)
+		case Token::TokenType::TYPE_PLUS: RETURN_BIN_OP(type, lr, rr, +)
+		default: {
+			std::string msg = "unknown bin op, type is: ";
 			msg += node->token->type;
 			throw ParseError("unknown bin op");
+		}
 	}
 }
 
