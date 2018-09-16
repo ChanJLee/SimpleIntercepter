@@ -63,8 +63,6 @@ Lexer.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/IntNumToken.h
 ../token/RealNumToken.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/RealNumToken.h
-string
--
 
 /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
 string
@@ -73,6 +71,8 @@ string
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
 ../token/Token.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/Token.h
+map
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/main.cpp
 iostream

@@ -12,10 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15831aca-37f1-4697-ab82-5177de4f9835" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" afterPath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interpreter/Interpreter.cpp" afterPath="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexer/Lexer.cpp" afterPath="$PROJECT_DIR$/lexer/Lexer.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexer/Lexer.h" afterPath="$PROJECT_DIR$/lexer/Lexer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser/Parser.h" afterPath="$PROJECT_DIR$/parser/Parser.h" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,111 +32,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Interpreter.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
+      <file leaf-file-name="Lexer.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexer/Lexer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="74" column="32" lean-forward="true" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+            <state relative-caret-position="210">
+              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding>
-                <element signature="e#40#64#0" expanded="true" />
-                <marker date="1537016317000" expanded="true" signature="2191:2666" ph="..." />
+                <element signature="e#109#126#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interpreter.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.h">
+      <file leaf-file-name="Lexer.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lexer/Lexer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-              <folding>
-                <element signature="e#121#150#0" expanded="true" />
-                <marker date="1536850411000" expanded="true" signature="833:856" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Token.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/token/Token.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+            <state relative-caret-position="130">
+              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntNumNode.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/ast/IntNumNode.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntNumToken.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/token/IntNumToken.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntNumNode.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/ast/IntNumNode.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeclarationsNode.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/ast/DeclarationsNode.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeclarationsNode.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/ast/DeclarationsNode.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5280">
-              <caret line="390" column="2" lean-forward="false" selection-start-line="390" selection-start-column="2" selection-end-line="390" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Result.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interpreter/result/Result.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-              <folding>
-                <element signature="e#253#265#0" expanded="true" />
-                <element signature="e#523#535#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -164,6 +76,7 @@
       <find>double</find>
       <find>Result</find>
       <find>_BUILD_IN_VALUE_TO_RESULT</find>
+      <find>formal_parameters</find>
     </findStrings>
     <replaceStrings>
       <replace>Token::TokenType::</replace>
@@ -203,8 +116,6 @@
         <option value="$PROJECT_DIR$/parser/ast/RealNumNode.h" />
         <option value="$PROJECT_DIR$/stream/char/CharStream.h" />
         <option value="$PROJECT_DIR$/test.pas" />
-        <option value="$PROJECT_DIR$/lexer/Lexer.h" />
-        <option value="$PROJECT_DIR$/lexer/Lexer.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/DeclarationNode.h" />
         <option value="$PROJECT_DIR$/parser/ast/DeclarationNode.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/BlockNode.h" />
@@ -222,7 +133,6 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/syntax/ast/Symbol.h" />
         <option value="$PROJECT_DIR$/syntax/SyntaxChecker.h" />
-        <option value="$PROJECT_DIR$/parser/Parser.h" />
         <option value="$PROJECT_DIR$/parser/Parser.cpp" />
         <option value="$PROJECT_DIR$/syntax/SyntaxChecker.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/DeclarationsNode.h" />
@@ -230,6 +140,9 @@
         <option value="$PROJECT_DIR$/interpreter/Interpreter.h" />
         <option value="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
         <option value="$PROJECT_DIR$/interpreter/result/Result.h" />
+        <option value="$PROJECT_DIR$/parser/Parser.h" />
+        <option value="$PROJECT_DIR$/lexer/Lexer.h" />
+        <option value="$PROJECT_DIR$/lexer/Lexer.cpp" />
       </list>
     </option>
   </component>
@@ -347,6 +260,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ast" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleInterpreter" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleInterpreter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lexer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -620,12 +547,12 @@
       <workItem from="1535468851221" duration="927000" />
       <workItem from="1535552463621" duration="8078000" />
       <workItem from="1535982833375" duration="36499000" />
-      <workItem from="1536673917040" duration="17001000" />
+      <workItem from="1536673917040" duration="19125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83466000" />
+    <option name="totallyTimeSpent" value="85590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="6" />
@@ -682,13 +609,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parser/ast/BinOpNode.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser/ast/ASTNode.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -861,14 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexer/Lexer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/syntax/SyntaxChecker.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -910,16 +822,6 @@
           <folding>
             <element signature="e#40#57#0" expanded="true" />
             <marker date="1536763989000" expanded="true" signature="2957:3481" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parser/Parser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <marker date="1536763340000" expanded="true" signature="325:795" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -980,14 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/token/Token.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser/ast/DeclarationsNode.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1028,12 +922,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="74" column="32" lean-forward="true" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+        <state relative-caret-position="1859">
+          <caret line="163" column="1" lean-forward="true" selection-start-line="163" selection-start-column="1" selection-end-line="163" selection-end-column="1" />
           <folding>
             <element signature="e#40#64#0" expanded="true" />
             <marker date="1537016317000" expanded="true" signature="2191:2666" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser/Parser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="e#112#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token/Token.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexer/Lexer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="e#109#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexer/Lexer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -8,25 +8,18 @@
 #include "../token/IdToken.h"
 #include "../token/IntNumToken.h"
 #include "../token/RealNumToken.h"
-#include <string>
-
-const std::string Lexer::KEYWORD_BEGIN = "BEGIN";
-
-const std::string Lexer::KEYWORD_END = "END";
-
-const std::string Lexer::KEYWORD_PROGRAM = "PROGRAM";
-
-const std::string Lexer::KEYWORD_DIV = "DIV";
-
-const std::string Lexer::KEYWORD_INTEGER = "INTEGER";
-
-const std::string Lexer::KEYWORD_REAL = "REAL";
-
-const std::string Lexer::KEYWORD_VAR = "VAR";
 
 Lexer::Lexer(Stream *stream)
 	: mStream(stream)
-{}
+{
+	mKeywordMap["BEGIN"] = Token::TokenType::TYPE_BEGIN;
+	mKeywordMap["END"] = Token::TokenType::TYPE_END;
+	mKeywordMap["PROGRAM"] = Token::TokenType::TYPE_PROGRAM;
+	mKeywordMap["DIV"] = Token::TokenType::TYPE_INT_DIV;
+	mKeywordMap["INTEGER"] = Token::TokenType::TYPE_INTEGER;
+	mKeywordMap["REAL"] = Token::TokenType::TYPE_REAL;
+	mKeywordMap["VAR"] = Token::TokenType::TYPE_VAR;
+}
 
 Token *Lexer::next()
 {
@@ -139,32 +132,9 @@ Token *Lexer::nextId()
 		mStream->back();
 	}
 
-	if (id == KEYWORD_BEGIN) {
-		return new Token(Token::TokenType::TYPE_BEGIN);
-	}
-
-	if (id == KEYWORD_END) {
-		return new Token(Token::TokenType::TYPE_END);
-	}
-
-	if (id == KEYWORD_PROGRAM) {
-		return new Token(Token::TokenType::TYPE_PROGRAM);
-	}
-
-	if (id == KEYWORD_DIV) {
-		return new Token(Token::TokenType::TYPE_INT_DIV);
-	}
-
-	if (id == KEYWORD_REAL) {
-		return new Token(Token::TokenType::TYPE_REAL);
-	}
-
-	if (id == KEYWORD_INTEGER) {
-		return new Token(Token::TokenType::TYPE_INTEGER);
-	}
-
-	if (id == KEYWORD_VAR) {
-		return new Token(Token::TokenType::TYPE_VAR);
+	Iterator iterator = mKeywordMap.find(id);
+	if (iterator != mKeywordMap.end()) {
+		return new Token(iterator->second);
 	}
 
 	return new IdToken(id);
