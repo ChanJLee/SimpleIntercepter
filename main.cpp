@@ -124,6 +124,14 @@ void checkUnit()
 	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
 		std::cerr << "real end" << std::endl;
 	}
+	lexer = Lexer(new CharStream("PROCEDURE"));
+	token = lexer.next();
+	if (token->type != Token::TokenType::TYPE_PROCEDURE) {
+		std::cerr << "PROCEDURE failed" << std::endl;
+	}
+	if ((token = lexer.next())->type != Token::TokenType::TYPE_EOF) {
+		std::cerr << "PROCEDURE end" << std::endl;
+	}
 }
 
 void checkStream()
@@ -384,9 +392,9 @@ void testDefine() {
 
 int main()
 {
-//	checkUnit();
+	checkUnit();
 //	checkStream();
-	readPas();
+//	readPas();
 //	printToken();
 //	testAssign();
 //	testDefine();

@@ -19,6 +19,7 @@ Lexer::Lexer(Stream *stream)
 	mKeywordMap["INTEGER"] = Token::TokenType::TYPE_INTEGER;
 	mKeywordMap["REAL"] = Token::TokenType::TYPE_REAL;
 	mKeywordMap["VAR"] = Token::TokenType::TYPE_VAR;
+	mKeywordMap["PROCEDURE"] = Token::TokenType::TYPE_PROCEDURE;
 }
 
 Token *Lexer::next()

@@ -31,6 +31,7 @@ struct Token
 		TYPE_REAL,
 		TYPE_INTEGER,
 		TYPE_VAR, // VAR
+		TYPE_PROCEDURE, // PROCEDURE
 	};
 
 	TokenType type;
