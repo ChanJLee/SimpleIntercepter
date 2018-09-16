@@ -334,6 +334,8 @@ void printToken()
 				break;
 			case Token::TokenType::TYPE_VAR : std::cout << "VAR" << std::endl;
 				break;
+			case Token::TokenType::TYPE_PROCEDURE : std::cout << "PROCEDURE" << std::endl;
+				break;
 			default: std::cerr << "unknown error: " << std::endl;
 				break;
 		}
@@ -392,10 +394,10 @@ void testDefine() {
 
 int main()
 {
-	checkUnit();
+//	checkUnit();
 //	checkStream();
 //	readPas();
-//	printToken();
+	printToken();
 //	testAssign();
 //	testDefine();
 	return 0;

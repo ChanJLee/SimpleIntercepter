@@ -13,9 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="15831aca-37f1-4697-ab82-5177de4f9835" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexer/Lexer.cpp" afterPath="$PROJECT_DIR$/lexer/Lexer.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/token/Token.h" afterPath="$PROJECT_DIR$/token/Token.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.pas" afterPath="$PROJECT_DIR$/test.pas" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="132" column="31" lean-forward="false" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+            <state relative-caret-position="734">
+              <caret line="336" column="75" lean-forward="false" selection-start-line="336" selection-start-column="75" selection-end-line="336" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.pas" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.pas">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -150,7 +159,6 @@
         <option value="$PROJECT_DIR$/parser/ast/RealNumNode.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/RealNumNode.h" />
         <option value="$PROJECT_DIR$/stream/char/CharStream.h" />
-        <option value="$PROJECT_DIR$/test.pas" />
         <option value="$PROJECT_DIR$/parser/ast/DeclarationNode.h" />
         <option value="$PROJECT_DIR$/parser/ast/DeclarationNode.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/BlockNode.h" />
@@ -178,6 +186,7 @@
         <option value="$PROJECT_DIR$/token/Token.h" />
         <option value="$PROJECT_DIR$/lexer/Lexer.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/test.pas" />
       </list>
     </option>
   </component>
@@ -582,12 +591,12 @@
       <workItem from="1535468851221" duration="927000" />
       <workItem from="1535552463621" duration="8078000" />
       <workItem from="1535982833375" duration="36499000" />
-      <workItem from="1536673917040" duration="19342000" />
+      <workItem from="1536673917040" duration="19794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85807000" />
+    <option name="totallyTimeSpent" value="86259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="6" />
@@ -644,14 +653,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parser/ast/ASTNode.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser/ast/AssignStatementNode.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -998,8 +999,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="132" column="31" lean-forward="false" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+        <state relative-caret-position="734">
+          <caret line="336" column="75" lean-forward="false" selection-start-line="336" selection-start-column="75" selection-end-line="336" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.pas">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
         </state>
       </provider>
