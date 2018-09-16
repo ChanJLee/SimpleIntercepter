@@ -4,8 +4,9 @@
 
 #include "DeclarationsNode.h"
 
-DeclarationsNode::DeclarationsNode(const std::vector<Declaration *> &declarations)
-	: ASTNode(nullptr, ASTNode::Type::DECLARATION), declarations(declarations)
+DeclarationsNode::DeclarationsNode(const std::vector<Declaration *> &declarations,
+								   const std::vector<ProcedureNode *> &procedures)
+	: ASTNode(nullptr, ASTNode::Type::DECLARATION), declarations(declarations), procedures(procedures)
 {
 
 }
@@ -16,6 +17,13 @@ DeclarationsNode::~DeclarationsNode()
 	{
 		if (declaration != nullptr) {
 			delete declaration;
+		}
+	});
+
+	std::for_each(procedures.cbegin(), procedures.cend(), [](ProcedureNode *procedure)
+	{
+		if (procedure != nullptr) {
+			delete procedure;
 		}
 	});
 }

@@ -9,6 +9,7 @@ struct Token
 {
 	enum TokenType
 	{
+		TYPE_NO_MEANING, // 无意义字段，标志没有初始化
 		TYPE_PLUS,
 		TYPE_SUB,
 		TYPE_MUL,

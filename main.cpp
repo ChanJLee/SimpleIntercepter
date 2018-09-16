@@ -397,8 +397,9 @@ int main()
 //	checkUnit();
 //	checkStream();
 //	readPas();
-	printToken();
+//	printToken();
 //	testAssign();
 //	testDefine();
+
 	return 0;
 }

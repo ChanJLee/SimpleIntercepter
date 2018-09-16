@@ -9,6 +9,8 @@
 #include <vector>
 #include "ASTNode.h"
 
+class ProcedureNode;
+
 class DeclarationsNode: public ASTNode
 {
 public:
@@ -21,10 +23,11 @@ public:
 	};
 
 	std::vector<Declaration *> declarations;
+	std::vector<ProcedureNode *> procedures;
 public:
 
 	DeclarationsNode();
-	DeclarationsNode(const std::vector<Declaration *> &declarations);
+	DeclarationsNode(const std::vector<Declaration *> &declarations, const std::vector<ProcedureNode *> &procedures);
 	virtual ~DeclarationsNode();
 };
 

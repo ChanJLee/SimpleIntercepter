@@ -23,6 +23,8 @@ public:
 		PROGRAM,
 		BLOCK,
 		DECLARATION,
+		PROCEDURE,
+		FORMAL_PARAMETER,
 	};
 public:
 	Token *const token;

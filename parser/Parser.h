@@ -13,6 +13,7 @@
 #include "ast/DeclarationsNode.h"
 #include "ast/BlockNode.h"
 #include "ast/ProgramNode.h"
+#include "ast/FormalParametersNode.h"
 
 /*
  * program : PROGRAM variable SEMI block DOT
@@ -20,7 +21,7 @@
  * block : declarations compound_statement
  *
  * declarations : (VAR (variable_declaration SEMI)+)*
- *              | (PROCEDURE ID (LPAREN formal_parameter_list RPAREN)? SEMI block SEMI)*
+ *                (PROCEDURE ID (LPAREN formal_parameter_list RPAREN)? SEMI block SEMI)*
  *              | empty
  *
  * formal_parameter_list : formal_parameters
@@ -71,6 +72,8 @@ private:
 	ProgramNode *program();
 	BlockNode *block();
 	DeclarationsNode *declarations();
+	FormalParametersNode *formalParameters();
+	ProcedureNode *procedure();
 	StatementNode *compound();
 	StatementNode *statement();
 	StatementNode *assignStatement();

@@ -147,6 +147,12 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
@@ -157,6 +163,12 @@
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.cpp">
@@ -187,6 +199,12 @@
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.cpp">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h">

@@ -393,6 +393,33 @@ parser/ast/DeclarationsNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.s
 .PHONY : parser/ast/DeclarationsNode.cpp.s
 
+parser/ast/FormalParametersNode.o: parser/ast/FormalParametersNode.cpp.o
+
+.PHONY : parser/ast/FormalParametersNode.o
+
+# target to build an object file
+parser/ast/FormalParametersNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o
+.PHONY : parser/ast/FormalParametersNode.cpp.o
+
+parser/ast/FormalParametersNode.i: parser/ast/FormalParametersNode.cpp.i
+
+.PHONY : parser/ast/FormalParametersNode.i
+
+# target to preprocess a source file
+parser/ast/FormalParametersNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.i
+.PHONY : parser/ast/FormalParametersNode.cpp.i
+
+parser/ast/FormalParametersNode.s: parser/ast/FormalParametersNode.cpp.s
+
+.PHONY : parser/ast/FormalParametersNode.s
+
+# target to generate assembly for a file
+parser/ast/FormalParametersNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.s
+.PHONY : parser/ast/FormalParametersNode.cpp.s
+
 parser/ast/IntNumNode.o: parser/ast/IntNumNode.cpp.o
 
 .PHONY : parser/ast/IntNumNode.o
@@ -446,6 +473,33 @@ parser/ast/NoOpStatementNode.s: parser/ast/NoOpStatementNode.cpp.s
 parser/ast/NoOpStatementNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.s
 .PHONY : parser/ast/NoOpStatementNode.cpp.s
+
+parser/ast/ProcedureNode.o: parser/ast/ProcedureNode.cpp.o
+
+.PHONY : parser/ast/ProcedureNode.o
+
+# target to build an object file
+parser/ast/ProcedureNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o
+.PHONY : parser/ast/ProcedureNode.cpp.o
+
+parser/ast/ProcedureNode.i: parser/ast/ProcedureNode.cpp.i
+
+.PHONY : parser/ast/ProcedureNode.i
+
+# target to preprocess a source file
+parser/ast/ProcedureNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.i
+.PHONY : parser/ast/ProcedureNode.cpp.i
+
+parser/ast/ProcedureNode.s: parser/ast/ProcedureNode.cpp.s
+
+.PHONY : parser/ast/ProcedureNode.s
+
+# target to generate assembly for a file
+parser/ast/ProcedureNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.s
+.PHONY : parser/ast/ProcedureNode.cpp.s
 
 parser/ast/ProgramNode.o: parser/ast/ProgramNode.cpp.o
 
@@ -581,6 +635,33 @@ parser/ast/VarNode.s: parser/ast/VarNode.cpp.s
 parser/ast/VarNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.s
 .PHONY : parser/ast/VarNode.cpp.s
+
+st/SymbolTable.o: st/SymbolTable.cpp.o
+
+.PHONY : st/SymbolTable.o
+
+# target to build an object file
+st/SymbolTable.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o
+.PHONY : st/SymbolTable.cpp.o
+
+st/SymbolTable.i: st/SymbolTable.cpp.i
+
+.PHONY : st/SymbolTable.i
+
+# target to preprocess a source file
+st/SymbolTable.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.i
+.PHONY : st/SymbolTable.cpp.i
+
+st/SymbolTable.s: st/SymbolTable.cpp.s
+
+.PHONY : st/SymbolTable.s
+
+# target to generate assembly for a file
+st/SymbolTable.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.s
+.PHONY : st/SymbolTable.cpp.s
 
 stream/char/CharStream.o: stream/char/CharStream.cpp.o
 
@@ -756,12 +837,18 @@ help:
 	@echo "... parser/ast/DeclarationsNode.o"
 	@echo "... parser/ast/DeclarationsNode.i"
 	@echo "... parser/ast/DeclarationsNode.s"
+	@echo "... parser/ast/FormalParametersNode.o"
+	@echo "... parser/ast/FormalParametersNode.i"
+	@echo "... parser/ast/FormalParametersNode.s"
 	@echo "... parser/ast/IntNumNode.o"
 	@echo "... parser/ast/IntNumNode.i"
 	@echo "... parser/ast/IntNumNode.s"
 	@echo "... parser/ast/NoOpStatementNode.o"
 	@echo "... parser/ast/NoOpStatementNode.i"
 	@echo "... parser/ast/NoOpStatementNode.s"
+	@echo "... parser/ast/ProcedureNode.o"
+	@echo "... parser/ast/ProcedureNode.i"
+	@echo "... parser/ast/ProcedureNode.s"
 	@echo "... parser/ast/ProgramNode.o"
 	@echo "... parser/ast/ProgramNode.i"
 	@echo "... parser/ast/ProgramNode.s"
@@ -777,6 +864,9 @@ help:
 	@echo "... parser/ast/VarNode.o"
 	@echo "... parser/ast/VarNode.i"
 	@echo "... parser/ast/VarNode.s"
+	@echo "... st/SymbolTable.o"
+	@echo "... st/SymbolTable.i"
+	@echo "... st/SymbolTable.s"
 	@echo "... stream/char/CharStream.o"
 	@echo "... stream/char/CharStream.i"
 	@echo "... stream/char/CharStream.s"

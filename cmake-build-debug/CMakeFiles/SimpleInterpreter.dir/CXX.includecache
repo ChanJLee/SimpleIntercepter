@@ -107,6 +107,10 @@ ast/AssignStatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/AssignStatementNode.h
 ast/RealNumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.h
+ast/ProcedureNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.h
+ast/FormalParametersNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
 ast/ASTNode.h
@@ -123,6 +127,8 @@ ast/BlockNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/BlockNode.h
 ast/ProgramNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
+ast/FormalParametersNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.cpp
 ASTNode.h
@@ -190,6 +196,16 @@ vector
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.cpp
+FormalParametersNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.h
+vector
+-
+ASTNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp
 IntNumNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.h
@@ -211,6 +227,18 @@ ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 StatementNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.cpp
+ProcedureNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.h
+ASTNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
+DeclarationsNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.h
+FormalParametersNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.cpp
 ProgramNode.h
@@ -257,6 +285,16 @@ ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h
 ../../token/IdToken.h
 /Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.cpp
+SymbolTable.h
+/Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.h
+map
+-
+string
+-
 
 /Users/chan/ClionProjects/SimpleInterpreter/stream/Stream.h
 

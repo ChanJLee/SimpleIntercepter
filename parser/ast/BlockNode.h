@@ -10,6 +10,7 @@
 #include "ASTNode.h"
 #include "CompoundStatementNode.h"
 #include "DeclarationsNode.h"
+
 class BlockNode: public ASTNode
 {
 public:

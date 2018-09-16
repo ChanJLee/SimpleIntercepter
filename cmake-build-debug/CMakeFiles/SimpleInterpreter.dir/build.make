@@ -585,6 +585,78 @@ CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o.provides: CMakeFiles
 CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o
 
 
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o: ../parser/ast/ProcedureNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.cpp
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.cpp > CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.i
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.s
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.requires:
+
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.requires
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.provides
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o
+
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o: ../parser/ast/FormalParametersNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.cpp
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.cpp > CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.i
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.s
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.requires:
+
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.requires
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.provides
+
+CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o
+
+
+CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o: ../st/SymbolTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.cpp
+
+CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.cpp > CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.i
+
+CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.cpp -o CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.s
+
+CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.requires:
+
+.PHONY : CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.requires
+
+CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.provides: CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.provides.build
+.PHONY : CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.provides
+
+CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.provides.build: CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o
+
+
 # Object files for target SimpleInterpreter
 SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/main.cpp.o" \
@@ -608,7 +680,10 @@ SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o"
+"CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o"
 
 # External object files for target SimpleInterpreter
 SimpleInterpreter_EXTERNAL_OBJECTS =
@@ -635,9 +710,12 @@ SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/build.make
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable SimpleInterpreter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable SimpleInterpreter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SimpleInterpreter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -667,6 +745,9 @@ CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/pars
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o.requires
 CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o.requires
+CMakeFiles/SimpleInterpreter.dir/requires: CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o.requires
 
 .PHONY : CMakeFiles/SimpleInterpreter.dir/requires
 

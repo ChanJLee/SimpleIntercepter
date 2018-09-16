@@ -10,6 +10,8 @@
 #include "ast/NoOpStatementNode.h"
 #include "ast/AssignStatementNode.h"
 #include "ast/RealNumNode.h"
+#include "ast/ProcedureNode.h"
+#include "ast/FormalParametersNode.h"
 
 Parser::Parser(const Lexer &lexer)
 	: mLexer(lexer)
@@ -191,8 +193,9 @@ DeclarationsNode *Parser::declarations()
 	// END
 	eat(Token::TokenType::TYPE_VAR);
 	std::vector<DeclarationsNode::Declaration *> declarations;
-	while (mCurrentToken->type != Token::TYPE_BEGIN &&
-		mCurrentToken->type != Token::TYPE_EOF) {
+	while (mCurrentToken->type != Token::TokenType::TYPE_BEGIN &&
+		mCurrentToken->type != Token::TokenType::TYPE_PROCEDURE &&
+		mCurrentToken->type != Token::TokenType::TYPE_EOF) {
 
 		Token *id = mCurrentToken;
 		eat(Token::TokenType::TYPE_ID);
@@ -230,5 +233,55 @@ DeclarationsNode *Parser::declarations()
 		eat(Token::TokenType::TYPE_SEMI);
 	}
 
-	return new DeclarationsNode(declarations);
+	std::vector<ProcedureNode *> procedures;
+	while (mCurrentToken->type == Token::TYPE_PROCEDURE) {
+		procedures.push_back(procedure());
+	}
+
+	return new DeclarationsNode(declarations, procedures);
+}
+
+ProcedureNode *Parser::procedure()
+{
+	eat(Token::TokenType::TYPE_PROCEDURE);
+	if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
+		throw ("missing id after PROCEDURE");
+	}
+
+	IdToken *idToken = (IdToken *) mCurrentToken;
+	FormalParametersNode *formalParametersNode = nullptr;
+	if (mCurrentToken->type == Token::TokenType::TYPE_LEFT_BRACKET) {
+		eat(Token::TokenType::TYPE_LEFT_BRACKET);
+		formalParametersNode = formalParameters();
+		eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing ')' after formal parameter list");
+	}
+	ProcedureNode *procedureNode = new ProcedureNode(idToken, formalParametersNode, block());
+	eat(Token::TokenType::TYPE_SEMI);
+	return procedureNode;
+}
+
+FormalParametersNode *Parser::formalParameters()
+{
+	std::vector<FormalParametersNode::Parameter *> vec;
+	while (mCurrentToken->type != Token::TokenType::TYPE_LEFT_BRACKET) {
+		if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
+			throw ParseError("formal parameters must start with a id token");
+		}
+		IdToken *id = (IdToken *) mCurrentToken;
+		eat(Token::TokenType::TYPE_ID);
+		eat(Token::TokenType::TYPE_COLON, "missing ':' after id token");
+		if (mCurrentToken->type != Token::TokenType::TYPE_REAL &&
+			mCurrentToken->type != Token::TokenType::TYPE_INTEGER) {
+			throw ParseError("unknown type in formal parameters");
+		}
+		vec.push_back(new FormalParametersNode::Parameter(id, mCurrentToken->type));
+		eat(mCurrentToken->type);
+
+		// has more value
+		if (mCurrentToken->type == Token::TokenType::TYPE_SEMI) {
+			eat(Token::TokenType::TYPE_SEMI);
+		}
+	}
+
+	return new FormalParametersNode(vec);
 }
