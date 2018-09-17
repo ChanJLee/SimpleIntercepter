@@ -474,32 +474,32 @@ parser/ast/NoOpStatementNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.s
 .PHONY : parser/ast/NoOpStatementNode.cpp.s
 
-parser/ast/ProcedureNode.o: parser/ast/ProcedureNode.cpp.o
+parser/ast/ProceduresNode.o: parser/ast/ProceduresNode.cpp.o
 
-.PHONY : parser/ast/ProcedureNode.o
+.PHONY : parser/ast/ProceduresNode.o
 
 # target to build an object file
-parser/ast/ProcedureNode.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o
-.PHONY : parser/ast/ProcedureNode.cpp.o
+parser/ast/ProceduresNode.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o
+.PHONY : parser/ast/ProceduresNode.cpp.o
 
-parser/ast/ProcedureNode.i: parser/ast/ProcedureNode.cpp.i
+parser/ast/ProceduresNode.i: parser/ast/ProceduresNode.cpp.i
 
-.PHONY : parser/ast/ProcedureNode.i
+.PHONY : parser/ast/ProceduresNode.i
 
 # target to preprocess a source file
-parser/ast/ProcedureNode.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.i
-.PHONY : parser/ast/ProcedureNode.cpp.i
+parser/ast/ProceduresNode.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.i
+.PHONY : parser/ast/ProceduresNode.cpp.i
 
-parser/ast/ProcedureNode.s: parser/ast/ProcedureNode.cpp.s
+parser/ast/ProceduresNode.s: parser/ast/ProceduresNode.cpp.s
 
-.PHONY : parser/ast/ProcedureNode.s
+.PHONY : parser/ast/ProceduresNode.s
 
 # target to generate assembly for a file
-parser/ast/ProcedureNode.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.s
-.PHONY : parser/ast/ProcedureNode.cpp.s
+parser/ast/ProceduresNode.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.s
+.PHONY : parser/ast/ProceduresNode.cpp.s
 
 parser/ast/ProgramNode.o: parser/ast/ProgramNode.cpp.o
 
@@ -846,9 +846,9 @@ help:
 	@echo "... parser/ast/NoOpStatementNode.o"
 	@echo "... parser/ast/NoOpStatementNode.i"
 	@echo "... parser/ast/NoOpStatementNode.s"
-	@echo "... parser/ast/ProcedureNode.o"
-	@echo "... parser/ast/ProcedureNode.i"
-	@echo "... parser/ast/ProcedureNode.s"
+	@echo "... parser/ast/ProceduresNode.o"
+	@echo "... parser/ast/ProceduresNode.i"
+	@echo "... parser/ast/ProceduresNode.s"
 	@echo "... parser/ast/ProgramNode.o"
 	@echo "... parser/ast/ProgramNode.i"
 	@echo "... parser/ast/ProgramNode.s"

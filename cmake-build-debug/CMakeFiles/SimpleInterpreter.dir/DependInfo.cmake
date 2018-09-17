@@ -17,7 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o"
-  "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ProcedureNode.cpp.o"
+  "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProceduresNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o"

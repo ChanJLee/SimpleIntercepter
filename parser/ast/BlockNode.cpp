@@ -13,10 +13,17 @@ BlockNode::~BlockNode()
 	if (declarations != nullptr) {
 		delete declarations;
 	}
+
+	if (procedures != nullptr) {
+		delete procedures;
+	}
 }
 
-BlockNode::BlockNode(DeclarationsNode *declarations, StatementNode *statementNode)
-	: ASTNode(NULL, ASTNode::Type::BLOCK), declarations(declarations), compoundStatementNode(statementNode)
+BlockNode::BlockNode(DeclarationsNode *declarations, ProceduresNode *procedures, StatementNode *statementNode)
+	: ASTNode(NULL, ASTNode::Type::BLOCK),
+	  declarations(declarations),
+	  compoundStatementNode(statementNode),
+	  procedures(procedures)
 {
 
 }

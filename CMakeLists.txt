@@ -55,8 +55,8 @@ set(SOURCE_FILES
         syntax/SyntaxChecker.cpp
         syntax/SyntaxChecker.h
         syntax/ast/Symbol.h
-        parser/ast/ProcedureNode.cpp
-        parser/ast/ProcedureNode.h
+        parser/ast/ProceduresNode.cpp
+        parser/ast/ProceduresNode.h
         parser/ast/FormalParametersNode.cpp
         parser/ast/FormalParametersNode.h
         st/SymbolTable.cpp

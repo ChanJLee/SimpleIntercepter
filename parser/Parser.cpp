@@ -10,7 +10,7 @@
 #include "ast/NoOpStatementNode.h"
 #include "ast/AssignStatementNode.h"
 #include "ast/RealNumNode.h"
-#include "ast/ProcedureNode.h"
+#include "ast/ProceduresNode.h"
 #include "ast/FormalParametersNode.h"
 
 Parser::Parser(const Lexer &lexer)
@@ -176,7 +176,7 @@ ProgramNode *Parser::parse()
 
 BlockNode *Parser::block()
 {
-	return new BlockNode(declarations(), compound());
+	return new BlockNode(declarations(), procedures(), compound());
 }
 
 DeclarationsNode *Parser::declarations()
@@ -193,10 +193,7 @@ DeclarationsNode *Parser::declarations()
 	// END
 	eat(Token::TokenType::TYPE_VAR);
 	std::vector<DeclarationsNode::Declaration *> declarations;
-	while (mCurrentToken->type != Token::TokenType::TYPE_BEGIN &&
-		mCurrentToken->type != Token::TokenType::TYPE_PROCEDURE &&
-		mCurrentToken->type != Token::TokenType::TYPE_EOF) {
-
+	while (mCurrentToken->type == Token::TokenType::TYPE_ID) {
 		Token *id = mCurrentToken;
 		eat(Token::TokenType::TYPE_ID);
 
@@ -233,31 +230,33 @@ DeclarationsNode *Parser::declarations()
 		eat(Token::TokenType::TYPE_SEMI);
 	}
 
-	std::vector<ProcedureNode *> procedures;
-	while (mCurrentToken->type == Token::TYPE_PROCEDURE) {
-		procedures.push_back(procedure());
-	}
-
-	return new DeclarationsNode(declarations, procedures);
+	return new DeclarationsNode(declarations);
 }
 
-ProcedureNode *Parser::procedure()
+ProceduresNode *Parser::procedures()
 {
-	eat(Token::TokenType::TYPE_PROCEDURE);
-	if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
-		throw ("missing id after PROCEDURE");
+	if (mCurrentToken->type != Token::TokenType::TYPE_PROCEDURE) {
+		return new ProceduresNode();
 	}
 
-	IdToken *idToken = (IdToken *) mCurrentToken;
-	FormalParametersNode *formalParametersNode = nullptr;
-	if (mCurrentToken->type == Token::TokenType::TYPE_LEFT_BRACKET) {
-		eat(Token::TokenType::TYPE_LEFT_BRACKET);
-		formalParametersNode = formalParameters();
-		eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing ')' after formal parameter list");
+	std::vector<ProceduresNode::Procedure *> vec;
+	while (mCurrentToken->type == Token::TokenType::TYPE_PROCEDURE) {
+		eat(Token::TokenType::TYPE_PROCEDURE);
+		if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
+			throw ("missing id after PROCEDURE");
+		}
+		IdToken *idToken = (IdToken *) mCurrentToken;
+		FormalParametersNode *formalParametersNode = nullptr;
+		if (mCurrentToken->type == Token::TokenType::TYPE_LEFT_BRACKET) {
+			eat(Token::TokenType::TYPE_LEFT_BRACKET);
+			formalParametersNode = formalParameters();
+			eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing ')' after formal parameter list");
+		}
+		eat(Token::TokenType::TYPE_SEMI, "missing ';' after id or formal parameter list");
+		vec.push_back(new ProceduresNode::Procedure(idToken, formalParametersNode, block()));
+		eat(Token::TokenType::TYPE_SEMI, "missing ';' after block");
 	}
-	ProcedureNode *procedureNode = new ProcedureNode(idToken, formalParametersNode, block());
-	eat(Token::TokenType::TYPE_SEMI);
-	return procedureNode;
+	return new ProceduresNode(vec);
 }
 
 FormalParametersNode *Parser::formalParameters()

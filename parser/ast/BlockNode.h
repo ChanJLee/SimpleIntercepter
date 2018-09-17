@@ -16,8 +16,9 @@ class BlockNode: public ASTNode
 public:
 	DeclarationsNode *declarations;
 	StatementNode *compoundStatementNode;
+	ProceduresNode *procedures;
 public:
-	BlockNode(DeclarationsNode *declarations, StatementNode *statementNode);
+	BlockNode(DeclarationsNode *declarations, ProceduresNode *procedures, StatementNode *statementNode);
 	virtual ~BlockNode();
 };
 

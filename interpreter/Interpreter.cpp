@@ -172,8 +172,13 @@ Result Interpreter::visitRealNumNode(RealNumNode *node)
 void Interpreter::visitProgramNode(ProgramNode *node)
 {
 #ifdef DEBUG
-	IdToken *idToken = (IdToken *) node->token;
-	std::cout << "current program: " << idToken->value << std::endl;
+	if (node->token != nullptr) {
+		IdToken *idToken = (IdToken *) node->token;
+		std::cout << "current program: " << idToken->value << std::endl;
+	}
+	else {
+		std::cout << "current program: <no id>" << std::endl;
+	}
 #endif
 	visitBlockNode(node->block);
 }

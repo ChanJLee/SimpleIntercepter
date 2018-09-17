@@ -165,10 +165,10 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.cpp">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProceduresNode.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
-		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProcedureNode.h">
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProceduresNode.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.cpp">

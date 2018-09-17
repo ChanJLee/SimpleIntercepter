@@ -18,10 +18,12 @@
 /*
  * program : PROGRAM variable SEMI block DOT
  *
- * block : declarations compound_statement
+ * block : declarations procedures compound_statement
+ *
+ * procedures (PROCEDURE ID (LPAREN formal_parameter_list RPAREN)? SEMI block SEMI)*
+ * 			 | empty
  *
  * declarations : (VAR (variable_declaration SEMI)+)*
- *                (PROCEDURE ID (LPAREN formal_parameter_list RPAREN)? SEMI block SEMI)*
  *              | empty
  *
  * formal_parameter_list : formal_parameters
@@ -73,7 +75,7 @@ private:
 	BlockNode *block();
 	DeclarationsNode *declarations();
 	FormalParametersNode *formalParameters();
-	ProcedureNode *procedure();
+	ProceduresNode *procedures();
 	StatementNode *compound();
 	StatementNode *statement();
 	StatementNode *assignStatement();
