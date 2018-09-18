@@ -79,7 +79,7 @@ ASTNode *Parser::factor()
 	}
 
 	std::string msg = "invalid token, type is";
-	msg += token->type;
+	msg += std::to_string(token->type);
 	throw ParseError(msg);
 }
 
@@ -88,11 +88,11 @@ void Parser::eat(int type)
 	try {
 		eat(type, "");
 	}
-	catch (const ParseError error) {
+	catch (const ParseError& error) {
 		std::string msg = "invalid state, need is: ";
-		msg += type;
+		msg += std::to_string(type);
 		msg += ", and current is ";
-		msg += mCurrentToken->type;
+		msg += std::to_string(mCurrentToken->type);
 		throw ParseError(msg);
 	}
 }
@@ -113,7 +113,7 @@ ProgramNode *Parser::program()
 	Token *id = mCurrentToken;
 	eat(Token::TokenType::TYPE_ID, "missing PROGRAM id");
 	eat(Token::TokenType::TYPE_SEMI, "missing ';' after PROGRAM id");
-	ProgramNode *node = new ProgramNode(id, block());
+	auto *node = new ProgramNode(id, block());
 	eat(Token::TokenType::TYPE_DOT, "missing .");
 	return node;
 }
@@ -162,7 +162,7 @@ StatementNode *Parser::empty()
 
 VarNode *Parser::variable()
 {
-	VarNode *var = new VarNode((IdToken *const) mCurrentToken);
+	auto *var = new VarNode((IdToken *const) mCurrentToken);
 	eat(Token::TokenType::TYPE_ID);
 	return var;
 }

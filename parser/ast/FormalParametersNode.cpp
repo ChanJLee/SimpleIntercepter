@@ -13,13 +13,11 @@ FormalParametersNode::Parameter::Parameter(Token *id, Token::TokenType type)
 
 FormalParametersNode::Parameter::~Parameter()
 {
-	if (id != nullptr) {
-		delete id;
-	}
+	delete id;
 }
 
 FormalParametersNode::FormalParametersNode(const std::vector<Parameter *> &parameters)
-	: ASTNode(nullptr, ASTNode::Type::FORMAL_PARAMETER)
+	: ASTNode(nullptr, ASTNode::Type::FORMAL_PARAMETER), parameters(parameters)
 {
 
 }

@@ -184,7 +184,7 @@ void checkStream()
 void readPas()
 {
 	std::ifstream infile;
-	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test.pas");
+	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test_st.pas");
 	std::stringstream ss;
 	char ch;
 	while (!infile.eof()) {
@@ -253,11 +253,8 @@ void readPas()
 //		syntaxChecker.check();
 		Interpreter interpreter(root);
 		interpreter.interpret();
-#ifdef DEBUG
-		interpreter.dumpSymbolTable();
-#endif
 	}
-	catch (ParseError error) {
+	catch (const ParseError &error) {
 		std::cerr << error.msg << std::endl;
 	}
 }
@@ -363,12 +360,14 @@ void testAssign()
 	SyntaxChecker checker(parser.parse());
 	try {
 		checker.check();
-	} catch (const ParseError &e) {
+	}
+	catch (const ParseError &e) {
 		std::cerr << e.msg << std::endl;
 	}
 }
 
-void testDefine() {
+void testDefine()
+{
 	std::ifstream infile;
 	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test_define.pas");
 	std::stringstream ss;
@@ -387,7 +386,8 @@ void testDefine() {
 	SyntaxChecker checker(parser.parse());
 	try {
 		checker.check();
-	} catch (const ParseError &e) {
+	}
+	catch (const ParseError &e) {
 		std::cerr << e.msg << std::endl;
 	}
 }

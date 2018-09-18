@@ -10,7 +10,7 @@
 #include <iostream>
 #endif
 
-const Result Interpreter::NO_VALUE = {
+Result Interpreter::NO_VALUE = {
 	.type = Token::TokenType::TYPE_NO_MEANING
 };
 
@@ -150,7 +150,8 @@ void Interpreter::visitNoOpStatementNode(NoOpStatementNode *node)
 void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
 	auto *lv = (IdToken *) node->lv->token;
-	mCurrentTable->insert(lv->value, visitNode(node->rv));
+	Result &record = mCurrentTable->lookup(lv->value, NO_VALUE);
+	record = visitNode(node->rv);
 }
 
 Result Interpreter::visitVarNode(VarNode *node)
@@ -178,12 +179,10 @@ Result Interpreter::visitRealNumNode(RealNumNode *node)
 void Interpreter::visitProgramNode(ProgramNode *node)
 {
 	auto *idToken = (IdToken *) node->token;
-#ifdef DEBUG
-	std::cout << "current program: " << idToken->value << std::endl;
-#endif
 	mCurrentTable = new KVTable(idToken->value, nullptr);
 	visitBlockNode(node->block);
 #ifdef DEBUG
+	std::cout << "current program: " << idToken->value << std::endl;
 	dumpSymbolTable();
 #endif
 }
@@ -238,6 +237,7 @@ void Interpreter::visitProceduresNode(ProceduresNode *node)
 					  });
 		visitBlockNode(procedure->block);
 #ifdef DEBUG
+		std::cout << "current procedure: " << idToken->value << std::endl;
 		dumpSymbolTable();
 #endif
 		delete localTable;

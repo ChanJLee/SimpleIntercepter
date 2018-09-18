@@ -25,7 +25,7 @@ private:
 	String mName;
 public:
 	SymbolTable(const String &name, SymbolTable *parent);
-	const V &lookup(const String &k, const V &defaultValue);
+	V &lookup(const String &k, V &defaultValue);
 	void insert(const String &k, const V &v);
 
 #ifdef DEBUG
@@ -34,7 +34,7 @@ public:
 };
 
 template<typename V>
-const V &SymbolTable<V>::lookup(const SymbolTable::String &k, const V &defaultValue)
+V &SymbolTable<V>::lookup(const SymbolTable::String &k, V &defaultValue)
 {
 	Iterator it = mMap.find(k);
 	if (it != mMap.end()) {

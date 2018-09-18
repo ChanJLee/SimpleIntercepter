@@ -20,7 +20,7 @@ ProceduresNode::ProceduresNode()
 {}
 
 ProceduresNode::ProceduresNode(const std::vector<Procedure *> &procedures)
-	: ASTNode(nullptr, ASTNode::Type::PROCEDURE)
+	: ASTNode(nullptr, ASTNode::Type::PROCEDURE), procedures(procedures)
 {
 
 }

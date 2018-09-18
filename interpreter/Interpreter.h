@@ -26,11 +26,11 @@ class Interpreter
 	typedef KVTable::Iterator Iterator;
 private:
 	ProgramNode *mRoot;
-	KVTable *mCurrentTable;
+	KVTable *mCurrentTable{};
 
-	static const Result NO_VALUE;
+	static Result NO_VALUE;
 public:
-	Interpreter(ProgramNode *root)
+	explicit Interpreter(ProgramNode *root)
 		: mRoot(root)
 	{}
 

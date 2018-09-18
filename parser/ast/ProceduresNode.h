@@ -28,8 +28,8 @@ public:
 	std::vector<Procedure*> procedures;
 public:
 	ProceduresNode();
-	ProceduresNode(const std::vector<Procedure*> &procedures);
-	~ProceduresNode();
+	explicit ProceduresNode(const std::vector<Procedure*> &procedures);
+	virtual ~ProceduresNode();
 };
 
 

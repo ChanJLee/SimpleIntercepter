@@ -36,7 +36,7 @@ struct Token
 	};
 
 	TokenType type;
-	Token(TokenType type)
+	explicit Token(TokenType type)
 		: type(type)
 	{}
 	virtual ~Token()
