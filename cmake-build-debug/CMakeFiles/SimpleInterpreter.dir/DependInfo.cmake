@@ -23,7 +23,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/UnaryNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/parser/ast/VarNode.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o"
-  "/Users/chan/ClionProjects/SimpleInterpreter/st/SymbolTable.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/st/SymbolTable.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/stream/char/CharStream.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o"
   "/Users/chan/ClionProjects/SimpleInterpreter/token/IdToken.cpp" "/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o"

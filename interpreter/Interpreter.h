@@ -16,22 +16,26 @@
 #include "../parser/ast/RealNumNode.h"
 #include "../parser/ast/ProgramNode.h"
 #include "result/Result.h"
+#include "../st/SymbolTable.h"
 #include <map>
 
 class Interpreter
 {
 	typedef std::string String;
-	typedef std::map<String, Result> KVTable;
-	typedef KVTable::iterator Iterator;
+	typedef SymbolTable<Result> KVTable;
+	typedef KVTable::Iterator Iterator;
 private:
-	ProgramNode * mRoot;
-	KVTable mSymbolTable;
+	ProgramNode *mRoot;
+	KVTable *mCurrentTable;
+
+	static const Result NO_VALUE;
 public:
 	Interpreter(ProgramNode *root)
 		: mRoot(root)
 	{}
 
 	void interpret();
+	virtual ~Interpreter();
 
 #ifdef DEBUG
 	void dumpSymbolTable();
@@ -48,6 +52,8 @@ private:
 	void visitAssignStatementNode(AssignStatementNode *node);
 
 	void visitNoOpStatementNode(NoOpStatementNode *node);
+
+	void visitProceduresNode(ProceduresNode *node);
 
 	Result visitNode(ASTNode *node);
 

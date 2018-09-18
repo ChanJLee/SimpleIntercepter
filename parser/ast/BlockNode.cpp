@@ -3,27 +3,18 @@
 //
 
 #include "BlockNode.h"
+#include "ProceduresNode.h"
 
 BlockNode::~BlockNode()
 {
-	if (compoundStatementNode != nullptr) {
-		delete compoundStatementNode;
-	}
-
-	if (declarations != nullptr) {
-		delete declarations;
-	}
-
-	if (procedures != nullptr) {
-		delete procedures;
-	}
+	delete compoundStatementNode;
+	delete declarations;
+	delete procedures;
 }
 
 BlockNode::BlockNode(DeclarationsNode *declarations, ProceduresNode *procedures, StatementNode *statementNode)
-	: ASTNode(NULL, ASTNode::Type::BLOCK),
+	: ASTNode(nullptr, ASTNode::Type::BLOCK),
 	  declarations(declarations),
 	  compoundStatementNode(statementNode),
 	  procedures(procedures)
-{
-
-}
+{}

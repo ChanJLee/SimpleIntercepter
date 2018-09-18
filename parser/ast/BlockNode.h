@@ -11,6 +11,8 @@
 #include "CompoundStatementNode.h"
 #include "DeclarationsNode.h"
 
+class ProceduresNode;
+
 class BlockNode: public ASTNode
 {
 public:

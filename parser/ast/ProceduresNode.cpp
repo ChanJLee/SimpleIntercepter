@@ -3,7 +3,7 @@
 //
 
 #include "ProceduresNode.h"
-
+#include "../ast/BlockNode.h"
 
 ProceduresNode::~ProceduresNode()
 {
@@ -31,11 +31,6 @@ ProceduresNode::Procedure::Procedure(IdToken *id, FormalParametersNode *formalPa
 
 ProceduresNode::Procedure::~Procedure()
 {
-	if (formalParameters != nullptr) {
-		delete formalParameters;
-	}
-
-	if (block != nullptr) {
-		delete block;
-	}
+	delete formalParameters;
+	delete block;
 }

@@ -4,9 +4,14 @@
 
 #include "Interpreter.h"
 #include "../exception/ParseError.h"
+#include "../st/SymbolTable.h"
 #ifdef DEBUG
 #include <iostream>
 #endif
+
+const Result Interpreter::NO_VALUE = {
+	.type = Token::TokenType::TYPE_NO_MEANING
+};
 
 Result Interpreter::visitNode(ASTNode *node)
 {
@@ -34,7 +39,7 @@ Result Interpreter::visitNode(ASTNode *node)
 Result Interpreter::visitIntNumNode(IntNumNode *node)
 {
 	IntNumToken *token = (IntNumToken *) node->token;
-	return Result {
+	return Result{
 		.type = Token::TokenType::TYPE_INTEGER,
 		.value.i = token->value
 	};
@@ -144,26 +149,26 @@ void Interpreter::visitNoOpStatementNode(NoOpStatementNode *node)
 void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
 	IdToken *lv = (IdToken *) node->lv->token;
-	mSymbolTable[lv->value] = visitNode(node->rv);
+	mCurrentTable->insert(lv->value, visitNode(node->rv));
 }
 
 Result Interpreter::visitVarNode(VarNode *node)
 {
 	IdToken *lv = (IdToken *) node->token;
-	Iterator it = mSymbolTable.find(lv->value);
-	if (it == mSymbolTable.end()) {
+	const Result result = mCurrentTable->lookup(lv->value, NO_VALUE);
+	if (result.type == Token::TokenType::TYPE_NO_MEANING) {
 		std::string msg = "unknown symbol: ";
 		msg += lv->value;
 		throw ParseError(msg);
 	}
 
-	return it->second;
+	return result;
 }
 
 Result Interpreter::visitRealNumNode(RealNumNode *node)
 {
 	RealNumToken *token = (RealNumToken *) node->token;
-	return Result {
+	return Result{
 		.type = Token::TokenType::TYPE_REAL,
 		.value.r = token->value
 	};
@@ -171,21 +176,24 @@ Result Interpreter::visitRealNumNode(RealNumNode *node)
 
 void Interpreter::visitProgramNode(ProgramNode *node)
 {
+	IdToken *idToken = nullptr;
 #ifdef DEBUG
 	if (node->token != nullptr) {
-		IdToken *idToken = (IdToken *) node->token;
+		idToken = (IdToken *) node->token;
 		std::cout << "current program: " << idToken->value << std::endl;
 	}
 	else {
 		std::cout << "current program: <no id>" << std::endl;
 	}
 #endif
+	mCurrentTable = new KVTable(idToken == nullptr ? "unknown" : idToken->value, nullptr);
 	visitBlockNode(node->block);
 }
 
 void Interpreter::visitBlockNode(BlockNode *node)
 {
 	visitDeclarationsNode(node->declarations);
+	visitProceduresNode(node->procedures);
 	visitCompoundStatementNode((CompoundStatementNode *) node->compoundStatementNode);
 }
 
@@ -197,7 +205,7 @@ void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
 				  {
 					  if (declaration != nullptr) {
 						  IdToken *id = (IdToken *) declaration->id;
-						  mSymbolTable[id->value] = BUILD_IN_VALUE_TO_RESULT(declaration->type, 0);
+						  mCurrentTable->insert(id->value, BUILD_IN_VALUE_TO_RESULT(declaration->type, 0));
 					  }
 				  });
 }
@@ -205,8 +213,19 @@ void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
 #ifdef DEBUG
 void Interpreter::dumpSymbolTable()
 {
-	for (Iterator it = mSymbolTable.begin(); it != mSymbolTable.end(); ++it) {
+	auto symbolTable = mCurrentTable->getMap();
+	for (Iterator it = symbolTable.begin(); it != symbolTable.end(); ++it) {
 		std::cout << "key: " << it->first << " value: " << RESULT_TO_BUILD_IN_VALUE(it->second) << std::endl;
 	}
+}
+
+void Interpreter::visitProceduresNode(ProceduresNode *pNode)
+{
+
+}
+
+Interpreter::~Interpreter()
+{
+	delete mCurrentTable;
 }
 #endif
