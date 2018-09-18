@@ -5,6 +5,7 @@
 #include "Interpreter.h"
 #include "../exception/ParseError.h"
 #include "../st/SymbolTable.h"
+#include "../parser/ast/ProceduresNode.h"
 #ifdef DEBUG
 #include <iostream>
 #endif
@@ -32,13 +33,13 @@ Result Interpreter::visitNode(ASTNode *node)
 	}
 
 	std::string msg = "unknown ast node, type is: ";
-	msg += node->token->type;
+	msg += std::to_string(node->token->type);
 	throw ParseError(msg);
 }
 
 Result Interpreter::visitIntNumNode(IntNumNode *node)
 {
-	IntNumToken *token = (IntNumToken *) node->token;
+	auto *token = (IntNumToken *) node->token;
 	return Result{
 		.type = Token::TokenType::TYPE_INTEGER,
 		.value.i = token->value
@@ -85,7 +86,7 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 		case Token::TokenType::TYPE_PLUS: RETURN_BIN_OP(type, lr, rr, +)
 		default: {
 			std::string msg = "unknown bin op, type is: ";
-			msg += node->token->type;
+			msg += std::to_string(node->token->type);
 			throw ParseError("unknown bin op");
 		}
 	}
@@ -107,7 +108,7 @@ Result Interpreter::visitUnaryNode(UnaryNode *node)
 	}
 
 	std::string msg = "unknown unary op, type is: ";
-	msg += node->token->type;
+	msg += std::to_string(node->token->type);
 	throw ParseError(msg);
 }
 
@@ -136,7 +137,7 @@ void Interpreter::visitCompoundStatementNode(CompoundStatementNode *node)
 		}
 
 		std::string msg = "unknown ast node, type is: ";
-		msg += child->type;
+		msg += std::to_string(child->type);
 		throw ParseError(msg);
 	});
 }
@@ -148,13 +149,13 @@ void Interpreter::visitNoOpStatementNode(NoOpStatementNode *node)
 
 void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
-	IdToken *lv = (IdToken *) node->lv->token;
+	auto *lv = (IdToken *) node->lv->token;
 	mCurrentTable->insert(lv->value, visitNode(node->rv));
 }
 
 Result Interpreter::visitVarNode(VarNode *node)
 {
-	IdToken *lv = (IdToken *) node->token;
+	auto *lv = (IdToken *) node->token;
 	const Result result = mCurrentTable->lookup(lv->value, NO_VALUE);
 	if (result.type == Token::TokenType::TYPE_NO_MEANING) {
 		std::string msg = "unknown symbol: ";
@@ -167,7 +168,7 @@ Result Interpreter::visitVarNode(VarNode *node)
 
 Result Interpreter::visitRealNumNode(RealNumNode *node)
 {
-	RealNumToken *token = (RealNumToken *) node->token;
+	auto *token = (RealNumToken *) node->token;
 	return Result{
 		.type = Token::TokenType::TYPE_REAL,
 		.value.r = token->value
@@ -176,18 +177,15 @@ Result Interpreter::visitRealNumNode(RealNumNode *node)
 
 void Interpreter::visitProgramNode(ProgramNode *node)
 {
-	IdToken *idToken = nullptr;
+	auto *idToken = (IdToken *) node->token;
 #ifdef DEBUG
-	if (node->token != nullptr) {
-		idToken = (IdToken *) node->token;
-		std::cout << "current program: " << idToken->value << std::endl;
-	}
-	else {
-		std::cout << "current program: <no id>" << std::endl;
-	}
+	std::cout << "current program: " << idToken->value << std::endl;
 #endif
-	mCurrentTable = new KVTable(idToken == nullptr ? "unknown" : idToken->value, nullptr);
+	mCurrentTable = new KVTable(idToken->value, nullptr);
 	visitBlockNode(node->block);
+#ifdef DEBUG
+	dumpSymbolTable();
+#endif
 }
 
 void Interpreter::visitBlockNode(BlockNode *node)
@@ -204,7 +202,7 @@ void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
 				  [this](DeclarationsNode::Declaration *declaration)
 				  {
 					  if (declaration != nullptr) {
-						  IdToken *id = (IdToken *) declaration->id;
+						  auto *id = (IdToken *) declaration->id;
 						  mCurrentTable->insert(id->value, BUILD_IN_VALUE_TO_RESULT(declaration->type, 0));
 					  }
 				  });
@@ -213,15 +211,38 @@ void Interpreter::visitDeclarationsNode(DeclarationsNode *node)
 #ifdef DEBUG
 void Interpreter::dumpSymbolTable()
 {
+	if (mCurrentTable == nullptr) {
+		return;
+	}
+
 	auto symbolTable = mCurrentTable->getMap();
-	for (Iterator it = symbolTable.begin(); it != symbolTable.end(); ++it) {
+	for (auto it = symbolTable.begin(); it != symbolTable.end(); ++it) {
 		std::cout << "key: " << it->first << " value: " << RESULT_TO_BUILD_IN_VALUE(it->second) << std::endl;
 	}
 }
 
-void Interpreter::visitProceduresNode(ProceduresNode *pNode)
+void Interpreter::visitProceduresNode(ProceduresNode *node)
 {
-
+	KVTable *context = mCurrentTable;
+	std::for_each(node->procedures.cbegin(), node->procedures.cend(), [&](ProceduresNode::Procedure *procedure)
+	{
+		IdToken *idToken = procedure->id;
+		auto *localTable = new KVTable(idToken->value, context);
+		mCurrentTable = localTable;
+		std::for_each(procedure->formalParameters->parameters.cbegin(),
+					  procedure->formalParameters->parameters.cend(),
+					  [this](FormalParametersNode::Parameter *parameter)
+					  {
+						  auto paramId = (IdToken *) parameter->id;
+						  mCurrentTable->insert(paramId->value, BUILD_IN_VALUE_TO_RESULT(parameter->type, 0));
+					  });
+		visitBlockNode(procedure->block);
+#ifdef DEBUG
+		dumpSymbolTable();
+#endif
+		delete localTable;
+		mCurrentTable = context;
+	});
 }
 
 Interpreter::~Interpreter()

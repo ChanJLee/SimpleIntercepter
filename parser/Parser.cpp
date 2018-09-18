@@ -245,7 +245,8 @@ ProceduresNode *Parser::procedures()
 		if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
 			throw ("missing id after PROCEDURE");
 		}
-		IdToken *idToken = (IdToken *) mCurrentToken;
+		auto *idToken = (IdToken *) mCurrentToken;
+		eat(Token::TokenType::TYPE_ID);
 		FormalParametersNode *formalParametersNode = nullptr;
 		if (mCurrentToken->type == Token::TokenType::TYPE_LEFT_BRACKET) {
 			eat(Token::TokenType::TYPE_LEFT_BRACKET);
@@ -262,11 +263,11 @@ ProceduresNode *Parser::procedures()
 FormalParametersNode *Parser::formalParameters()
 {
 	std::vector<FormalParametersNode::Parameter *> vec;
-	while (mCurrentToken->type != Token::TokenType::TYPE_LEFT_BRACKET) {
+	while (mCurrentToken->type != Token::TokenType::TYPE_RIGHT_BRACKET) {
 		if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
 			throw ParseError("formal parameters must start with a id token");
 		}
-		IdToken *id = (IdToken *) mCurrentToken;
+		auto *id = (IdToken *) mCurrentToken;
 		eat(Token::TokenType::TYPE_ID);
 		eat(Token::TokenType::TYPE_COLON, "missing ':' after id token");
 		if (mCurrentToken->type != Token::TokenType::TYPE_REAL &&

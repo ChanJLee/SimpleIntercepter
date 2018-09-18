@@ -68,7 +68,7 @@ private:
 	Lexer mLexer;
 	Token *mCurrentToken = nullptr;
 public:
-	Parser(const Lexer &lexer);
+	explicit Parser(const Lexer &lexer);
 	ProgramNode *parse();
 private:
 	ProgramNode *program();

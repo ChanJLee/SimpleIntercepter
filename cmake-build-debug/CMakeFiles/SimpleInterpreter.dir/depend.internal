@@ -17,6 +17,7 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/FormalParametersNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/IntNumNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/NoOpStatementNode.h
+ /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProceduresNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ProgramNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/RealNumNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/StatementNode.h

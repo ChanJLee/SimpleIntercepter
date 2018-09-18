@@ -16,6 +16,7 @@ CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/De
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/FormalParametersNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/IntNumNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/NoOpStatementNode.h
+CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/ProceduresNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/ProgramNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/RealNumNode.h
 CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o: ../parser/ast/StatementNode.h
