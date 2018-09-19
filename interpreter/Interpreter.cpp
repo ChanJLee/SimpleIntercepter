@@ -151,7 +151,9 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
 	auto *lv = (IdToken *) node->lv->token;
 	Result &record = mCurrentTable->lookup(lv->value, NO_VALUE);
+	Token::TokenType type = record.type;
 	record = visitNode(node->rv);
+	record.type = type;
 }
 
 Result Interpreter::visitVarNode(VarNode *node)
