@@ -151,9 +151,13 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
 	auto *lv = (IdToken *) node->lv->token;
 	Result &record = mCurrentTable->lookup(lv->value, INVALID_RESULT);
-	Token::TokenType type = record.type;
-	record = visitNode(node->rv);
-	record.type = type;
+	const Result &rhs = visitNode(node->rv);
+	if (record.type == Token::TokenType::TYPE_INTEGER) {
+		record.value.i = RESULT_TO_BUILD_IN_VALUE(rhs);
+	}
+	else {
+		record.value.r = RESULT_TO_BUILD_IN_VALUE(rhs);
+	}
 }
 
 Result Interpreter::visitVarNode(VarNode *node)
