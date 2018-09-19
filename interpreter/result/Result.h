@@ -42,11 +42,11 @@ inline T _RESULT_TO_BUILD_IN_VALUE(Result result) {
 
 #ifndef RESULT_TO_BUILD_IN_VALUE_
 #define RESULT_TO_BUILD_IN_VALUE_(result) \
-	(result.type == Token::TokenType::TYPE_REAL ? _RESULT_TO_BUILD_IN_VALUE<double>(result) : _RESULT_TO_BUILD_IN_VALUE<int>(result))
+    (result.type == Token::TokenType::TYPE_REAL ? _RESULT_TO_BUILD_IN_VALUE<double>(result) : _RESULT_TO_BUILD_IN_VALUE<int>(result))
 #define RESULT_TO_BUILD_IN_VALUE RESULT_TO_BUILD_IN_VALUE_
 
 #define BUILD_IN_VALUE_TO_RESULT_(type, value) \
-	type == Token::TokenType::TYPE_REAL ? _BUILD_IN_VALUE_TO_RESULT<double>(type, value) : _BUILD_IN_VALUE_TO_RESULT<int>(type, value)
+    type == Token::TokenType::TYPE_REAL ? _BUILD_IN_VALUE_TO_RESULT<double>(type, value) : _BUILD_IN_VALUE_TO_RESULT<int>(type, value)
 #define BUILD_IN_VALUE_TO_RESULT BUILD_IN_VALUE_TO_RESULT_
 #endif
 

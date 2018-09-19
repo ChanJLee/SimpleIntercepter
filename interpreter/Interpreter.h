@@ -28,7 +28,7 @@ private:
 	ProgramNode *mRoot;
 	KVTable *mCurrentTable{};
 
-	static Result NO_VALUE;
+	static Result INVALID_RESULT;
 public:
 	explicit Interpreter(ProgramNode *root)
 		: mRoot(root)

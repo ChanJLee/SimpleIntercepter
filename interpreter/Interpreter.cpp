@@ -10,8 +10,8 @@
 #include <iostream>
 #endif
 
-Result Interpreter::NO_VALUE = {
-	.type = Token::TokenType::TYPE_NO_MEANING
+Result Interpreter::INVALID_RESULT = {
+	.type = Token::TokenType::TYPE_NONE
 };
 
 Result Interpreter::visitNode(ASTNode *node)
@@ -150,7 +150,7 @@ void Interpreter::visitNoOpStatementNode(NoOpStatementNode *node)
 void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 {
 	auto *lv = (IdToken *) node->lv->token;
-	Result &record = mCurrentTable->lookup(lv->value, NO_VALUE);
+	Result &record = mCurrentTable->lookup(lv->value, INVALID_RESULT);
 	Token::TokenType type = record.type;
 	record = visitNode(node->rv);
 	record.type = type;
@@ -159,8 +159,8 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 Result Interpreter::visitVarNode(VarNode *node)
 {
 	auto *lv = (IdToken *) node->token;
-	const Result result = mCurrentTable->lookup(lv->value, NO_VALUE);
-	if (result.type == Token::TokenType::TYPE_NO_MEANING) {
+	const Result result = mCurrentTable->lookup(lv->value, INVALID_RESULT);
+	if (result.type == Token::TokenType::TYPE_NONE) {
 		std::string msg = "unknown symbol: ";
 		msg += lv->value;
 		throw ParseError(msg);

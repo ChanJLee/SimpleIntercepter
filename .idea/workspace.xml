@@ -15,37 +15,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/lexer/Lexer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ASTNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/AssignStatementNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/BinOpNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/CompoundStatementNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/IntNumNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/NoOpStatementNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/StatementNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/UnaryNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IdToken.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/IntNumToken.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/token/RealNumToken.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interpreter/Interpreter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/interpreter/Interpreter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interpreter/Interpreter.h" beforeDir="false" afterPath="$PROJECT_DIR$/interpreter/Interpreter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/Parser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/parser/Parser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/ast/FormalParametersNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/parser/ast/FormalParametersNode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/ast/ProceduresNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/parser/ast/ProceduresNode.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parser/ast/ProceduresNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/parser/ast/ProceduresNode.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/st/SymbolTable.h" beforeDir="false" afterPath="$PROJECT_DIR$/st/SymbolTable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interpreter/result/Result.h" beforeDir="false" afterPath="$PROJECT_DIR$/interpreter/result/Result.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/token/Token.h" beforeDir="false" afterPath="$PROJECT_DIR$/token/Token.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -69,28 +42,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="842" />
-          <entry key="h" value="200" />
+          <entry key="cpp" value="985" />
+          <entry key="h" value="458" />
           <entry key="pas" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="1042" />
+          <entry key="ObjectiveC" value="1443" />
           <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cpp" value="8" />
-          <entry key="h" value="10" />
+          <entry key="h" value="11" />
           <entry key="pas" value="2" />
           <entry key="string" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="19" />
+          <entry key="ObjectiveC" value="20" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -103,14 +76,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="212" selection-start-line="212" selection-end-line="212" />
+            <state relative-caret-position="216">
+              <caret line="153" column="10" selection-start-line="153" selection-start-column="10" selection-end-line="153" selection-end-column="10" />
               <folding>
                 <element signature="e#40#64#0" expanded="true" />
-                <marker date="1537283114000" expanded="true" signature="2352:2843" ph="..." />
+                <marker date="1537364086000" expanded="true" signature="2351:2842" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interpreter/result/Result.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+              <folding>
+                <element signature="e#253#265#0" expanded="true" />
+                <element signature="e#523#535#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/st/SymbolTable.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#121#135#0" expanded="true" />
                 <element signature="e#921#933#0" expanded="true" />
@@ -147,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="249" column="29" lean-forward="true" selection-start-line="249" selection-start-column="29" selection-end-line="249" selection-end-column="29" />
+            <state relative-caret-position="1018">
+              <caret line="222" column="22" selection-start-line="222" selection-start-column="22" selection-end-line="222" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -164,15 +150,6 @@
               <folding>
                 <element signature="e#40#59#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/ast/FormalParametersNode.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -202,7 +179,7 @@
         <entry file="file://$PROJECT_DIR$/parser/ast/ProceduresNode.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#40#67#0" expanded="true" />
               </folding>
@@ -230,7 +207,6 @@
       <find>visitNode</find>
       <find>unknown type</find>
       <find>double</find>
-      <find>Result</find>
       <find>_BUILD_IN_VALUE_TO_RESULT</find>
       <find>formal_parameters</find>
       <find>Declare</find>
@@ -239,6 +215,7 @@
       <find>formal parameters must start with</find>
       <find>visitProceduresNode</find>
       <find>visitBlockNode</find>
+      <find>Result</find>
     </findStrings>
     <replaceStrings>
       <replace>Token::TokenType::</replace>
@@ -287,7 +264,6 @@
         <option value="$PROJECT_DIR$/parser/ast/FormalParametersNode.h" />
         <option value="$PROJECT_DIR$/parser/ast/ProcedureNode.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/interpreter/result/Result.h" />
         <option value="$PROJECT_DIR$/parser/ast/ProcedureNode.h" />
         <option value="$PROJECT_DIR$/parser/ast/DeclarationsNode.h" />
         <option value="$PROJECT_DIR$/parser/ast/DeclarationsNode.cpp" />
@@ -303,8 +279,9 @@
         <option value="$PROJECT_DIR$/st/SymbolTable.h" />
         <option value="$PROJECT_DIR$/interpreter/Interpreter.h" />
         <option value="$PROJECT_DIR$/token/Token.h" />
-        <option value="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/interpreter/result/Result.h" />
+        <option value="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
       </list>
     </option>
   </component>
@@ -336,6 +313,12 @@
               <item name="SimpleInterpreter" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimpleInterpreter" type="462c0819:PsiDirectoryNode" />
               <item name="interpreter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimpleInterpreter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimpleInterpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="interpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="result" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimpleInterpreter" type="b2602c69:ProjectViewProjectNode" />
@@ -463,12 +446,12 @@
       <workItem from="1535982833375" duration="36499000" />
       <workItem from="1536673917040" duration="33260000" />
       <workItem from="1537277535355" duration="1188000" />
-      <workItem from="1537278872656" duration="4176000" />
+      <workItem from="1537278872656" duration="7190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105089000" />
+    <option name="totallyTimeSpent" value="108103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="6" />
@@ -480,14 +463,14 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49753347" weight="0.45467034" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49753347" visible="true" weight="0.489011" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49753347" weight="0.34065935" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49753347" weight="0.489011" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32967034" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32967034" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.37362638" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.37362638" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5024665" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49753347" weight="0.32692307" />
       <window_info anchor="right" id="Database" />
@@ -539,17 +522,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/interpreter/Interpreter.cpp</url>
-          <line>212</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/parser/result/NodeValue.cpp" />
@@ -703,13 +675,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/st/SymbolTable.cpp" />
-    <entry file="file://$PROJECT_DIR$/interpreter/result/Result.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parser/ast/DeclarationsNode.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -809,7 +774,7 @@
     <entry file="file://$PROJECT_DIR$/parser/ast/ProceduresNode.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#40#67#0" expanded="true" />
           </folding>
@@ -819,7 +784,7 @@
     <entry file="file://$PROJECT_DIR$/st/SymbolTable.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#121#135#0" expanded="true" />
             <element signature="e#921#933#0" expanded="true" />
@@ -851,21 +816,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="212" selection-start-line="212" selection-end-line="212" />
+        <state relative-caret-position="1018">
+          <caret line="222" column="22" selection-start-line="222" selection-start-column="22" selection-end-line="222" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interpreter/result/Result.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding>
-            <element signature="e#40#64#0" expanded="true" />
-            <marker date="1537283114000" expanded="true" signature="2352:2843" ph="..." />
+            <element signature="e#253#265#0" expanded="true" />
+            <element signature="e#523#535#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="249" column="29" lean-forward="true" selection-start-line="249" selection-start-column="29" selection-end-line="249" selection-end-column="29" />
+        <state relative-caret-position="216">
+          <caret line="153" column="10" selection-start-line="153" selection-start-column="10" selection-end-line="153" selection-end-column="10" />
+          <folding>
+            <element signature="e#40#64#0" expanded="true" />
+            <marker date="1537364086000" expanded="true" signature="2351:2842" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
