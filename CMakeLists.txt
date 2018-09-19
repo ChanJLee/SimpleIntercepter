@@ -52,9 +52,9 @@ set(SOURCE_FILES
         parser/ast/BlockNode.h
         parser/ast/DeclarationsNode.cpp
         parser/ast/DeclarationsNode.h
-        syntax/SyntaxChecker.cpp
-        syntax/SyntaxChecker.h
-        syntax/ast/Symbol.h
+        semantic/SemanticAnalyzer.cpp
+        semantic/SemanticAnalyzer.h
+        semantic/ast/Symbol.h
         parser/ast/ProceduresNode.cpp
         parser/ast/ProceduresNode.h
         parser/ast/FormalParametersNode.cpp

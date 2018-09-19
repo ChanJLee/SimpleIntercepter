@@ -330,18 +330,18 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/DeclarationsNode.cpp -o CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.s
 
-CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
-CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o: ../syntax/SyntaxChecker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp
+CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
+CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o: ../semantic/SemanticAnalyzer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chan/ClionProjects/SimpleInterpreter/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o -c /Users/chan/ClionProjects/SimpleInterpreter/semantic/SemanticAnalyzer.cpp
 
-CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp > CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.i
+CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chan/ClionProjects/SimpleInterpreter/semantic/SemanticAnalyzer.cpp > CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.i
 
-CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/syntax/SyntaxChecker.cpp -o CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.s
+CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chan/ClionProjects/SimpleInterpreter/semantic/SemanticAnalyzer.cpp -o CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.s
 
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o: CMakeFiles/SimpleInterpreter.dir/flags.make
 CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o: ../parser/ast/ProceduresNode.cpp
@@ -392,7 +392,7 @@ SimpleInterpreter_OBJECTS = \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o" \
-"CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o" \
+"CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o" \
 "CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o"
 
@@ -420,7 +420,7 @@ SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/RealNumNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o
-SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o
+SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o
 SimpleInterpreter: CMakeFiles/SimpleInterpreter.dir/build.make

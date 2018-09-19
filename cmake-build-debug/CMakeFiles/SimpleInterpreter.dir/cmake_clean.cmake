@@ -20,7 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/ProgramNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/BlockNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/DeclarationsNode.cpp.o"
-  "CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o"
+  "CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/ProceduresNode.cpp.o"
   "CMakeFiles/SimpleInterpreter.dir/parser/ast/FormalParametersNode.cpp.o"
   "SimpleInterpreter.pdb"

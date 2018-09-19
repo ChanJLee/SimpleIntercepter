@@ -12,18 +12,19 @@
 #include "../parser/ast/UnaryNode.h"
 #include "../parser/ast/NoOpStatementNode.h"
 #include <map>
+#include "../st/SymbolTable.h"
 #include <string>
 
-class SyntaxChecker
+class SemanticAnalyzer
 {
 	typedef std::string String;
-	typedef std::map<String, Symbol> SymbolTable;
-	typedef SymbolTable::iterator Iterator;
+	typedef SymbolTable<Symbol> SymbolTable;
+	typedef SymbolTable::Iterator Iterator;
 private:
 	ProgramNode *mTree;
-	SymbolTable mGlobalSymbolTable;
+	SymbolTable *mCurrentTable;
 public:
-	SyntaxChecker(ProgramNode *tree);
+	explicit SemanticAnalyzer(ProgramNode *tree);
 	void check();
 private:
 	void checkBlock(BlockNode *node);
@@ -31,14 +32,15 @@ private:
 	void checkCompoundStatement(CompoundStatementNode *node);
 	void checkAssignStatement(AssignStatementNode *node);
 	void checkNoOp(NoOpStatementNode *node);
+	void checkProcedures(ProceduresNode *node);
 
 	Symbol checkVar(VarNode *node);
 	Symbol checkExp(ASTNode *node);
 	Symbol checkBinOp(BinOpNode *node);
 	Symbol visitUnaryNode(UnaryNode *node);
 
-	void putSymbol(const String &key, Token::TokenType value);
-	Symbol getSymbol(const String &key);
+	void insert(const String &key, Token::TokenType value);
+	Symbol lookup(const String &key);
 };
 
 

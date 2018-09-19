@@ -233,7 +233,7 @@ factor: INTEGER
 
 ## 如果想更模块化一点呢
 
-上面的例子我们可以看到，目前我们的代码将解析和执行都是放在一起。这种模式叫做直接语法解释器(syntax-directed interpreter)。他们适合去解释一些简单的应用。但是如果我们想要去实现更复杂的功能，我们需要构建一个中间表示(intermediate representation)，我们简称IR。parser负责构建IR，interpreter负责执行IR。
+上面的例子我们可以看到，目前我们的代码将解析和执行都是放在一起。这种模式叫做直接语法解释器(semantic-directed interpreter)。他们适合去解释一些简单的应用。但是如果我们想要去实现更复杂的功能，我们需要构建一个中间表示(intermediate representation)，我们简称IR。parser负责构建IR，interpreter负责执行IR。
 
 对于IR，我们通常都是使用tree去描述它。我们考虑下面这个例子
 
@@ -241,7 +241,7 @@ factor: INTEGER
 
 ## Abstract-syntax tree (AST)
 
-AST是比较常见的IR。但是我们先不讨论AST，我们可以看看解析树(parse-tree)。 可能有些地方叫做直接语法树（concrete syntax tree）
+AST是比较常见的IR。但是我们先不讨论AST，我们可以看看解析树(parse-tree)。 可能有些地方叫做直接语法树（concrete semantic tree）
 
 ![tree](img/lsbasi_part7_parsetree_01.png)
 

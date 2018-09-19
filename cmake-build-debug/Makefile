@@ -636,6 +636,33 @@ parser/ast/VarNode.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.s
 .PHONY : parser/ast/VarNode.cpp.s
 
+semantic/SemanticAnalyzer.o: semantic/SemanticAnalyzer.cpp.o
+
+.PHONY : semantic/SemanticAnalyzer.o
+
+# target to build an object file
+semantic/SemanticAnalyzer.cpp.o:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o
+.PHONY : semantic/SemanticAnalyzer.cpp.o
+
+semantic/SemanticAnalyzer.i: semantic/SemanticAnalyzer.cpp.i
+
+.PHONY : semantic/SemanticAnalyzer.i
+
+# target to preprocess a source file
+semantic/SemanticAnalyzer.cpp.i:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.i
+.PHONY : semantic/SemanticAnalyzer.cpp.i
+
+semantic/SemanticAnalyzer.s: semantic/SemanticAnalyzer.cpp.s
+
+.PHONY : semantic/SemanticAnalyzer.s
+
+# target to generate assembly for a file
+semantic/SemanticAnalyzer.cpp.s:
+	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.s
+.PHONY : semantic/SemanticAnalyzer.cpp.s
+
 stream/char/CharStream.o: stream/char/CharStream.cpp.o
 
 .PHONY : stream/char/CharStream.o
@@ -662,33 +689,6 @@ stream/char/CharStream.s: stream/char/CharStream.cpp.s
 stream/char/CharStream.cpp.s:
 	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/stream/char/CharStream.cpp.s
 .PHONY : stream/char/CharStream.cpp.s
-
-syntax/SyntaxChecker.o: syntax/SyntaxChecker.cpp.o
-
-.PHONY : syntax/SyntaxChecker.o
-
-# target to build an object file
-syntax/SyntaxChecker.cpp.o:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.o
-.PHONY : syntax/SyntaxChecker.cpp.o
-
-syntax/SyntaxChecker.i: syntax/SyntaxChecker.cpp.i
-
-.PHONY : syntax/SyntaxChecker.i
-
-# target to preprocess a source file
-syntax/SyntaxChecker.cpp.i:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.i
-.PHONY : syntax/SyntaxChecker.cpp.i
-
-syntax/SyntaxChecker.s: syntax/SyntaxChecker.cpp.s
-
-.PHONY : syntax/SyntaxChecker.s
-
-# target to generate assembly for a file
-syntax/SyntaxChecker.cpp.s:
-	$(MAKE) -f CMakeFiles/SimpleInterpreter.dir/build.make CMakeFiles/SimpleInterpreter.dir/syntax/SyntaxChecker.cpp.s
-.PHONY : syntax/SyntaxChecker.cpp.s
 
 token/IdToken.o: token/IdToken.cpp.o
 
@@ -837,12 +837,12 @@ help:
 	@echo "... parser/ast/VarNode.o"
 	@echo "... parser/ast/VarNode.i"
 	@echo "... parser/ast/VarNode.s"
+	@echo "... semantic/SemanticAnalyzer.o"
+	@echo "... semantic/SemanticAnalyzer.i"
+	@echo "... semantic/SemanticAnalyzer.s"
 	@echo "... stream/char/CharStream.o"
 	@echo "... stream/char/CharStream.i"
 	@echo "... stream/char/CharStream.s"
-	@echo "... syntax/SyntaxChecker.o"
-	@echo "... syntax/SyntaxChecker.i"
-	@echo "... syntax/SyntaxChecker.s"
 	@echo "... token/IdToken.o"
 	@echo "... token/IdToken.i"
 	@echo "... token/IdToken.s"

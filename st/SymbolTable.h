@@ -26,7 +26,7 @@ private:
 public:
 	SymbolTable(const String &name, SymbolTable *parent);
 	V &lookup(const String &k, V &defaultValue);
-	void insert(const String &k, const V &v);
+	bool insert(const String &k, const V &v);
 
 #ifdef DEBUG
 	const KVMap &getMap();
@@ -54,9 +54,14 @@ SymbolTable<V>::SymbolTable(const String &name, SymbolTable *parent)
 {}
 
 template<typename V>
-void SymbolTable<V>::insert(const SymbolTable::String &k, const V &v)
+bool SymbolTable<V>::insert(const SymbolTable::String &k, const V &v)
 {
+	if (mMap.find(k) != mMap.end()) {
+		return false;
+	}
+
 	mMap[k] = v;
+	return true;
 }
 
 #ifdef DEBUG

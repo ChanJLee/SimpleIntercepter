@@ -2,7 +2,7 @@
 #include "stream/char/CharStream.h"
 #include "interpreter/Interpreter.h"
 #include "exception/ParseError.h"
-#include "syntax/SyntaxChecker.h"
+#include "semantic/SemanticAnalyzer.h"
 #include <fstream>
 #include <sstream>
 
@@ -184,7 +184,7 @@ void checkStream()
 void readPas()
 {
 	std::ifstream infile;
-	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test_st.pas");
+	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test.pas");
 	std::stringstream ss;
 	char ch;
 	while (!infile.eof()) {
@@ -249,8 +249,8 @@ void readPas()
 		Lexer lexer(stream);
 		Parser parser(lexer);
 		ProgramNode *root = parser.parse();
-//		SyntaxChecker syntaxChecker(root);
-//		syntaxChecker.check();
+		SemanticAnalyzer syntaxChecker(root);
+		syntaxChecker.check();
 		Interpreter interpreter(root);
 		interpreter.interpret();
 	}
@@ -357,7 +357,7 @@ void testAssign()
 
 	Lexer lexer = Lexer(new CharStream(content.c_str()));
 	Parser parser(lexer);
-	SyntaxChecker checker(parser.parse());
+	SemanticAnalyzer checker(parser.parse());
 	try {
 		checker.check();
 	}
@@ -383,7 +383,7 @@ void testDefine()
 
 	Lexer lexer = Lexer(new CharStream(content.c_str()));
 	Parser parser(lexer);
-	SyntaxChecker checker(parser.parse());
+	SemanticAnalyzer checker(parser.parse());
 	try {
 		checker.check();
 	}
