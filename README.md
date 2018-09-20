@@ -737,8 +737,38 @@ variable: ID
 
 pascal同样有自己的作用域，当前作用域能够访问到外部作用域的符号，通常都是使用一个指针指向外部符号表，这样当当前符号表查找不到符号的时候就会委托给外部去查找。如果没有一个符号表有需要查找符号的记录，那么可以断定这个符号是为定义的。
 
-## 语法检查
+```python
+def visit_ProcedureDecl(self, node):
+    proc_name = node.proc_name
+    proc_symbol = ProcedureSymbol(proc_name)
+    self.current_scope.insert(proc_symbol)
+
+    print('ENTER scope: %s' %  proc_name)
+    # Scope for parameters and local variables
+    procedure_scope = ScopedSymbolTable(
+        scope_name=proc_name,
+        scope_level=2,
+    )
+    self.current_scope = procedure_scope
+
+    # Insert parameters into the procedure scope
+    for param in node.params:
+        param_type = self.current_scope.lookup(param.type_node.value)
+        param_name = param.var_node.value
+        var_symbol = VarSymbol(param_name, param_type)
+        self.current_scope.insert(var_symbol)
+        proc_symbol.params.append(var_symbol)
+
+    self.visit(node.block_node)
+
+    print(procedure_scope)
+    print('LEAVE scope: %s' %  proc_name)
+```
+
+## 语义分析
 
 通常一段pascal代码的执行要经历以下几个阶段
 
 ![lsbasi_part13_img03.png](img/lsbasi_part13_img03.png)
+
+语义分析是编译过程的一个逻辑阶段. 语义分析的任务是对结构上正确的源程序进行上下文有关性质的审查, 进行类型审查。
