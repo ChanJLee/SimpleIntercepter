@@ -3,7 +3,6 @@
 //
 
 #include "Interpreter.h"
-#include "../exception/ParseError.h"
 #include "../st/SymbolTable.h"
 #include "../parser/ast/ProceduresNode.h"
 #ifdef DEBUG
@@ -31,10 +30,6 @@ Result Interpreter::visitNode(ASTNode *node)
 	else if (node->type == ASTNode::Type::REAL_NUM) {
 		return visitRealNumNode((RealNumNode *) node);
 	}
-
-	std::string msg = "unknown ast node, type is: ";
-	msg += std::to_string(node->token->type);
-	throw ParseError(msg);
 }
 
 Result Interpreter::visitIntNumNode(IntNumNode *node)
@@ -62,14 +57,6 @@ Result Interpreter::visitIntNumNode(IntNumNode *node)
 
 Result Interpreter::visitBinOpNode(BinOpNode *node)
 {
-	if (node->lhs == nullptr) {
-		throw ParseError("missing left operand");
-	}
-
-	if (node->rhs == nullptr) {
-		throw ParseError("missing right operand");
-	}
-
 	const Result &lr = visitNode(node->lhs);
 	const Result &rr = visitNode(node->rhs);
 
@@ -84,20 +71,12 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 		case Token::TokenType::TYPE_MUL: RETURN_BIN_OP(type, lr, rr, *)
 		case Token::TokenType::TYPE_SUB: RETURN_BIN_OP(type, lr, rr, -)
 		case Token::TokenType::TYPE_PLUS: RETURN_BIN_OP(type, lr, rr, +)
-		default: {
-			std::string msg = "unknown bin op, type is: ";
-			msg += std::to_string(node->token->type);
-			throw ParseError("unknown bin op");
-		}
+		default: break;
 	}
 }
 
 Result Interpreter::visitUnaryNode(UnaryNode *node)
 {
-	if (node->child == nullptr) {
-		throw ParseError("missing unary operand");
-	}
-
 	if (node->token->type == Token::TokenType::TYPE_SUB) {
 		const Result &result = visitNode(node->child);
 		return BUILD_IN_VALUE_TO_RESULT(result.type, -RESULT_TO_BUILD_IN_VALUE_(result));
@@ -106,10 +85,6 @@ Result Interpreter::visitUnaryNode(UnaryNode *node)
 	if (node->token->type == Token::TokenType::TYPE_PLUS) {
 		return visitNode(node->child);
 	}
-
-	std::string msg = "unknown unary op, type is: ";
-	msg += std::to_string(node->token->type);
-	throw ParseError(msg);
 }
 
 void Interpreter::interpret()
@@ -135,10 +110,6 @@ void Interpreter::visitCompoundStatementNode(CompoundStatementNode *node)
 			visitNoOpStatementNode((NoOpStatementNode *) child);
 			return;
 		}
-
-		std::string msg = "unknown ast node, type is: ";
-		msg += std::to_string(child->type);
-		throw ParseError(msg);
 	});
 }
 
@@ -164,12 +135,6 @@ Result Interpreter::visitVarNode(VarNode *node)
 {
 	auto *lv = (IdToken *) node->token;
 	const Result result = mCurrentTable->lookup(lv->value, INVALID_RESULT);
-	if (result.type == Token::TokenType::TYPE_NONE) {
-		std::string msg = "unknown symbol: ";
-		msg += lv->value;
-		throw ParseError(msg);
-	}
-
 	return result;
 }
 
