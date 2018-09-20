@@ -15,11 +15,12 @@ private:
 	const char* mStr;
 	int mLen;
 public:
-	CharStream(const char *mStr);
+	explicit CharStream(const char *mStr);
+	virtual ~CharStream();
 public:
-	char next();
+	char next() override;
 
-	void back();
+	void back() override;
 };
 
 

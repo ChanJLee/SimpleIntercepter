@@ -176,3 +176,8 @@ char Lexer::skipComment()
 	}
 	return ch;
 }
+
+Lexer::~Lexer()
+{
+	//delete mStream;
+}

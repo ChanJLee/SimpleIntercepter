@@ -195,55 +195,6 @@ void readPas()
 
 	std::string content = ss.str();
 	std::cout << content;
-
-//	Lexer lexer = Lexer(new CharStream(trim(content).c_str()));
-//	Token *token = lexer.next();
-//	while (token->type != Token::TokenType::TYPE_EOF) {
-//		switch (token->type) {
-//			case Token::TokenType::TYPE_PLUS : std::cout << "plus" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_SUB : std::cout << "sub" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_MUL : std::cout << "mul" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_REAL_DIV : std::cout << "div" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_LEFT_BRACKET : std::cout << "left bracket" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_RIGHT_BRACKET : std::cout << "right bracket" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_INT_NUM : {
-//				IntNumToken *numToken = (IntNumToken *) token;
-//				std::cout << "number: " << numToken->value << std::endl;
-//				break;
-//			}
-//			case Token::TokenType::TYPE_EOF : std::cout << "eof" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_BEGIN : std::cout << "begin" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_END : std::cout << "end" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_DOT : std::cout << "dot" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_COLON : std::cout << "colon" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_ASSIGN : std::cout << "assign" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_SEMI : std::cout << "semi" << std::endl;
-//				break;
-//			case Token::TokenType::TYPE_ID : {
-//				IdToken *idToken = (IdToken *) token;
-//				std::cout << "id: " << idToken->value << std::endl;
-//				break;
-//			}
-//			default: std::cerr << "unknown error: " << std::endl;
-//				break;
-//		}
-//
-//		delete token;
-//		token = lexer.next();
-//	}
-
 	try {
 		Stream *stream = new CharStream(content.c_str());
 		Lexer lexer(stream);

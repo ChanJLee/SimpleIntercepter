@@ -88,7 +88,7 @@ void Parser::eat(int type)
 	try {
 		eat(type, "");
 	}
-	catch (const ParseError& error) {
+	catch (const ParseError &error) {
 		std::string msg = "invalid state, need is: ";
 		msg += std::to_string(type);
 		msg += ", and current is ";

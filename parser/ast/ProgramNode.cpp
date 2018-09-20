@@ -10,7 +10,5 @@ ProgramNode::ProgramNode(Token *const token, BlockNode *block)
 
 ProgramNode::~ProgramNode()
 {
-	if (block != nullptr) {
-		delete block;
-	}
+	delete block;
 }

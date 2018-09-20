@@ -26,3 +26,5 @@ CharStream::CharStream(const char *mStr)
 {
 	mLen = (int) (mStr == nullptr ? 0 : strlen(mStr));
 }
+
+CharStream::~CharStream() = default;

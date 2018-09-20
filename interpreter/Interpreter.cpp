@@ -27,7 +27,7 @@ Result Interpreter::visitNode(ASTNode *node)
 	else if (node->type == ASTNode::Type::VAR) {
 		return visitVarNode((VarNode *) node);
 	}
-	else if (node->type == ASTNode::Type::REAL_NUM) {
+	else {
 		return visitRealNumNode((RealNumNode *) node);
 	}
 }

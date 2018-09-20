@@ -201,5 +201,4 @@ void SemanticAnalyzer::checkProcedures(ProceduresNode *node)
 		delete localTable;
 		mCurrentTable = context;
 	});
-
 }

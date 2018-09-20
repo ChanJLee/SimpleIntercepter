@@ -19,7 +19,9 @@ private:
 	Stream *mStream;
 	KeywordsMap mKeywordMap;
 public:
-	Lexer(Stream *stream);
+	explicit Lexer(Stream *stream);
+
+	virtual ~Lexer();
 
 	Token *next();
 private:
