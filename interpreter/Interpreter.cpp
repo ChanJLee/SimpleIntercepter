@@ -70,8 +70,7 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 		case Token::TokenType::TYPE_INT_DIV: RETURN_BIN_OP(type, lr, rr, /)
 		case Token::TokenType::TYPE_MUL: RETURN_BIN_OP(type, lr, rr, *)
 		case Token::TokenType::TYPE_SUB: RETURN_BIN_OP(type, lr, rr, -)
-		case Token::TokenType::TYPE_PLUS: RETURN_BIN_OP(type, lr, rr, +)
-		default: break;
+		default: RETURN_BIN_OP(type, lr, rr, +)
 	}
 }
 
@@ -82,9 +81,7 @@ Result Interpreter::visitUnaryNode(UnaryNode *node)
 		return BUILD_IN_VALUE_TO_RESULT(result.type, -RESULT_TO_BUILD_IN_VALUE_(result));
 	}
 
-	if (node->token->type == Token::TokenType::TYPE_PLUS) {
-		return visitNode(node->child);
-	}
+	return visitNode(node->child);
 }
 
 void Interpreter::interpret()

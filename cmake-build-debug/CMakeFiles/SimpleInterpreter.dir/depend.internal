@@ -71,6 +71,7 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/exception/ParseError.h
  /Users/chan/ClionProjects/SimpleInterpreter/lexer/Lexer.h
+ /Users/chan/ClionProjects/SimpleInterpreter/memory/LocalRef.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp
  /Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.h
  /Users/chan/ClionProjects/SimpleInterpreter/parser/ast/ASTNode.h

@@ -65,10 +65,10 @@
 class Parser
 {
 private:
-	Lexer mLexer;
+	Lexer *mLexer;
 	Token *mCurrentToken = nullptr;
 public:
-	explicit Parser(const Lexer &lexer);
+	explicit Parser(Lexer *lexer);
 	ProgramNode *parse();
 private:
 	ProgramNode *program();

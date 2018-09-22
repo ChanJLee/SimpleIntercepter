@@ -9,7 +9,8 @@
 class Stream
 {
 public:
-	virtual ~Stream() = default;
+	virtual ~Stream()
+	{}
 
 	virtual char next() = 0;
 

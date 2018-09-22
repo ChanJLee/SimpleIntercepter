@@ -70,6 +70,7 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../exception/ParseError.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../lexer/Lexer.h
+CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../memory/LocalRef.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/Parser.cpp
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/Parser.h
 CMakeFiles/SimpleInterpreter.dir/parser/Parser.cpp.o: ../parser/ast/ASTNode.h

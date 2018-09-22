@@ -12,11 +12,12 @@
 #include "ast/RealNumNode.h"
 #include "ast/ProceduresNode.h"
 #include "ast/FormalParametersNode.h"
+#include "../memory/LocalRef.h"
 
-Parser::Parser(const Lexer &lexer)
+Parser::Parser(Lexer *lexer)
 	: mLexer(lexer)
 {
-	mCurrentToken = mLexer.next();
+	mCurrentToken = mLexer->next();
 }
 
 ASTNode *Parser::exp()
@@ -100,7 +101,7 @@ void Parser::eat(int type)
 void Parser::eat(int type, const std::string &msg)
 {
 	if (mCurrentToken->type == type) {
-		mCurrentToken = mLexer.next();
+		mCurrentToken = mLexer->next();
 		return;
 	}
 
@@ -110,12 +111,15 @@ void Parser::eat(int type, const std::string &msg)
 ProgramNode *Parser::program()
 {
 	eat(Token::TokenType::TYPE_PROGRAM, "miss PROGRAM header");
-	Token *id = mCurrentToken;
+	LocalRef<Token> id(mCurrentToken);
 	eat(Token::TokenType::TYPE_ID, "missing PROGRAM id");
 	eat(Token::TokenType::TYPE_SEMI, "missing ';' after PROGRAM id");
-	auto *node = new ProgramNode(id, block());
+	LocalRef<BlockNode> blockNode(block());
+	LocalRef<ProgramNode> programNode(new ProgramNode(id.get(), blockNode.get()));
 	eat(Token::TokenType::TYPE_DOT, "missing .");
-	return node;
+	id.release();
+	blockNode.release();
+	return programNode.release();
 }
 
 StatementNode *Parser::compound()
@@ -176,7 +180,14 @@ ProgramNode *Parser::parse()
 
 BlockNode *Parser::block()
 {
-	return new BlockNode(declarations(), procedures(), compound());
+	LocalRef<DeclarationsNode> declarationsNode(declarations());
+	LocalRef<ProceduresNode> proceduresNode(procedures());
+	LocalRef<StatementNode> statementNode(compound());
+	return new BlockNode(
+		declarationsNode.release(),
+		proceduresNode.release(),
+		statementNode.release()
+	);
 }
 
 DeclarationsNode *Parser::declarations()

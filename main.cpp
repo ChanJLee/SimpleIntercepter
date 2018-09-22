@@ -198,12 +198,13 @@ void readPas()
 	try {
 		Stream *stream = new CharStream(content.c_str());
 		Lexer lexer(stream);
-		Parser parser(lexer);
+		Parser parser(&lexer);
 		ProgramNode *root = parser.parse();
 		SemanticAnalyzer syntaxChecker(root);
 		syntaxChecker.check();
 		Interpreter interpreter(root);
 		interpreter.interpret();
+		delete stream;
 	}
 	catch (const ParseError &error) {
 		std::cerr << error.msg << std::endl;
@@ -307,7 +308,7 @@ void testAssign()
 	std::cout << content << std::endl;
 
 	Lexer lexer = Lexer(new CharStream(content.c_str()));
-	Parser parser(lexer);
+	Parser parser(&lexer);
 	SemanticAnalyzer checker(parser.parse());
 	try {
 		checker.check();
@@ -333,7 +334,7 @@ void testDefine()
 	std::cout << content << std::endl;
 
 	Lexer lexer = Lexer(new CharStream(content.c_str()));
-	Parser parser(lexer);
+	Parser parser(&lexer);
 	SemanticAnalyzer checker(parser.parse());
 	try {
 		checker.check();

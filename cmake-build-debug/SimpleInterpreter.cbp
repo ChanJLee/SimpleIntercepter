@@ -105,6 +105,9 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/main.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/memory/LocalRef.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/parser/Parser.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>

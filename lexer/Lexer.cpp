@@ -133,7 +133,7 @@ Token *Lexer::nextId()
 		mStream->back();
 	}
 
-	Iterator iterator = mKeywordMap.find(id);
+	auto iterator = mKeywordMap.find(id);
 	if (iterator != mKeywordMap.end()) {
 		return new Token(iterator->second);
 	}
@@ -179,5 +179,4 @@ char Lexer::skipComment()
 
 Lexer::~Lexer()
 {
-	//delete mStream;
 }
