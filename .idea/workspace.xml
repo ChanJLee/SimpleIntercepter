@@ -14,13 +14,12 @@
     <list default="true" id="15831aca-37f1-4697-ab82-5177de4f9835" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/interpreter/Interpreter.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SimpleInterpreter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interpreter/Interpreter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/interpreter/Interpreter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.pas" beforeDir="false" afterPath="$PROJECT_DIR$/test.pas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_st.pas" beforeDir="false" afterPath="$PROJECT_DIR$/test_st.pas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semantic/SemanticAnalyzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/semantic/SemanticAnalyzer.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,15 +58,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2733" />
-          <entry key="h" value="713" />
-          <entry key="mm" value="25" />
+          <entry key="cpp" value="2740" />
+          <entry key="h" value="714" />
+          <entry key="mm" value="55" />
           <entry key="pas" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="3471" />
+          <entry key="ObjectiveC" value="3509" />
           <entry key="PLAIN_TEXT" value="36" />
         </counts>
       </usages-collector>
@@ -75,7 +74,7 @@
         <counts>
           <entry key="algorithm" value="1" />
           <entry key="cpp" value="23" />
-          <entry key="h" value="24" />
+          <entry key="h" value="27" />
           <entry key="md" value="1" />
           <entry key="memory" value="2" />
           <entry key="pas" value="7" />
@@ -84,7 +83,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="51" />
+          <entry key="ObjectiveC" value="54" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -98,9 +97,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/semantic/SemanticAnalyzer.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+              <folding>
+                <element signature="e#125#163#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parser/Parser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1751">
+            <state relative-caret-position="-131">
               <caret line="264" column="57" selection-start-line="264" selection-start-column="57" selection-end-line="264" selection-end-column="57" />
               <folding>
                 <element signature="e#40#59#0" expanded="true" />
@@ -109,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="294">
+              <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
               <folding>
                 <element signature="e#40#57#0" expanded="true" />
               </folding>
@@ -122,10 +133,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lexer/Lexer.cpp">
+        <entry file="file://$PROJECT_DIR$/parser/ast/DeclarationsNode.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1912">
-              <caret line="180" column="1" selection-start-line="180" selection-start-column="1" selection-end-line="180" selection-end-column="1" />
+            <state relative-caret-position="285">
+              <caret line="19" column="29" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="29" />
+              <folding>
+                <element signature="e#131#148#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,22 +154,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/memory/LocalRef.h">
+        <entry file="file://$PROJECT_DIR$/st/SymbolTable.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="139">
+              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
               <folding>
-                <element signature="e#124#136#0" expanded="true" />
+                <element signature="e#121#135#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser/Parser.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -163,20 +168,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="197" column="9" lean-forward="true" selection-start-line="197" selection-start-column="9" selection-end-line="197" selection-end-column="9" />
+            <state relative-caret-position="2073">
+              <caret line="202" column="45" lean-forward="true" selection-start-line="202" selection-start-column="45" selection-end-line="202" selection-end-column="45" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+                <marker date="1537718543000" expanded="true" signature="6192:6256" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+            <state relative-caret-position="262">
+              <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               <folding>
                 <element signature="e#40#64#0" expanded="true" />
               </folding>
@@ -290,9 +296,7 @@
         <option value="$PROJECT_DIR$/token/Token.h" />
         <option value="$PROJECT_DIR$/interpreter/result/Result.h" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/semantic/SemanticAnalyzer.h" />
         <option value="$PROJECT_DIR$/st/SymbolTable.h" />
-        <option value="$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp" />
         <option value="$PROJECT_DIR$/parser/ast/ProgramNode.cpp" />
         <option value="$PROJECT_DIR$/lexer/Lexer.h" />
         <option value="$PROJECT_DIR$/stream/char/CharStream.h" />
@@ -302,10 +306,12 @@
         <option value="$PROJECT_DIR$/lexer/Lexer.cpp" />
         <option value="$PROJECT_DIR$/memory/LocalRef.h" />
         <option value="$PROJECT_DIR$/parser/Parser.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/test.pas" />
         <option value="$PROJECT_DIR$/test_st.pas" />
         <option value="$PROJECT_DIR$/interpreter/Interpreter.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/semantic/SemanticAnalyzer.h" />
+        <option value="$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp" />
       </list>
     </option>
   </component>
@@ -332,11 +338,6 @@
             <path>
               <item name="SimpleInterpreter" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimpleInterpreter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SimpleInterpreter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SimpleInterpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="interpreter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimpleInterpreter" type="b2602c69:ProjectViewProjectNode" />
@@ -466,12 +467,12 @@
       <workItem from="1537277535355" duration="1188000" />
       <workItem from="1537278872656" duration="8683000" />
       <workItem from="1537365608310" duration="2208000" />
-      <workItem from="1537450911714" duration="6994000" />
+      <workItem from="1537450911714" duration="8002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118798000" />
+    <option name="totallyTimeSpent" value="119806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -492,13 +493,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49753347" weight="0.62362635" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49753347" visible="true" weight="0.32005495" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49753347" visible="true" weight="0.35576922" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32967034" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32967034" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32967034" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.18406594" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.39148352" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5024665" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49753347" weight="0.32692307" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -557,19 +558,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp</url>
-          <line>154</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp</url>
-          <line>160</line>
-          <option name="timeStamp" value="9" />
+          <line>99</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>key == &quot;number&quot;</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>key == &quot;foo&quot;</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -667,16 +668,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/st/SymbolTable.cpp" />
-    <entry file="file://$PROJECT_DIR$/parser/ast/DeclarationsNode.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#131#148#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/string">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
@@ -764,28 +755,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/semantic/SemanticAnalyzer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding>
-            <element signature="e#125#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_assign.pas">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/st/SymbolTable.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#121#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parser/ast/ProgramNode.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -870,16 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parser/Parser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="264" column="57" selection-start-line="264" selection-start-column="57" selection-end-line="264" selection-end-column="57" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interpreter/result/Result.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -887,16 +848,6 @@
           <folding>
             <element signature="e#253#265#0" expanded="true" />
             <element signature="e#523#535#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="e#40#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -922,22 +873,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="197" column="9" lean-forward="true" selection-start-line="197" selection-start-column="9" selection-end-line="197" selection-end-column="9" />
+        <state relative-caret-position="262">
+          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#40#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interpreter/Interpreter.cpp">
+    <entry file="file://$PROJECT_DIR$/parser/Parser.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+        <state relative-caret-position="-131">
+          <caret line="264" column="57" selection-start-line="264" selection-start-column="57" selection-end-line="264" selection-end-column="57" />
           <folding>
-            <element signature="e#40#64#0" expanded="true" />
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/st/SymbolTable.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="e#121#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2073">
+          <caret line="202" column="45" lean-forward="true" selection-start-line="202" selection-start-column="45" selection-end-line="202" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1537718543000" expanded="true" signature="6192:6256" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic/SemanticAnalyzer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="42" column="11" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+          <folding>
+            <element signature="e#125#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser/ast/DeclarationsNode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="e#131#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic/SemanticAnalyzer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
+          <folding>
+            <element signature="e#40#57#0" expanded="true" />
           </folding>
         </state>
       </provider>

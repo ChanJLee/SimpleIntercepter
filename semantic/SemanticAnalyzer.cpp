@@ -82,7 +82,7 @@ void SemanticAnalyzer::insert(const SemanticAnalyzer::String &key, Token::TokenT
 	}
 
 	if (value == Token::TokenType::TYPE_INTEGER) {
-		if (!mCurrentTable->insert(key, Symbol::REAL)) {
+		if (!mCurrentTable->insert(key, Symbol::INT)) {
 			String msg = "define " + key + " twice";
 			throw ParseError(msg);
 		}
@@ -94,10 +94,10 @@ void SemanticAnalyzer::insert(const SemanticAnalyzer::String &key, Token::TokenT
 	throw ParseError(msg);
 }
 
-Symbol SemanticAnalyzer::lookup(const SemanticAnalyzer::String &key)
+Symbol &SemanticAnalyzer::lookup(const SemanticAnalyzer::String &key)
 {
 	Symbol undefined = Symbol::UNDEFINED;
-	Symbol result = mCurrentTable->lookup(key, undefined);
+	Symbol &result = mCurrentTable->lookup(key, undefined);
 	if (result == undefined) {
 		throw ParseError("can not find symbol: " + key);
 	}
@@ -188,7 +188,7 @@ void SemanticAnalyzer::checkProcedures(ProceduresNode *node)
 	std::for_each(node->procedures.cbegin(), node->procedures.cend(), [&](ProceduresNode::Procedure *procedure)
 	{
 		IdToken *idToken = procedure->id;
-		auto localTable = new SymbolTable(idToken->value, mCurrentTable);
+		auto localTable = new SymbolTable(idToken->value, context);
 		mCurrentTable = localTable;
 		std::for_each(procedure->formalParameters->parameters.cbegin(),
 					  procedure->formalParameters->parameters.cend(),

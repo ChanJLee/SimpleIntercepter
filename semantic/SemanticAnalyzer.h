@@ -40,7 +40,7 @@ private:
 	Symbol visitUnaryNode(UnaryNode *node);
 
 	void insert(const String &key, Token::TokenType value);
-	Symbol lookup(const String &key);
+	Symbol& lookup(const String &key);
 };
 
 
