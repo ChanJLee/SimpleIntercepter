@@ -61,13 +61,15 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 	const Result &rr = visitNode(node->rhs);
 
 	Token::TokenType type = Token::TokenType::TYPE_INTEGER;
-	if (lr.type == Token::TokenType::TYPE_REAL || rr.type == Token::TokenType::TYPE_REAL) {
+	if (lr.type == Token::TokenType::TYPE_REAL ||
+		rr.type == Token::TokenType::TYPE_REAL ||
+		node->token->type == Token::TokenType::TYPE_REAL_DIV) {
 		type = Token::TokenType::TYPE_REAL;
 	}
 
 	switch (node->token->type) {
 		case Token::TokenType::TYPE_INT_DIV: RETURN_BIN_OP(type, lr, rr, /)
-		case Token::TokenType::TYPE_REAL_DIV: RETURN_BIN_OP(type, lr, rr, *1.0/)
+		case Token::TokenType::TYPE_REAL_DIV: RETURN_BIN_OP(type, lr, rr, *1.0 /)
 		case Token::TokenType::TYPE_MUL: RETURN_BIN_OP(type, lr, rr, *)
 		case Token::TokenType::TYPE_SUB: RETURN_BIN_OP(type, lr, rr, -)
 		default: RETURN_BIN_OP(type, lr, rr, +)

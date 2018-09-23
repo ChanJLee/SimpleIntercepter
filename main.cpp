@@ -200,8 +200,8 @@ void readPas()
 		Lexer lexer(stream);
 		Parser parser(&lexer);
 		ProgramNode *root = parser.parse();
-		SemanticAnalyzer syntaxChecker(root);
-		syntaxChecker.check();
+//		SemanticAnalyzer syntaxChecker(root);
+//		syntaxChecker.check();
 		Interpreter interpreter(root);
 		interpreter.interpret();
 		delete stream;

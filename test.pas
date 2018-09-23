@@ -18,7 +18,7 @@ BEGIN {Part10}
       c := a - - b
    END;
    x := 11;
-   y := 20 / 7 + 3.14;
+   y := 10 / 4 + 3.14;
    { writeln('a = ', a); }
    { writeln('b = ', b); }
    { writeln('c = ', c); }
