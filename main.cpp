@@ -184,7 +184,7 @@ void checkStream()
 void readPas()
 {
 	std::ifstream infile;
-	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test.pas");
+	infile.open("/Users/chan/ClionProjects/SimpleInterpreter/test_st.pas");
 	std::stringstream ss;
 	char ch;
 	while (!infile.eof()) {

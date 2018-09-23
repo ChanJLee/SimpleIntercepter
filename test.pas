@@ -11,7 +11,6 @@ BEGIN {P1}
     a := 10;
     k := 1;
     number := 3;
-    foo := 2;
 END;  {P1}
 BEGIN {Part10}
    BEGIN
