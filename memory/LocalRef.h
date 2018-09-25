@@ -14,6 +14,13 @@ public:
 		: mRef(ref)
 	{}
 
+	LocalRef(const LocalRef<T> &other) = default;
+
+	LocalRef(LocalRef<T> &&other) noexcept
+	{
+		mRef = other.release();
+	}
+
 	virtual ~LocalRef()
 	{
 		delete mRef;
@@ -26,7 +33,12 @@ public:
 		return result;
 	}
 
-	T *get()
+	T *get() const
+	{
+		return mRef;
+	}
+
+	T *operator->() const
 	{
 		return mRef;
 	}
