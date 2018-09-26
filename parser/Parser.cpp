@@ -205,17 +205,16 @@ DeclarationsNode *Parser::declarations()
 	eat(Token::TokenType::TYPE_VAR);
 	std::vector<LocalRef<DeclarationsNode::Declaration>> declarations;
 	while (mCurrentToken->type == Token::TokenType::TYPE_ID) {
-		Token *id = mCurrentToken;
+		LocalRef<Token> id(mCurrentToken);
 		eat(Token::TokenType::TYPE_ID);
 
-		std::vector<Token *> ids;
-		ids.push_back(id);
+		std::vector<LocalRef<Token>> ids;
+		ids.push_back(std::move(id));
 
 		// a, b, c, d : REAL
 		while (mCurrentToken->type == Token::TokenType::TYPE_COMMA) {
 			eat(Token::TokenType::TYPE_COMMA);
-			id = mCurrentToken;
-			ids.push_back(id);
+			ids.push_back(LocalRef<Token>(mCurrentToken));
 			eat(Token::TokenType::TYPE_ID, "missing id after ','");
 		}
 
@@ -225,14 +224,14 @@ DeclarationsNode *Parser::declarations()
 			throw ParseError("missing type after declaration");
 		}
 
-		Token *idTypeToken = mCurrentToken;
+
+		LocalRef<Token> idTypeToken(mCurrentToken);
 		Token::TokenType varType = idTypeToken->type;
 		eat(mCurrentToken->type);
-		delete idTypeToken;
-		std::for_each(ids.cbegin(), ids.cend(), [&](Token *token)
+		std::for_each(ids.begin(), ids.end(), [&](LocalRef<Token> &token)
 		{
-			declarations
-				.push_back(LocalRef<DeclarationsNode::Declaration>(new DeclarationsNode::Declaration(token, varType)));
+			declarations.push_back(LocalRef<DeclarationsNode::Declaration>(
+				new DeclarationsNode::Declaration(token.release(), varType)));
 		});
 
 		// eat ;
