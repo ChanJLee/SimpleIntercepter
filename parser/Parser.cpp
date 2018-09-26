@@ -203,7 +203,7 @@ DeclarationsNode *Parser::declarations()
 	// ...
 	// END
 	eat(Token::TokenType::TYPE_VAR);
-	std::vector<DeclarationsNode::Declaration *> declarations;
+	std::vector<LocalRef<DeclarationsNode::Declaration>> declarations;
 	while (mCurrentToken->type == Token::TokenType::TYPE_ID) {
 		Token *id = mCurrentToken;
 		eat(Token::TokenType::TYPE_ID);
@@ -231,7 +231,8 @@ DeclarationsNode *Parser::declarations()
 		delete idTypeToken;
 		std::for_each(ids.cbegin(), ids.cend(), [&](Token *token)
 		{
-			declarations.push_back(new DeclarationsNode::Declaration(token, varType));
+			declarations
+				.push_back(LocalRef<DeclarationsNode::Declaration>(new DeclarationsNode::Declaration(token, varType)));
 		});
 
 		// eat ;
@@ -241,7 +242,12 @@ DeclarationsNode *Parser::declarations()
 		eat(Token::TokenType::TYPE_SEMI);
 	}
 
-	return new DeclarationsNode(declarations);
+	std::vector<DeclarationsNode::Declaration *> vec;
+	std::for_each(declarations.begin(), declarations.end(), [&](LocalRef<DeclarationsNode::Declaration> &ref)
+	{
+		vec.push_back(ref.release());
+	});
+	return new DeclarationsNode(vec);
 }
 
 ProceduresNode *Parser::procedures()
