@@ -224,7 +224,6 @@ DeclarationsNode *Parser::declarations()
 			throw ParseError("missing type after declaration");
 		}
 
-
 		LocalRef<Token> idTypeToken(mCurrentToken);
 		Token::TokenType varType = idTypeToken->type;
 		eat(mCurrentToken->type);
@@ -255,25 +254,37 @@ ProceduresNode *Parser::procedures()
 		return new ProceduresNode();
 	}
 
-	std::vector<ProceduresNode::Procedure *> vec;
+	std::vector<LocalRef<ProceduresNode::Procedure>> vec;
 	while (mCurrentToken->type == Token::TokenType::TYPE_PROCEDURE) {
 		eat(Token::TokenType::TYPE_PROCEDURE);
 		if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
 			throw ("missing id after PROCEDURE");
 		}
-		auto *idToken = (IdToken *) mCurrentToken;
+
+		LocalRef<IdToken> idToken((IdToken *) mCurrentToken);
 		eat(Token::TokenType::TYPE_ID);
-		FormalParametersNode *formalParametersNode = nullptr;
+		LocalRef<FormalParametersNode> formalParametersNode;
 		if (mCurrentToken->type == Token::TokenType::TYPE_LEFT_BRACKET) {
 			eat(Token::TokenType::TYPE_LEFT_BRACKET);
-			formalParametersNode = formalParameters();
+			formalParametersNode.set(formalParameters());
 			eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing ')' after formal parameter list");
 		}
+
 		eat(Token::TokenType::TYPE_SEMI, "missing ';' after id or formal parameter list");
-		vec.push_back(new ProceduresNode::Procedure(idToken, formalParametersNode, block()));
+		LocalRef<BlockNode> blockNode(block());
+		vec.push_back(LocalRef<ProceduresNode::Procedure>(new ProceduresNode::Procedure(idToken.release(),
+																						formalParametersNode.release(),
+																						blockNode.release())));
 		eat(Token::TokenType::TYPE_SEMI, "missing ';' after block");
 	}
-	return new ProceduresNode(vec);
+
+	std::vector<ProceduresNode::Procedure *> result;
+	std::for_each(vec.begin(), vec.end(), [&](LocalRef<ProceduresNode::Procedure> &ref)
+	{
+		result.push_back(ref.release());
+	});
+
+	return new ProceduresNode(result);
 }
 
 FormalParametersNode *Parser::formalParameters()

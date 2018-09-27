@@ -14,6 +14,10 @@ public:
 		: mRef(ref)
 	{}
 
+	LocalRef()
+		: mRef(nullptr)
+	{}
+
 	LocalRef(const LocalRef<T> &other) = default;
 
 	LocalRef(LocalRef<T> &&other) noexcept
@@ -36,6 +40,11 @@ public:
 	T *get() const
 	{
 		return mRef;
+	}
+
+	void set(T *ref)
+	{
+		mRef = ref;
 	}
 
 	T *operator->() const
