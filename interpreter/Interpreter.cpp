@@ -189,6 +189,7 @@ void Interpreter::dumpSymbolTable()
 		std::cout << "key: " << it->first << " value: " << RESULT_TO_BUILD_IN_VALUE(it->second) << std::endl;
 	}
 }
+#endif
 
 void Interpreter::visitProceduresNode(ProceduresNode *node)
 {
@@ -219,4 +220,3 @@ Interpreter::~Interpreter()
 {
 	delete mCurrentTable;
 }
-#endif
