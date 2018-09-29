@@ -175,6 +175,7 @@ VarNode *Parser::variable()
 ProgramNode *Parser::parse()
 {
 	ProgramNode *root = program();
+	LocalRef<Token> eof(mCurrentToken);
 	eat(Token::TokenType::TYPE_EOF, "eof error");
 	return root;
 }
