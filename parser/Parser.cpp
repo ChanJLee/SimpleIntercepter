@@ -100,12 +100,13 @@ void Parser::eat(int type)
 
 void Parser::eat(int type, const std::string &msg)
 {
-	if (mCurrentToken->type == type) {
-		mCurrentToken = mLexer->next();
-		return;
+	if (mCurrentToken->type != type) {
+		throw ParseError(msg);
 	}
-
-	throw ParseError(msg);
+	
+	if (mCurrentToken->type != Token::TokenType::EOF) {
+		mCurrentToken = mLexer->next();
+	}
 }
 
 ProgramNode *Parser::program()
