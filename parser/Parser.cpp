@@ -104,7 +104,7 @@ void Parser::eat(int type, const std::string &msg)
 		throw ParseError(msg);
 	}
 	
-	if (mCurrentToken->type != Token::TokenType::EOF) {
+	if (mCurrentToken->type != Token::TokenType::TYPE_EOF) {
 		mCurrentToken = mLexer->next();
 	}
 }
