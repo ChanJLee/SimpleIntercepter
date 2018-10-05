@@ -25,24 +25,24 @@ ASTNode *Parser::exp()
 	LocalRef<ASTNode> lhs(term());
 	while (mCurrentToken->type == Token::TokenType::TYPE_SUB ||
 		mCurrentToken->type == Token::TokenType::TYPE_PLUS) {
-		Token *token = mCurrentToken;
+		LocalRef<Token> token(mCurrentToken);
 		eat(token->type);
-		lhs.set(new BinOpNode(token, lhs.get(), term()));
+		lhs.set(new BinOpNode(token.release(), lhs.get(), term()));
 	}
 	return lhs.release();
 }
 
 ASTNode *Parser::term()
 {
-	ASTNode *lhs = factor();
+	LocalRef<ASTNode> lhs(factor());
 	while (mCurrentToken->type == Token::TokenType::TYPE_REAL_DIV ||
 		mCurrentToken->type == Token::TokenType::TYPE_INT_DIV ||
 		mCurrentToken->type == Token::TokenType::TYPE_MUL) {
-		Token *token = mCurrentToken;
+		LocalRef<Token> token(mCurrentToken);
 		eat(token->type);
-		lhs = new BinOpNode(token, lhs, factor());
+		lhs.set(new BinOpNode(token.release(), lhs.release(), factor()));
 	}
-	return lhs;
+	return lhs.release();
 }
 
 ASTNode *Parser::factor()
