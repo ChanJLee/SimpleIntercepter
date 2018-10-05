@@ -22,14 +22,14 @@ Parser::Parser(Lexer *lexer)
 
 ASTNode *Parser::exp()
 {
-	ASTNode *lhs = term();
+	LocalRef<ASTNode> lhs(term());
 	while (mCurrentToken->type == Token::TokenType::TYPE_SUB ||
 		mCurrentToken->type == Token::TokenType::TYPE_PLUS) {
 		Token *token = mCurrentToken;
 		eat(token->type);
-		lhs = new BinOpNode(token, lhs, term());
+		lhs.set(new BinOpNode(token, lhs.get(), term()));
 	}
-	return lhs;
+	return lhs.release();
 }
 
 ASTNode *Parser::term()
@@ -103,7 +103,7 @@ void Parser::eat(int type, const std::string &msg)
 	if (mCurrentToken->type != type) {
 		throw ParseError(msg);
 	}
-	
+
 	if (mCurrentToken->type != Token::TokenType::TYPE_EOF) {
 		mCurrentToken = mLexer->next();
 	}
