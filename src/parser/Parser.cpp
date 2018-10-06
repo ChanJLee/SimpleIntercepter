@@ -40,7 +40,8 @@ ASTNode *Parser::term()
 		mCurrentToken->type == Token::TokenType::TYPE_MUL) {
 		LocalRef<Token> token(mCurrentToken);
 		eat(token->type);
-		lhs.set(new BinOpNode(token.release(), lhs.release(), factor()));
+		LocalRef<ASTNode> rhs(factor());
+		lhs.set(new BinOpNode(token.release(), lhs.release(), rhs.release()));
 	}
 	return lhs.release();
 }
