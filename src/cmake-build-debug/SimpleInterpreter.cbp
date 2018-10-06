@@ -102,6 +102,9 @@
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/src/lexer/Lexer.h">
 			<Option target="SimpleInterpreter"/>
 		</Unit>
+		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/src/log/log.h">
+			<Option target="SimpleInterpreter"/>
+		</Unit>
 		<Unit filename="/Users/chan/ClionProjects/SimpleInterpreter/src/main.cpp">
 			<Option target="SimpleInterpreter"/>
 		</Unit>

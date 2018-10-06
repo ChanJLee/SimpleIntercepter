@@ -47,7 +47,7 @@ ASTNode *Parser::term()
 
 ASTNode *Parser::factor()
 {
-	Token *token = mCurrentToken;
+	LocalRef<Token> token(mCurrentToken);
 	if (token->type == Token::TokenType::TYPE_LEFT_BRACKET) {
 		eat(Token::TokenType::TYPE_LEFT_BRACKET);
 		ASTNode *result = exp();
@@ -57,26 +57,27 @@ ASTNode *Parser::factor()
 
 	if (token->type == Token::TokenType::TYPE_INT_NUM) {
 		eat(Token::TokenType::TYPE_INT_NUM);
-		return new IntNumNode((IntNumToken *) token);
+		return new IntNumNode((IntNumToken *) token.release());
 	}
 
 	if (token->type == Token::TokenType::TYPE_PLUS) {
 		eat(Token::TokenType::TYPE_PLUS);
-		return new UnaryNode(token, factor());
+		return new UnaryNode(token.release(), factor());
 	}
 
 	if (token->type == Token::TokenType::TYPE_SUB) {
 		eat(Token::TokenType::TYPE_SUB);
-		return new UnaryNode(token, factor());
+		return new UnaryNode(token.release(), factor());
 	}
 
 	if (token->type == Token::TokenType::TYPE_ID) {
+		token.release();
 		return variable();
 	}
 
 	if (token->type == Token::TokenType::TYPE_REAL_NUM) {
 		eat(Token::TokenType::TYPE_REAL_NUM);
-		return new RealNumNode((RealNumToken *) token);
+		return new RealNumNode((RealNumToken *) token.release());
 	}
 
 	std::string msg = "invalid token, type is";

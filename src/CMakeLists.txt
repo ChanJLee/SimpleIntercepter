@@ -59,6 +59,6 @@ set(SOURCE_FILES
         parser/ast/ProceduresNode.h
         parser/ast/FormalParametersNode.cpp
         parser/ast/FormalParametersNode.h
-        st/SymbolTable.h memory/LocalRef.h)
+        st/SymbolTable.h memory/LocalRef.h log/log.h)
 
 add_executable(SimpleInterpreter ${SOURCE_FILES})

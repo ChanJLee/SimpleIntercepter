@@ -194,6 +194,7 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/src/token/Token.h
 CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/src/exception/ParseError.h
+ /Users/chan/ClionProjects/SimpleInterpreter/src/log/log.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/AssignStatementNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/BinOpNode.h

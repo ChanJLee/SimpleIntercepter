@@ -10,6 +10,7 @@
 #include "../parser/ast/BinOpNode.h"
 #include "../parser/ast/UnaryNode.h"
 #include "../parser/ast/ProceduresNode.h"
+#include "../log/log.h"
 
 SemanticAnalyzer::SemanticAnalyzer(ProgramNode *tree)
 	: mTree(tree)
@@ -20,6 +21,7 @@ SemanticAnalyzer::SemanticAnalyzer(ProgramNode *tree)
 void SemanticAnalyzer::check()
 {
 	auto idToken = (IdToken *) mTree->token;
+	LOG("semantic, check program, id: %s\n", idToken->value.c_str());
 	mCurrentTable = new SymbolTable(idToken->value, nullptr);
 	checkBlock(mTree->block);
 	delete mCurrentTable;
@@ -41,6 +43,7 @@ void SemanticAnalyzer::checkDeclarations(DeclarationsNode *node)
 		{
 			if (declaration != nullptr) {
 				auto id = (IdToken *) declaration->id;
+				LOG("semantic: insert decl, id %s type %d\n", id->value.c_str(), declaration->type);
 				insert(id->value, declaration->type);
 			}
 		});
@@ -107,6 +110,7 @@ Symbol &SemanticAnalyzer::lookup(const SemanticAnalyzer::String &key)
 void SemanticAnalyzer::checkAssignStatement(AssignStatementNode *node)
 {
 	VarNode *lv = node->lv;
+	LOG("semantic, check assign\n");
 	Symbol lhs = checkVar(lv);
 	Symbol rhs = checkExp(node->rv);
 	if (lhs == Symbol::INT && rhs == Symbol::REAL) {
@@ -119,6 +123,7 @@ void SemanticAnalyzer::checkAssignStatement(AssignStatementNode *node)
 Symbol SemanticAnalyzer::checkVar(VarNode *node)
 {
 	auto id = (IdToken *) node->token;
+	LOG("semantic, lookup var: %s\n", id->value.c_str());
 	Symbol type = lookup(id->value);
 	if (type == Symbol::UNDEFINED) {
 		String msg = "undefined symbol " + id->value;
@@ -130,18 +135,23 @@ Symbol SemanticAnalyzer::checkVar(VarNode *node)
 Symbol SemanticAnalyzer::checkExp(ASTNode *node)
 {
 	if (node->type == ASTNode::Type::INT_NUM) {
+		LOG("semantic, check exp int\n");
 		return Symbol::INT;
 	}
 	else if (node->type == ASTNode::Type::BIN) {
+		LOG("semantic, check exp bin op\n");
 		return checkBinOp((BinOpNode *) node);
 	}
 	else if (node->type == ASTNode::Type::UNARY) {
+		LOG("semantic, check exp unary\n");
 		return visitUnaryNode((UnaryNode *) node);
 	}
 	else if (node->type == ASTNode::Type::VAR) {
+		LOG("semantic, check exp var\n");
 		return checkVar((VarNode *) node);
 	}
 	else if (node->type == ASTNode::Type::REAL_NUM) {
+		LOG("semantic, check exp real\n");
 		return Symbol::REAL;
 	}
 
@@ -195,6 +205,9 @@ void SemanticAnalyzer::checkProcedures(ProceduresNode *node)
 					  [&](FormalParametersNode::Parameter *parameter)
 					  {
 						  auto id = (IdToken *) parameter->id;
+						  LOG("semantic, insert procedures parameters, id: %s, type: %d\n",
+							  id->value.c_str(),
+							  parameter->type);
 						  insert(id->value, parameter->type);
 					  });
 		checkBlock(procedure->block);

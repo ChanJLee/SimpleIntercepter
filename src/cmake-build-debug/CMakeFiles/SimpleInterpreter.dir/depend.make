@@ -193,6 +193,7 @@ CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o: ../token/IdToken.h
 CMakeFiles/SimpleInterpreter.dir/parser/ast/VarNode.cpp.o: ../token/Token.h
 
 CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o: ../exception/ParseError.h
+CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o: ../log/log.h
 CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o: ../parser/ast/AssignStatementNode.h
 CMakeFiles/SimpleInterpreter.dir/semantic/SemanticAnalyzer.cpp.o: ../parser/ast/BinOpNode.h
