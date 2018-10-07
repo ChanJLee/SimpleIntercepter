@@ -129,17 +129,20 @@ ProgramNode *Parser::program()
 StatementNode *Parser::compound()
 {
 	eat(Token::TokenType::TYPE_BEGIN);
-	std::vector<StatementNode *> statements;
-	StatementNode *child = statement();
-	statements.push_back(child);
+	std::vector<LocalRef<StatementNode>> statements;
+	statements.emplace_back(statement());
 	while (mCurrentToken->type == Token::TokenType::TYPE_SEMI) {
 		eat(Token::TokenType::TYPE_SEMI);
-		child = statement();
-		statements.push_back(child);
+		statements.emplace_back(statement());
 	}
 
 	eat(Token::TokenType::TYPE_END);
-	return new CompoundStatementNode(statements);;
+	std::vector<StatementNode *> result;
+	std::for_each(statements.begin(), statements.end(), [&](LocalRef<StatementNode> &ref)
+	{
+		result.push_back(ref.release());
+	});
+	return new CompoundStatementNode(result);;
 }
 
 StatementNode *Parser::statement()
@@ -219,7 +222,7 @@ DeclarationsNode *Parser::declarations()
 		// a, b, c, d : REAL
 		while (mCurrentToken->type == Token::TokenType::TYPE_COMMA) {
 			eat(Token::TokenType::TYPE_COMMA);
-			ids.push_back(LocalRef<Token>(mCurrentToken));
+			ids.emplace_back(mCurrentToken);
 			eat(Token::TokenType::TYPE_ID, "missing id after ','");
 		}
 
