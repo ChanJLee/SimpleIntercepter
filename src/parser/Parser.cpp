@@ -160,10 +160,11 @@ StatementNode *Parser::statement()
 
 StatementNode *Parser::assignStatement()
 {
-	VarNode *lv = variable();
-	Token *op = mCurrentToken;
-	eat(op->type);
-	return new AssignStatementNode(lv, op, exp());
+	LocalRef<VarNode> lv(variable());
+	LocalRef<Token> op(mCurrentToken);
+	eat(Token::TokenType::TYPE_ASSIGN);
+	LocalRef<ASTNode> expNode(exp());
+	return new AssignStatementNode(lv.release(), op.release(), expNode.release());
 }
 
 StatementNode *Parser::empty()
