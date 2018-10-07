@@ -27,7 +27,8 @@ ASTNode *Parser::exp()
 		mCurrentToken->type == Token::TokenType::TYPE_PLUS) {
 		LocalRef<Token> token(mCurrentToken);
 		eat(token->type);
-		lhs.set(new BinOpNode(token.release(), lhs.get(), term()));
+		LocalRef<ASTNode> rhs(term());
+		lhs.set(new BinOpNode(token.release(), lhs.get(), rhs.release()));
 	}
 	return lhs.release();
 }
@@ -51,9 +52,9 @@ ASTNode *Parser::factor()
 	LocalRef<Token> token(mCurrentToken);
 	if (token->type == Token::TokenType::TYPE_LEFT_BRACKET) {
 		eat(Token::TokenType::TYPE_LEFT_BRACKET);
-		ASTNode *result = exp();
+		LocalRef<ASTNode> result(exp());
 		eat(Token::TokenType::TYPE_RIGHT_BRACKET, "missing )");
-		return result;
+		return result.release();
 	}
 
 	if (token->type == Token::TokenType::TYPE_INT_NUM) {
@@ -169,9 +170,9 @@ StatementNode *Parser::empty()
 
 VarNode *Parser::variable()
 {
-	auto *var = new VarNode((IdToken *const) mCurrentToken);
+	LocalRef<VarNode> var(new VarNode((IdToken *const) mCurrentToken));
 	eat(Token::TokenType::TYPE_ID);
-	return var;
+	return var.release();
 }
 
 ProgramNode *Parser::parse()
