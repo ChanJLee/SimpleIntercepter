@@ -298,19 +298,24 @@ ProceduresNode *Parser::procedures()
 
 FormalParametersNode *Parser::formalParameters()
 {
-	std::vector<FormalParametersNode::Parameter *> vec;
+	std::vector<LocalRef<FormalParametersNode::Parameter>> vec;
 	while (mCurrentToken->type != Token::TokenType::TYPE_RIGHT_BRACKET) {
+		LocalRef<Token> token(mCurrentToken);
 		if (mCurrentToken->type != Token::TokenType::TYPE_ID) {
 			throw ParseError("formal parameters must start with a id token");
 		}
-		auto *id = (IdToken *) mCurrentToken;
+		LocalRef<IdToken> id((IdToken *) token.release());
 		eat(Token::TokenType::TYPE_ID);
+		token.set(mCurrentToken);
 		eat(Token::TokenType::TYPE_COLON, "missing ':' after id token");
 		if (mCurrentToken->type != Token::TokenType::TYPE_REAL &&
 			mCurrentToken->type != Token::TokenType::TYPE_INTEGER) {
 			throw ParseError("unknown type in formal parameters");
 		}
-		vec.push_back(new FormalParametersNode::Parameter(id, mCurrentToken->type));
+
+		vec.push_back(LocalRef<FormalParametersNode::Parameter>(
+			new FormalParametersNode::Parameter(id.release(), mCurrentToken->type))
+		);
 		eat(mCurrentToken->type);
 
 		// has more value
@@ -319,5 +324,11 @@ FormalParametersNode *Parser::formalParameters()
 		}
 	}
 
-	return new FormalParametersNode(vec);
+	std::vector<FormalParametersNode::Parameter *> params;
+	std::for_each(vec.begin(), vec.end(), [&](LocalRef<FormalParametersNode::Parameter> &ref)
+	{
+		params.push_back(ref.release());
+	});
+
+	return new FormalParametersNode(params);
 }
