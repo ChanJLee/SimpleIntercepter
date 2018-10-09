@@ -9,9 +9,7 @@ ProceduresNode::~ProceduresNode()
 {
 	std::for_each(procedures.cbegin(), procedures.cend(), [](Procedure *procedure)
 	{
-		if (procedure != nullptr) {
-			delete procedure;
-		}
+		delete procedure;
 	});
 }
 

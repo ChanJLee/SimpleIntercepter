@@ -12,9 +12,8 @@ CompoundStatementNode::CompoundStatementNode(const std::vector<StatementNode *> 
 
 CompoundStatementNode::~CompoundStatementNode()
 {
-	std::for_each(statements.cbegin(), statements.cend(), [](const StatementNode *child) {
-		if (child != nullptr) {
-			delete child;
-		}
+	std::for_each(statements.cbegin(), statements.cend(), [](const StatementNode *child)
+	{
+		delete child;
 	});
 }

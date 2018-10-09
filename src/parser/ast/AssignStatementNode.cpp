@@ -10,15 +10,7 @@ AssignStatementNode::AssignStatementNode(VarNode *lv, Token *op, ASTNode *rv)
 
 AssignStatementNode::~AssignStatementNode()
 {
-	if (lv != nullptr) {
-		delete lv;
-	}
-
-	if (rv != nullptr) {
-		delete rv;
-	}
-
-	if (op != nullptr) {
-		delete op;
-	}
+	delete lv;
+	delete rv;
+	delete op;
 }

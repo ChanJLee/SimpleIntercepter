@@ -6,13 +6,8 @@
 
 BinOpNode::~BinOpNode()
 {
-	if (lhs != nullptr) {
-		delete lhs;
-	}
-
-	if (rhs != nullptr) {
-		delete rhs;
-	}
+	delete lhs;
+	delete rhs;
 }
 
 BinOpNode::BinOpNode(Token *const token, ASTNode *lhs, ASTNode *rhs)

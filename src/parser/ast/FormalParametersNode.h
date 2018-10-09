@@ -21,7 +21,8 @@ public:
 
 	std::vector<Parameter*> parameters;
 public:
-	FormalParametersNode(const std::vector<Parameter*> &parameters);
+	explicit FormalParametersNode(const std::vector<Parameter*> &parameters);
+	virtual ~FormalParametersNode();
 };
 
 

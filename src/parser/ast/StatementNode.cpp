@@ -9,8 +9,3 @@ StatementNode::StatementNode(ASTNode::Type type)
 {
 
 }
-
-StatementNode::~StatementNode()
-{
-
-}

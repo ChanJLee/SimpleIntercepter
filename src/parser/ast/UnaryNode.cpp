@@ -12,7 +12,5 @@ UnaryNode::UnaryNode(Token *const token, ASTNode *child)
 
 UnaryNode::~UnaryNode()
 {
-	if (child != nullptr) {
-		delete child;
-	}
+	delete child;
 }

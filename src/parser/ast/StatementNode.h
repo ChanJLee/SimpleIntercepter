@@ -10,8 +10,8 @@
 class StatementNode: public ASTNode
 {
 public:
-	StatementNode(ASTNode::Type type);
-	virtual ~StatementNode();
+	explicit StatementNode(ASTNode::Type type);
+	~StatementNode() override = default;
 };
 
 

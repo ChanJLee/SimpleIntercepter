@@ -13,8 +13,8 @@
 class IntNumNode: public ASTNode
 {
 public:
-	IntNumNode(IntNumToken *token);
-	virtual ~IntNumNode();
+	explicit IntNumNode(IntNumToken *token);
+	~IntNumNode() override = default;
 };
 
 

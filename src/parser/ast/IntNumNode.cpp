@@ -4,10 +4,6 @@
 
 #include "IntNumNode.h"
 
-IntNumNode::~IntNumNode()
-{
-}
-
 IntNumNode::IntNumNode(IntNumToken *token)
 	: ASTNode(token, ASTNode::Type::INT_NUM)
 {

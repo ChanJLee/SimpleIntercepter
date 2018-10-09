@@ -21,3 +21,11 @@ FormalParametersNode::FormalParametersNode(const std::vector<Parameter *> &param
 {
 
 }
+
+FormalParametersNode::~FormalParametersNode()
+{
+	std::for_each(parameters.cbegin(), parameters.cend(), [](FormalParametersNode::Parameter *parameter)
+	{
+		delete parameter;
+	});
+}

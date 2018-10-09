@@ -14,9 +14,7 @@ DeclarationsNode::~DeclarationsNode()
 {
 	std::for_each(declarations.cbegin(), declarations.cend(), [](Declaration *declaration)
 	{
-		if (declaration != nullptr) {
-			delete declaration;
-		}
+		delete declaration;
 	});
 }
 
@@ -30,7 +28,5 @@ DeclarationsNode::Declaration::Declaration(Token *id, Token::TokenType type)
 
 DeclarationsNode::Declaration::~Declaration()
 {
-	if (id != nullptr) {
-		delete id;
-	}
+	delete id;
 }
