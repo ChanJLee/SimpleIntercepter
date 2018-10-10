@@ -195,11 +195,12 @@ void readPas()
 
 	std::string content = ss.str();
 	std::cout << content;
+	ProgramNode *root = nullptr;
 	try {
 		Stream *stream = new CharStream(content.c_str());
 		Lexer lexer(stream);
 		Parser parser(&lexer);
-		ProgramNode *root = parser.parse();
+		root = parser.parse();
 		SemanticAnalyzer syntaxChecker(root);
 		syntaxChecker.check();
 		Interpreter interpreter(root);
@@ -208,6 +209,7 @@ void readPas()
 	}
 	catch (const ParseError &error) {
 		std::cerr << error.msg << std::endl;
+		delete root;
 	}
 }
 
