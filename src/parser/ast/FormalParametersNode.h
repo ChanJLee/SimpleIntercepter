@@ -19,10 +19,10 @@ public:
 		virtual ~Parameter();
 	};
 
-	std::vector<Parameter*> parameters;
+	std::vector<Parameter *> parameters;
 public:
-	explicit FormalParametersNode(const std::vector<Parameter*> &parameters);
-	virtual ~FormalParametersNode();
+	explicit FormalParametersNode(const std::vector<Parameter *> &parameters);
+	~FormalParametersNode() override;
 };
 
 

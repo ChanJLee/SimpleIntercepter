@@ -12,8 +12,8 @@ class UnaryNode: public ASTNode
 public:
 	ASTNode* child;
 public:
-	UnaryNode(Token *const token,  ASTNode* child);
-	~UnaryNode();
+	UnaryNode(Token *token,  ASTNode* child);
+	~UnaryNode() override;
 };
 
 

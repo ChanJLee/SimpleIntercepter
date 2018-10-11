@@ -11,7 +11,7 @@
 class RealNumNode: public ASTNode
 {
 public:
-	RealNumNode(RealNumToken * token);
+	explicit RealNumNode(RealNumToken * token);
 };
 
 

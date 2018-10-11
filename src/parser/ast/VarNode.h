@@ -11,8 +11,7 @@
 class VarNode: public ASTNode
 {
 public:
-	VarNode(IdToken *token);
-
+	explicit VarNode(IdToken *token);
 };
 
 

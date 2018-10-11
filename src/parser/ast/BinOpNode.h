@@ -13,8 +13,8 @@ struct BinOpNode: public ASTNode
 {
 	ASTNode *lhs;
 	ASTNode *rhs;
-	BinOpNode(Token *const token, ASTNode *lhs, ASTNode *rhs);
-	virtual ~BinOpNode();
+	BinOpNode(Token *token, ASTNode *lhs, ASTNode *rhs);
+	~BinOpNode() override;
 };
 
 

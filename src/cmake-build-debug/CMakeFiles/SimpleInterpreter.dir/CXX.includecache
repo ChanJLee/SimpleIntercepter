@@ -254,6 +254,10 @@ ASTNode.h
 BlockNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/BlockNode.h
 
+/Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/RealNumNode.cpp
+RealNumNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/RealNumNode.h
+
 /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/RealNumNode.h
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/ASTNode.h
@@ -275,6 +279,10 @@ UnaryNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/UnaryNode.h
 ASTNode.h
 /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/ASTNode.h
+
+/Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/VarNode.cpp
+VarNode.h
+/Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/VarNode.h
 
 /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/VarNode.h
 ASTNode.h

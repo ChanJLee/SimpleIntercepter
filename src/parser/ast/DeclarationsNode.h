@@ -26,8 +26,8 @@ public:
 public:
 
 	DeclarationsNode();
-	DeclarationsNode(const std::vector<Declaration *> &declarations);
-	virtual ~DeclarationsNode();
+	explicit DeclarationsNode(const std::vector<Declaration *> &declarations);
+	~DeclarationsNode() override;
 };
 
 

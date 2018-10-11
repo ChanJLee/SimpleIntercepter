@@ -29,7 +29,7 @@ public:
 public:
 	ProceduresNode();
 	explicit ProceduresNode(const std::vector<Procedure*> &procedures);
-	virtual ~ProceduresNode();
+	~ProceduresNode() override;
 };
 
 

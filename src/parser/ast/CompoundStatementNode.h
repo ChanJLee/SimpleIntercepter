@@ -15,8 +15,8 @@ class CompoundStatementNode: public StatementNode
 public:
 	const std::vector<StatementNode *> statements;
 public:
-	CompoundStatementNode(const std::vector<StatementNode *> &statements);
-	virtual ~CompoundStatementNode();
+	explicit CompoundStatementNode(const std::vector<StatementNode *> &statements);
+	~CompoundStatementNode() override;
 };
 
 

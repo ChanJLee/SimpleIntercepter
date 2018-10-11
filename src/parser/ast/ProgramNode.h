@@ -14,7 +14,7 @@ public:
 	BlockNode* block;
 public:
 	ProgramNode(Token *id, BlockNode* block);
-	virtual ~ProgramNode();
+	~ProgramNode() override;
 };
 
 

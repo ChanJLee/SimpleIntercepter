@@ -28,9 +28,9 @@ public:
 	};
 public:
 	Token *const token;
-	Type type;
+	ASTNode::Type type;
 public:
-	ASTNode(Token *const token, ASTNode::Type type);
+	ASTNode(Token *token, ASTNode::Type type);
 	virtual ~ASTNode();
 };
 

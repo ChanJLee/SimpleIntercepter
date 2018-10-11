@@ -21,7 +21,7 @@ public:
 	ProceduresNode *procedures;
 public:
 	BlockNode(DeclarationsNode *declarations, ProceduresNode *procedures, StatementNode *statementNode);
-	virtual ~BlockNode();
+	~BlockNode() override;
 };
 
 
