@@ -69,7 +69,7 @@ Result Interpreter::visitBinOpNode(BinOpNode *node)
 
 	switch (node->token->type) {
 		case Token::TokenType::TYPE_INT_DIV: RETURN_BIN_OP(type, lr, rr, /)
-		case Token::TokenType::TYPE_REAL_DIV: RETURN_BIN_OP(type, lr, rr, * 1.0 /)
+		case Token::TokenType::TYPE_REAL_DIV: RETURN_BIN_OP(type, lr, rr, *1.0 /)
 		case Token::TokenType::TYPE_MUL: RETURN_BIN_OP(type, lr, rr, *)
 		case Token::TokenType::TYPE_SUB: RETURN_BIN_OP(type, lr, rr, -)
 		default: RETURN_BIN_OP(type, lr, rr, +)
@@ -133,7 +133,7 @@ void Interpreter::visitAssignStatementNode(AssignStatementNode *node)
 Result Interpreter::visitVarNode(VarNode *node)
 {
 	auto *lv = (IdToken *) node->token;
-	const Result result = mCurrentTable->lookup(lv->value, INVALID_RESULT);
+	const Result &result = mCurrentTable->lookup(lv->value, INVALID_RESULT);
 	return result;
 }
 
