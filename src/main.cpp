@@ -247,12 +247,12 @@ void printToken()
 			case Token::TokenType::TYPE_RIGHT_BRACKET : std::cout << "right bracket" << std::endl;
 				break;
 			case Token::TokenType::TYPE_INT_NUM : {
-				IntNumToken *numToken = (IntNumToken *) token;
+				auto *numToken = (IntNumToken *) token;
 				std::cout << "int number: " << numToken->value << std::endl;
 				break;
 			}
 			case Token::TokenType::TYPE_REAL_NUM : {
-				RealNumToken *numToken = (RealNumToken *) token;
+				auto *numToken = (RealNumToken *) token;
 				std::cout << "real number: " << numToken->value << std::endl;
 				break;
 			}
