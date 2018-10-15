@@ -215,3 +215,8 @@ void SemanticAnalyzer::checkProcedures(ProceduresNode *node)
 		mCurrentTable = context;
 	});
 }
+
+SemanticAnalyzer::~SemanticAnalyzer()
+{
+	delete mCurrentTable;
+}

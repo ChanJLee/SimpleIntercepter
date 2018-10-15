@@ -25,6 +25,7 @@ private:
 	SymbolTable *mCurrentTable;
 public:
 	explicit SemanticAnalyzer(ProgramNode *tree);
+	virtual ~SemanticAnalyzer();
 	void check();
 private:
 	void checkBlock(BlockNode *node);
