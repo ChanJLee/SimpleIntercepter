@@ -44,6 +44,7 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o
  /Users/chan/ClionProjects/SimpleInterpreter/src/interpreter/result/Result.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/lexer/Lexer.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/main.cpp
+ /Users/chan/ClionProjects/SimpleInterpreter/src/memory/LocalRef.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/parser/Parser.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/ASTNode.h
  /Users/chan/ClionProjects/SimpleInterpreter/src/parser/ast/AssignStatementNode.h

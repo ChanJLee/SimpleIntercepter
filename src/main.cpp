@@ -3,6 +3,7 @@
 #include "interpreter/Interpreter.h"
 #include "exception/ParseError.h"
 #include "semantic/SemanticAnalyzer.h"
+#include "memory/LocalRef.h"
 #include <fstream>
 #include <sstream>
 
@@ -197,15 +198,14 @@ void readPas()
 	std::cout << content;
 	ProgramNode *root = nullptr;
 	try {
-		Stream *stream = new CharStream(content.c_str());
-		Lexer lexer(stream);
+		LocalRef<Stream> stream(new CharStream(content.c_str()));
+		Lexer lexer(stream.get());
 		Parser parser(&lexer);
 		root = parser.parse();
 		SemanticAnalyzer syntaxChecker(root);
 		syntaxChecker.check();
 		Interpreter interpreter(root);
 		interpreter.interpret();
-		delete stream;
 	}
 	catch (const ParseError &error) {
 		std::cerr << error.msg << std::endl;

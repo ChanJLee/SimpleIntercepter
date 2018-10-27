@@ -43,6 +43,7 @@ CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../interpreter/Interpreter.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../interpreter/result/Result.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../lexer/Lexer.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../main.cpp
+CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../memory/LocalRef.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/Parser.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/ASTNode.h
 CMakeFiles/SimpleInterpreter.dir/main.cpp.o: ../parser/ast/AssignStatementNode.h
